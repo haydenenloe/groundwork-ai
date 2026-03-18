@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Groundwork AI — AI Operations for B2B Companies</title>
+  <meta name="description" content="Groundwork AI helps B2B companies identify, build, and deploy AI systems that multiply operational output. From audit to production in 90 days." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark:    '#070B14',
+            navy:    '#0C1525',
+            slate:   '#162035',
+            border:  '#1E2D47',
+            blue:    '#4B7FFF',
+            'blue-l':'#7AA3FF',
+            amber:   '#F59E0B',
+            muted:   '#4A5568',
+            subtle:  '#8892A4',
+            body:    '#DCE3EF',
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          animation: { 'fade-up': 'fadeUp 0.6s ease forwards' },
+          keyframes: { fadeUp: { from: { opacity: 0, transform: 'translateY(20px)' }, to: { opacity: 1, transform: 'translateY(0)' } } }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { background-color: #070B14; color: #DCE3EF; }
+
+    /* Subtle grid background */
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(75,127,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(75,127,255,0.04) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+
+    /* Hero glow */
+    .hero-glow {
+      background: radial-gradient(ellipse 90% 50% at 50% -5%, rgba(75,127,255,0.18) 0%, transparent 65%);
+    }
+
+    /* Blue gradient text */
+    .grad-text {
+      background: linear-gradient(120deg, #4B7FFF 0%, #7AA3FF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Card hover glow */
+    .card-hover {
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    }
+    .card-hover:hover {
+      border-color: rgba(75,127,255,0.4);
+      box-shadow: 0 0 0 1px rgba(75,127,255,0.2), 0 8px 32px rgba(75,127,255,0.08);
+      transform: translateY(-2px);
+    }
+
+    /* Tier connector line */
+    .tier-line { position: relative; }
+    .tier-line::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -24px;
+      width: 24px;
+      height: 2px;
+      background: linear-gradient(90deg, #1E2D47, #4B7FFF44);
+    }
+
+    /* Smooth scrolling */
+    html { scroll-behavior: smooth; }
+
+    /* Nav scroll effect */
+    .nav-scrolled { background: rgba(7,11,20,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid #1E2D47; }
+
+    /* Mobile menu */
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: block; }
+  </style>
+</head>
+
+<body class="font-sans antialiased">
+
+  <!-- ========== NAV ========== -->
+  <header id="nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <svg width="28" height="28" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="20" width="32" height="8" rx="2" fill="#4B7FFF"/>
+          <rect x="0" y="11" width="22" height="8" rx="2" fill="#4B7FFF" opacity="0.72"/>
+          <rect x="0" y="2"  width="13" height="8" rx="2" fill="#4B7FFF" opacity="0.44"/>
+        </svg>
+        <span class="font-bold text-lg text-body tracking-tight">Groundwork <span class="text-blue">AI</span></span>
+      </a>
+
+      <!-- Desktop nav -->
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-subtle">
+        <a href="#services" class="hover:text-body transition-colors">Services</a>
+        <a href="#capabilities" class="hover:text-body transition-colors">What We Build</a>
+        <a href="#process" class="hover:text-body transition-colors">Process</a>
+        <a href="#quiz" class="hover:text-body transition-colors">Readiness Quiz</a>
+      </div>
+
+      <!-- CTA -->
+      <div class="hidden md:flex items-center gap-3">
+        <a href="#quiz" class="text-sm font-medium text-subtle hover:text-body transition-colors px-4 py-2">
+          Take the Quiz
+        </a>
+        <a href="#audit" class="bg-blue hover:bg-blue-l transition-colors text-white font-semibold text-sm px-5 py-2.5 rounded-lg">
+          Book an Audit
+        </a>
+      </div>
+
+      <!-- Hamburger -->
+      <button id="hamburger" class="md:hidden text-subtle hover:text-body p-2" aria-label="Open menu">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="19" y2="6"/><line x1="3" y1="11" x2="19" y2="11"/><line x1="3" y1="16" x2="19" y2="16"/>
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden bg-navy border-t border-border px-6 py-4 space-y-3 text-sm font-medium text-subtle">
+      <a href="#services" class="block hover:text-body py-1">Services</a>
+      <a href="#capabilities" class="block hover:text-body py-1">What We Build</a>
+      <a href="#process" class="block hover:text-body py-1">Process</a>
+      <a href="#quiz" class="block hover:text-body py-1">Readiness Quiz</a>
+      <a href="#audit" class="block mt-3 bg-blue text-white font-semibold px-5 py-3 rounded-lg text-center">Book an Audit — $2,500</a>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="relative min-h-screen flex items-center pt-16 overflow-hidden grid-bg">
+    <div class="hero-glow absolute inset-0 pointer-events-none"></div>
+
+    <div class="relative max-w-6xl mx-auto px-6 py-24 md:py-32 text-center">
+
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 bg-slate border border-border rounded-full px-4 py-1.5 text-sm text-subtle mb-8">
+        <span class="w-2 h-2 rounded-full bg-blue animate-pulse inline-block"></span>
+        Now onboarding B2B SaaS clients
+      </div>
+
+      <!-- Headline -->
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] mb-6">
+        Build the AI Layer<br class="hidden md:block" />
+        <span class="grad-text">Your Business Is Missing.</span>
+      </h1>
+
+      <!-- Sub -->
+      <p class="max-w-2xl mx-auto text-lg md:text-xl text-subtle leading-relaxed mb-10">
+        Groundwork AI helps B2B companies identify, build, and deploy AI systems that
+        multiply operational output — not prototypes that never ship.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+        <a href="#quiz"
+           class="w-full sm:w-auto bg-blue hover:bg-blue-l transition-colors text-white font-bold text-base px-8 py-4 rounded-xl shadow-lg shadow-blue/20">
+          Take the Free Readiness Quiz →
+        </a>
+        <a href="#audit"
+           class="w-full sm:w-auto border border-border hover:border-blue/50 bg-navy/60 text-body font-semibold text-base px-8 py-4 rounded-xl transition-colors">
+          Book an AI Audit — $2,500
+        </a>
+      </div>
+
+      <!-- Stats strip -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-muted">
+        <div class="flex items-center gap-2">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#4B7FFF" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#4B7FFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Production systems, not slide decks</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#4B7FFF" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#4B7FFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>90-day avg. from audit to production</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#4B7FFF" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#4B7FFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Transparent, flat-fee pricing</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROBLEM ========== -->
+  <section class="py-20 md:py-28 bg-navy">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+        <p class="text-blue font-semibold text-sm uppercase tracking-widest mb-3">The problem</p>
+        <h2 class="text-3xl md:text-5xl font-black tracking-tight mb-4">
+          Most AI initiatives die between<br class="hidden md:block" /> pilot and production.
+        </h2>
+        <p class="text-subtle text-lg max-w-xl mx-auto">Sound familiar?</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+        <div class="bg-slate border border-border rounded-2xl p-6 card-hover">
+          <div class="text-2xl mb-3">💸</div>
+          <h3 class="font-bold text-body mb-2">The subscription graveyard</h3>
+          <p class="text-subtle text-sm leading-relaxed">You're paying for 8 AI tools that don't talk to each other. ChatGPT here, Notion AI there, some Zapier automations — but no central layer and no measurable ROI.</p>
+        </div>
+
+        <div class="bg-slate border border-border rounded-2xl p-6 card-hover">
+          <div class="text-2xl mb-3">🚫</div>
+          <h3 class="font-bold text-body mb-2">The pilot that never launched</h3>
+          <p class="text-subtle text-sm leading-relaxed">Your team ran a proof of concept. It worked in the demo. Then it sat in a repo for six months while everyone went back to their spreadsheets.</p>
+        </div>
+
+        <div class="bg-slate border border-border rounded-2xl p-6 card-hover">
+          <div class="text-2xl mb-3">🤷</div>
+          <h3 class="font-bold text-body mb-2">No one owns the AI layer</h3>
+          <p class="text-subtle text-sm leading-relaxed">Everybody's using AI their own way. There's no system, no standard, and no one accountable for making it actually work across the business.</p>
+        </div>
+
+        <div class="bg-slate border border-border rounded-2xl p-6 card-hover">
+          <div class="text-2xl mb-3">⏳</div>
+          <h3 class="font-bold text-body mb-2">IT's backlog is 18 months deep</h3>
+          <p class="text-subtle text-sm leading-relaxed">You know where AI could help. Your ops team knows. But the engineering roadmap is full, and this keeps getting bumped in favor of product features.</p>
+        </div>
+
+      </div>
+
+      <div class="mt-12 bg-blue/10 border border-blue/20 rounded-2xl p-8 text-center">
+        <p class="text-body font-semibold text-lg">
+          We're not a big consulting firm. We're not a solo freelancer.<br class="hidden md:block" />
+          We're a specialized AI operations team that <em>builds the system</em> — and hands it to your team running.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICE LADDER ========== -->
+  <section id="services" class="py-20 md:py-28">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+        <p class="text-blue font-semibold text-sm uppercase tracking-widest mb-3">How it works</p>
+        <h2 class="text-3xl md:text-5xl font-black tracking-tight mb-4">
+          Four tiers. One clear path.
+        </h2>
+        <p class="text-subtle text-lg max-w-xl mx-auto">Start free. Every step delivers standalone value — and makes the next one obvious.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+
+        <!-- Tier 1 -->
+        <div class="bg-navy border border-border rounded-2xl p-6 card-hover flex flex-col">
+          <div class="flex items-start justify-between mb-4">
+            <span class="bg-blue/10 text-blue font-bold text-xs px-3 py-1 rounded-full">TIER 1</span>
+            <span class="text-subtle text-sm font-medium">Free</span>
+          </div>
+          <h3 class="text-body font-bold text-lg mb-2">AI Readiness Quiz</h3>
+          <p class="text-subtle text-sm leading-relaxed flex-1">5-minute assessment that scores your AI readiness across 10 dimensions and delivers a personalized roadmap.</p>
+          <div class="mt-5 pt-5 border-t border-border text-xs text-muted space-y-1.5">
+            <div class="flex items-center gap-2"><span class="text-blue">→</span> 10 qualification questions</div>
+            <div class="flex items-center gap-2"><span class="text-blue">→</span> Scored 0–100 with tiers</div>
+            <div class="flex items-center gap-2"><span class="text-blue">→</span> Personalized recommendations</div>
+            <div class="flex items-center gap-2"><span class="text-blue">→</span> CTA to book paid audit</div>
+          </div>
+          <a href="#quiz" class="mt-5 block text-center border border-blue text-blue hover:bg-blue hover:text-white font-semibold text-sm py-2.5 rounded-lg transition-colors">
+            Take the Quiz →
+          </a>
+        </div>
+
+        <!-- Tier 2 -->
+        <div class="bg-navy border border-blue/30 rounded-2xl p-6 card-hover flex flex-col relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-blue text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl tracking-widest">MOST START HERE</div>
+          <div class="flex items-start justify-between mb-4 mt-2">
+            <span class="bg-blue/10 text-blue font-bold text-xs px-3 py-1 rounded-full">TIER 2</span>
+            <span class="text-body font-bold">$2,500</span>
+          </div>
+          <h3 class="text-body font-bold text-lg mb-2">AI Operations Audit</h3>
+          <p class="text-subtle text-sm leading-relaxed flex-1">A focused, executive-level assessment that maps your highest-leverage workflows and delivers a prioritized 30/60/90-day roadmap.</p>
+          <div class="mt-5 pt-5 border-t border-border text-xs text-muted space-y-1.5">
+            <div class="flex items-center gap-2"><span class="text-blue">→</span> 90-min discovery session</div>
+            <div class="flex items-center gap-2"><span class="text-blue">→</span> 2–3 workflows mapped</div>
+            <div class="flex items-center gap-2"><span class="text-blue">→</span> Cost-of-inaction analysis</div>
+            <div class="flex items-center gap-2"><span class="text-blue">→</span> 8-page prioritized roadmap</div>
+            <div class="flex items-center gap-2"><span class="text-blue">→</span> Implementation proposal</div>
+          </div>
+          <a href="#audit" class="mt-5 block text-center bg-blue hover:bg-blue-l text-white font-semibold text-sm py-2.5 rounded-lg transition-colors">
+            Book an Audit →
+          </a>
+        </div>
+
+        <!-- Tier 3 -->
+        <div class="bg-navy border border-border rounded-2xl p-6 card-hover flex flex-col">
+          <div class="flex items-start justify-between mb-4">
+            <span class="bg-blue/10 text-blue font-bold text-xs px-3 py-1 rounded-full">TIER 3</span>
+            <span class="text-subtle text-sm font-medium">$15K–$75K</span>
+          </div>
+          <h3 class="text-body font-bold text-lg mb-2">Implementation</h3>
+          <p class="text-subtle text-sm leading-relaxed flex-1">We build the AI systems identified in your audit — production-grade, handed off working and integrated into your existing stack.</p>
+          <div class="mt-5 pt-5 border-t border-border text-xs text-muted space-y-1.5">
+            <div class="flex items-center gap-2"><span class="text-blue">→</span> Voice AI &amp; call automation</div>
+            <div class="flex items-center gap-2"><span class="text-blue">→</span> Document processing</div>
+            <div class="flex items-center gap-2"><span class="text-blue">→</span> Custom AI agents</div>
+            <div class="flex items-center gap-2"><span class="text-blue">→</span> RAG knowledge systems</div>
+            <div class="flex items-center gap-2"><span class="text-blue">→</span> Workflow automation</div>
+          </div>
+          <a href="#capabilities" class="mt-5 block text-center border border-border hover:border-blue/40 text-subtle hover:text-body font-semibold text-sm py-2.5 rounded-lg transition-colors">
+            See What We Build →
+          </a>
+        </div>
+
+        <!-- Tier 4 -->
+        <div class="bg-navy border border-border rounded-2xl p-6 card-hover flex flex-col">
+          <div class="flex items-start justify-between mb-4">
+            <span class="bg-blue/10 text-blue font-bold text-xs px-3 py-1 rounded-full">TIER 4</span>
+            <span class="text-subtle text-sm font-medium">$1.5K–$5K/mo</span>
+          </div>
+          <h3 class="text-body font-bold text-lg mb-2">Ongoing Retainer</h3>
+          <p class="text-subtle text-sm leading-relaxed flex-1">Monthly partnership for system maintenance, monitoring, iteration, and support as your operations scale.</p>
+          <div class="mt-5 pt-5 border-t border-border text-xs text-muted space-y-1.5">
+            <div class="flex items-center gap-2"><span class="text-blue">→</span> System monitoring &amp; alerts</div>
+            <div class="flex items-center gap-2"><span class="text-blue">→</span> Monthly iteration sprints</div>
+            <div class="flex items-center gap-2"><span class="text-blue">→</span> Priority support SLA</div>
+            <div class="flex items-center gap-2"><span class="text-blue">→</span> Quarterly strategy review</div>
+          </div>
+          <a href="#audit" class="mt-5 block text-center border border-border hover:border-blue/40 text-subtle hover:text-body font-semibold text-sm py-2.5 rounded-lg transition-colors">
+            Ask About Retainers →
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CAPABILITIES ========== -->
+  <section id="capabilities" class="py-20 md:py-28 bg-navy">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+        <p class="text-blue font-semibold text-sm uppercase tracking-widest mb-3">What we build</p>
+        <h2 class="text-3xl md:text-5xl font-black tracking-tight mb-4">
+          Five capability areas.<br class="hidden md:block" /> All production-ready.
+        </h2>
+        <p class="text-subtle text-lg max-w-xl mx-auto">We pick the right tool for the job — not the trendy one.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="bg-slate border border-border rounded-2xl p-7 card-hover">
+          <div class="w-10 h-10 bg-blue/10 rounded-xl flex items-center justify-center mb-4">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2z" stroke="#4B7FFF" stroke-width="1.5"/><path d="M7 8s0-2 3-2 3 2 3 2v.5a3 3 0 01-3 3 3 3 0 01-3-3V8z" stroke="#4B7FFF" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 13.5V16" stroke="#4B7FFF" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="font-bold text-body text-lg mb-2">Voice AI</h3>
+          <p class="text-subtle text-sm leading-relaxed mb-4">Inbound and outbound call automation that qualifies leads, handles FAQs, books appointments, and escalates intelligently to humans.</p>
+          <div class="text-xs text-muted font-mono bg-dark px-3 py-2 rounded-lg">Vapi · Claude API · Twilio</div>
+        </div>
+
+        <div class="bg-slate border border-border rounded-2xl p-7 card-hover">
+          <div class="w-10 h-10 bg-blue/10 rounded-xl flex items-center justify-center mb-4">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="2" width="14" height="16" rx="2" stroke="#4B7FFF" stroke-width="1.5"/><path d="M7 7h6M7 10h6M7 13h4" stroke="#4B7FFF" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="font-bold text-body text-lg mb-2">Document Processing</h3>
+          <p class="text-subtle text-sm leading-relaxed mb-4">Auto-extract, classify, and route contracts, invoices, intake forms, and reports — eliminating manual data entry at scale.</p>
+          <div class="text-xs text-muted font-mono bg-dark px-3 py-2 rounded-lg">Claude API · n8n · Airtable</div>
+        </div>
+
+        <div class="bg-slate border border-border rounded-2xl p-7 card-hover">
+          <div class="w-10 h-10 bg-blue/10 rounded-xl flex items-center justify-center mb-4">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#4B7FFF" stroke-width="1.5"/><path d="M7 10l2 2 4-4" stroke="#4B7FFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="font-bold text-body text-lg mb-2">Custom AI Agents</h3>
+          <p class="text-subtle text-sm leading-relaxed mb-4">Purpose-built agents that take actions, not just answers — CRM updates, email drafts, ticket routing, internal approvals, and more.</p>
+          <div class="text-xs text-muted font-mono bg-dark px-3 py-2 rounded-lg">Claude API · LangChain · n8n</div>
+        </div>
+
+        <div class="bg-slate border border-border rounded-2xl p-7 card-hover">
+          <div class="w-10 h-10 bg-blue/10 rounded-xl flex items-center justify-center mb-4">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><ellipse cx="10" cy="7" rx="7" ry="4" stroke="#4B7FFF" stroke-width="1.5"/><path d="M3 7v6c0 2.2 3.1 4 7 4s7-1.8 7-4V7" stroke="#4B7FFF" stroke-width="1.5"/></svg>
+          </div>
+          <h3 class="font-bold text-body text-lg mb-2">RAG Knowledge Systems</h3>
+          <p class="text-subtle text-sm leading-relaxed mb-4">Searchable AI over your internal docs, SOPs, support history, and knowledge base — so your team and customers always find the right answer.</p>
+          <div class="text-xs text-muted font-mono bg-dark px-3 py-2 rounded-lg">pgvector · Claude API · Supabase</div>
+        </div>
+
+        <div class="bg-slate border border-border rounded-2xl p-7 card-hover">
+          <div class="w-10 h-10 bg-blue/10 rounded-xl flex items-center justify-center mb-4">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="5" width="5" height="4" rx="1.5" stroke="#4B7FFF" stroke-width="1.5"/><rect x="13" y="5" width="5" height="4" rx="1.5" stroke="#4B7FFF" stroke-width="1.5"/><rect x="7.5" y="11" width="5" height="4" rx="1.5" stroke="#4B7FFF" stroke-width="1.5"/><path d="M7 7h1M12 7h1M10 11V9M7 9H13" stroke="#4B7FFF" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="font-bold text-body text-lg mb-2">Workflow Automation</h3>
+          <p class="text-subtle text-sm leading-relaxed mb-4">Connect your entire stack and eliminate the repetitive work between tools — from CRM handoffs to onboarding sequences to reporting pipelines.</p>
+          <div class="text-xs text-muted font-mono bg-dark px-3 py-2 rounded-lg">n8n · Make.com · Zapier</div>
+        </div>
+
+        <div class="bg-slate border border-blue/20 rounded-2xl p-7 flex flex-col items-center justify-center text-center card-hover">
+          <div class="text-4xl mb-3">🔍</div>
+          <h3 class="font-bold text-body text-lg mb-2">Not sure what you need?</h3>
+          <p class="text-subtle text-sm leading-relaxed mb-5">Take the free readiness quiz. We'll tell you exactly where AI will have the highest ROI in your business.</p>
+          <a href="#quiz" class="border border-blue text-blue hover:bg-blue hover:text-white font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors">
+            Take the Quiz →
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHO IT'S FOR ========== -->
+  <section id="process" class="py-20 md:py-28">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+        <!-- Left: Who it's for -->
+        <div>
+          <p class="text-blue font-semibold text-sm uppercase tracking-widest mb-3">Who this is for</p>
+          <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-6">
+            Built for B2B software companies that need it built, not advised.
+          </h2>
+          <p class="text-subtle leading-relaxed mb-8">
+            You have a product, a team, operational bottlenecks, and a few AI subscriptions that aren't talking to each other. You need someone who ships.
+          </p>
+
+          <div class="space-y-3 mb-8">
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-blue/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-4" stroke="#4B7FFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p class="text-body text-sm">B2B SaaS or software company, 15–300 employees</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-blue/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-4" stroke="#4B7FFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p class="text-body text-sm">Real operational bottlenecks eating hours every week</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-blue/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-4" stroke="#4B7FFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p class="text-body text-sm">Budget for operations tooling ($10K–$200K/yr)</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-blue/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-4" stroke="#4B7FFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p class="text-body text-sm">Leadership ready to move from evaluation to execution</p>
+            </div>
+          </div>
+
+          <div class="bg-slate border border-border rounded-xl p-4 text-sm text-subtle">
+            <strong class="text-muted">Not a fit:</strong> Enterprise companies that need a 12-month SOW, or solo founders who need a Zapier tutorial. We work best with operators ready to build.
+          </div>
+        </div>
+
+        <!-- Right: The 3-step process -->
+        <div class="space-y-4">
+          <p class="text-blue font-semibold text-sm uppercase tracking-widest mb-6">The process</p>
+
+          <div class="flex gap-5 bg-navy border border-border rounded-2xl p-6 card-hover">
+            <div class="w-10 h-10 bg-blue rounded-xl flex items-center justify-center flex-shrink-0 font-black text-white text-lg">1</div>
+            <div>
+              <h3 class="font-bold text-body mb-1">Assess</h3>
+              <p class="text-subtle text-sm leading-relaxed">Start with the free quiz or a $2,500 AI Operations Audit. We map your workflows, identify the highest-ROI opportunities, and quantify the cost of inaction.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-5 bg-navy border border-border rounded-2xl p-6 card-hover">
+            <div class="w-10 h-10 bg-blue rounded-xl flex items-center justify-center flex-shrink-0 font-black text-white text-lg">2</div>
+            <div>
+              <h3 class="font-bold text-body mb-1">Build</h3>
+              <p class="text-subtle text-sm leading-relaxed">We build the implementation from the audit roadmap. Production system, integrated into your stack, your team trained to use it. Delivered in 4–12 weeks.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-5 bg-navy border border-border rounded-2xl p-6 card-hover">
+            <div class="w-10 h-10 bg-blue rounded-xl flex items-center justify-center flex-shrink-0 font-black text-white text-lg">3</div>
+            <div>
+              <h3 class="font-bold text-body mb-1">Run</h3>
+              <p class="text-subtle text-sm leading-relaxed">Optional monthly retainer to maintain, monitor, and iterate. As your business grows, the AI layer grows with it — no ripping and replacing.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== QUIZ CTA ========== -->
+  <section id="quiz" class="py-20 md:py-28 bg-navy relative overflow-hidden">
+    <div class="absolute inset-0 hero-glow pointer-events-none"></div>
+    <div class="relative max-w-3xl mx-auto px-6 text-center">
+
+      <div class="inline-flex items-center gap-2 bg-blue/10 border border-blue/20 rounded-full px-4 py-1.5 text-sm text-blue font-semibold mb-8">
+        Free • 5 Minutes • Instant Results
+      </div>
+
+      <h2 class="text-3xl md:text-5xl font-black tracking-tight mb-4">
+        Find out where AI will multiply your operations.
+      </h2>
+      <p class="text-subtle text-lg leading-relaxed mb-10">
+        Answer 10 questions. Get a personalized AI readiness score, a breakdown of your highest-impact opportunities, and a clear next step.
+      </p>
+
+      <!-- Quiz embed placeholder — replace with Typeform embed code -->
+      <div class="bg-slate border border-border rounded-2xl p-10 mb-8 text-center">
+        <div class="text-4xl mb-4">🧪</div>
+        <p class="text-body font-semibold mb-2">Quiz launching soon</p>
+        <p class="text-subtle text-sm mb-6">Be the first to know when the AI Readiness Quiz goes live.</p>
+        <form class="flex flex-col sm:flex-row gap-3 max-w-sm mx-auto" onsubmit="handleEmailSubmit(event)">
+          <input
+            type="email"
+            placeholder="your@company.com"
+            required
+            class="flex-1 bg-dark border border-border rounded-lg px-4 py-3 text-body placeholder-muted text-sm focus:outline-none focus:border-blue/60 transition-colors"
+          />
+          <button type="submit" class="bg-blue hover:bg-blue-l text-white font-semibold text-sm px-5 py-3 rounded-lg transition-colors whitespace-nowrap">
+            Notify Me
+          </button>
+        </form>
+        <p id="quiz-success" class="hidden text-blue text-sm mt-3 font-medium">You're on the list. ✓</p>
+      </div>
+
+      <p class="text-muted text-sm">
+        Rather skip the quiz?
+        <a href="#audit" class="text-blue hover:underline font-medium">Book an AI Audit directly →</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== AUDIT CTA ========== -->
+  <section id="audit" class="py-20 md:py-28">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="bg-navy border border-blue/20 rounded-3xl p-10 md:p-14 text-center relative overflow-hidden">
+        <div class="absolute inset-0 hero-glow pointer-events-none opacity-60"></div>
+        <div class="relative">
+          <p class="text-blue font-semibold text-sm uppercase tracking-widest mb-4">Ready to get started?</p>
+          <h2 class="text-3xl md:text-5xl font-black tracking-tight mb-4">Book your AI Operations Audit</h2>
+          <p class="text-subtle text-lg leading-relaxed max-w-xl mx-auto mb-10">
+            A 90-minute working session that maps your highest-leverage workflows, quantifies the cost of inaction, and delivers a prioritized 30/60/90-day implementation roadmap. Flat fee: $2,500.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10 text-sm">
+            <div class="bg-slate rounded-xl p-4">
+              <div class="font-bold text-body mb-1">90-min Session</div>
+              <div class="text-subtle">Deep-dive into your ops with your team</div>
+            </div>
+            <div class="bg-slate rounded-xl p-4">
+              <div class="font-bold text-body mb-1">8-Page Report</div>
+              <div class="text-subtle">Workflows mapped, ROI quantified, priorities ranked</div>
+            </div>
+            <div class="bg-slate rounded-xl p-4">
+              <div class="font-bold text-body mb-1">Clear Roadmap</div>
+              <div class="text-subtle">30/60/90-day plan with implementation estimates</div>
+            </div>
+          </div>
+
+          <!-- Booking placeholder -->
+          <a href="mailto:hello@groundworkai.co?subject=AI%20Operations%20Audit%20Request&body=Hi%2C%20I%27d%20like%20to%20book%20an%20AI%20Operations%20Audit%20for%20my%20company."
+             class="inline-block bg-blue hover:bg-blue-l transition-colors text-white font-bold text-lg px-10 py-4 rounded-xl shadow-lg shadow-blue/25">
+            Book an Audit — $2,500 →
+          </a>
+          <p class="text-muted text-sm mt-4">Typically scheduled within 5 business days. Flat fee, no hidden charges.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="border-t border-border bg-navy py-10">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+
+      <!-- Logo -->
+      <div class="flex items-center gap-3">
+        <svg width="22" height="22" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="20" width="32" height="8" rx="2" fill="#4B7FFF"/>
+          <rect x="0" y="11" width="22" height="8" rx="2" fill="#4B7FFF" opacity="0.72"/>
+          <rect x="0" y="2"  width="13" height="8" rx="2" fill="#4B7FFF" opacity="0.44"/>
+        </svg>
+        <span class="font-bold text-body tracking-tight">Groundwork <span class="text-blue">AI</span></span>
+      </div>
+
+      <!-- Links -->
+      <div class="flex gap-6 text-sm text-muted">
+        <a href="#services" class="hover:text-subtle transition-colors">Services</a>
+        <a href="#capabilities" class="hover:text-subtle transition-colors">What We Build</a>
+        <a href="#quiz" class="hover:text-subtle transition-colors">Quiz</a>
+        <a href="mailto:hello@groundworkai.co" class="hover:text-subtle transition-colors">hello@groundworkai.co</a>
+      </div>
+
+      <p class="text-muted text-xs">© 2026 Groundwork AI. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script>
+    // Nav scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        nav.classList.add('nav-scrolled');
+      } else {
+        nav.classList.remove('nav-scrolled');
+      }
+    });
+
+    // Mobile menu
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('open');
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('#mobile-menu a').forEach(a => {
+      a.addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.remove('open');
+      });
+    });
+
+    // Email waitlist (placeholder — wire up to a real service like ConvertKit/MailerLite)
+    function handleEmailSubmit(e) {
+      e.preventDefault();
+      document.getElementById('quiz-success').classList.remove('hidden');
+      e.target.reset();
+      // TODO: POST to email service endpoint
+    }
+  </script>
+
+</body>
+</html>
