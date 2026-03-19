@@ -622,23 +622,11 @@
         Answer 10 questions. Get a personalized AI readiness score, a breakdown of your highest-impact opportunities, and a clear next step.
       </p>
 
-      <!-- Quiz embed placeholder — replace with Typeform embed code -->
-      <div class="bg-slate border border-border rounded-2xl p-10 mb-8 text-center">
-        <div class="text-4xl mb-4">🧪</div>
-        <p class="text-body font-semibold mb-2">Quiz launching soon</p>
-        <p class="text-subtle text-sm mb-6">Be the first to know when the AI Readiness Quiz goes live.</p>
-        <form class="flex flex-col sm:flex-row gap-3 max-w-sm mx-auto" onsubmit="handleEmailSubmit(event)">
-          <input
-            type="email"
-            placeholder="your@company.com"
-            required
-            class="flex-1 bg-dark border border-border rounded-lg px-4 py-3 text-body placeholder-muted text-sm focus:outline-none focus:border-blue/60 transition-colors"
-          />
-          <button type="submit" class="bg-blue hover:bg-blue-l text-white font-semibold text-sm px-5 py-3 rounded-lg transition-colors whitespace-nowrap">
-            Notify Me
-          </button>
-        </form>
-        <p id="quiz-success" class="hidden text-blue text-sm mt-3 font-medium">You're on the list. ✓</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+        <a href="/quiz.html"
+           class="w-full sm:w-auto bg-blue hover:bg-blue-l transition-colors text-white font-bold text-lg px-10 py-4 rounded-xl shadow-lg shadow-blue/20">
+          Take the Quiz — It's Free →
+        </a>
       </div>
 
       <p class="text-muted text-sm">
@@ -675,12 +663,10 @@
             </div>
           </div>
 
-          <!-- Booking placeholder -->
-          <a href="mailto:hello@groundworkai.co?subject=AI%20Operations%20Audit%20Request&body=Hi%2C%20I%27d%20like%20to%20book%20an%20AI%20Operations%20Audit%20for%20my%20company."
-             class="inline-block bg-blue hover:bg-blue-l transition-colors text-white font-bold text-lg px-10 py-4 rounded-xl shadow-lg shadow-blue/25">
-            Book an Audit — $2,500 →
-          </a>
-          <p class="text-muted text-sm mt-4">Typically scheduled within 5 business days. Flat fee, no hidden charges.</p>
+          <!-- Calendly inline embed -->
+          <div class="calendly-inline-widget rounded-2xl overflow-hidden" data-url="https://calendly.com/hayden-enloe/15min?background_color=0c1525&text_color=dce3ef&primary_color=4b7fff" style="min-width:320px;height:660px;"></div>
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+          <p class="text-muted text-sm mt-4">Flat fee $2,500. Typically scheduled within 5 business days.</p>
         </div>
       </div>
     </div>
@@ -705,7 +691,7 @@
         <a href="#services" class="hover:text-subtle transition-colors">Services</a>
         <a href="#capabilities" class="hover:text-subtle transition-colors">What We Build</a>
         <a href="#quiz" class="hover:text-subtle transition-colors">Quiz</a>
-        <a href="mailto:hello@groundworkai.co" class="hover:text-subtle transition-colors">hello@groundworkai.co</a>
+        <a href="mailto:hello@groundwork-ai.dev" class="hover:text-subtle transition-colors">hello@groundworkai.co</a>
       </div>
 
       <p class="text-muted text-xs">© 2026 Groundwork AI. All rights reserved.</p>
