@@ -7,7 +7,8 @@ const FROM_EMAIL      = "Groundwork AI <onboarding@resend.dev>";
 serve(async (req) => {
   try {
     const payload = await req.json();
-    const record  = payload.record;
+    // Support both direct record (from pg_net trigger) and wrapped { record: {...} } format
+    const record  = payload.record ?? payload;
 
     const { name, email, company_name, score, tier, answers } = record;
 
