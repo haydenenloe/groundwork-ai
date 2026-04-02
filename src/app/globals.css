@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@import "tailwindcss";
+
+body {
+  background-color: #070B14;
+  color: #DCE3EF;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(75,127,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(75,127,255,0.04) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.hero-glow {
+  background: radial-gradient(ellipse 90% 50% at 50% -5%, rgba(75,127,255,0.18) 0%, transparent 65%);
+}
+
+.grad-text {
+  background: linear-gradient(120deg, #4B7FFF 0%, #7AA3FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card-hover {
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.card-hover:hover {
+  border-color: rgba(75,127,255,0.4);
+  box-shadow: 0 0 0 1px rgba(75,127,255,0.2), 0 8px 32px rgba(75,127,255,0.08);
+  transform: translateY(-2px);
+}
+
+.nav-scrolled {
+  background: rgba(7,11,20,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #1E2D47;
+}
+
+.score-ring {
+  transition: stroke-dashoffset 1s ease;
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.option-btn {
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.option-btn:hover {
+  border-color: rgba(75,127,255,0.5);
+  background: rgba(75,127,255,0.06);
+}
+
+.option-btn.selected {
+  border-color: #4B7FFF;
+  background: rgba(75,127,255,0.12);
+}
+
+.option-dot {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #1E2D47;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+  transition: all 0.15s;
+}
+
+.option-dot::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.option-btn.selected .option-dot {
+  background: #4B7FFF;
+  border-color: #4B7FFF;
+}
+
+.option-btn.selected .option-dot::after {
+  opacity: 1;
+}
+
+.progress-bar {
+  transition: width 0.4s ease;
+}
+
+input[type="text"],
+input[type="email"] {
+  background: #0C1525;
+  border: 1px solid #1E2D47;
+  color: #DCE3EF;
+  border-radius: 10px;
+  padding: 12px 16px;
+  width: 100%;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-color: rgba(75,127,255,0.6);
+}
+
+input::placeholder {
+  color: #4A5568;
+}
