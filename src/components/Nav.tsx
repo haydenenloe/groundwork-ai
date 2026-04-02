@@ -80,7 +80,7 @@ export default function Nav() {
             style={{ background: '#4B7FFF' }}
             onClick={() => setMenuOpen(false)}
           >
-            Book an Audit ($2,500)
+            Book an Audit
           </a>
         </div>
       )}

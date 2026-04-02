@@ -13,13 +13,12 @@ export default function Home() {
 
         <div className="relative max-w-7xl mx-auto px-6 py-32 md:py-40 text-center">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[1.02] mb-8" style={{ color: '#DCE3EF' }}>
-            Build the AI Layer<br className="hidden md:block" />
-            <span className="grad-text">Your Business Is Missing.</span>
+            Stop losing hours to work<br className="hidden md:block" />
+            <span className="grad-text">that should run itself.</span>
           </h1>
 
           <p className="max-w-2xl mx-auto text-xl md:text-2xl leading-relaxed mb-12" style={{ color: '#8892A4' }}>
-            Groundwork AI helps B2B companies identify, build, and deploy AI systems that
-            multiply operational output, not prototypes that never ship.
+            We build AI systems that handle your team&apos;s most repetitive, time-consuming work — so they can focus on what actually moves the business. Done for you. Running in weeks.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
@@ -45,7 +44,14 @@ export default function Home() {
                 <circle cx="8" cy="8" r="7" stroke="#4B7FFF" strokeWidth="1.5"/>
                 <path d="M5 8l2 2 4-4" stroke="#4B7FFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-              <span>Production systems, not slide decks</span>
+              <span>Done for you, not handed off for you to figure out</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <circle cx="8" cy="8" r="7" stroke="#4B7FFF" strokeWidth="1.5"/>
+                <path d="M5 8l2 2 4-4" stroke="#4B7FFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              <span>First automation live within 2 weeks</span>
             </div>
             <div className="flex items-center gap-2">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -71,13 +77,54 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
-              { emoji: '💸', title: 'The subscription graveyard', body: "You're paying for 8 AI tools that don't talk to each other. ChatGPT here, Notion AI there, some Zapier automations, but no central layer and no measurable ROI." },
-              { emoji: '🚫', title: 'The pilot that never launched', body: "Your team ran a proof of concept. It worked in the demo. Then it sat in a repo for six months while everyone went back to their spreadsheets." },
-              { emoji: '🤷', title: 'No one owns the AI layer', body: "Everybody's using AI their own way. There's no system, no standard, and no one accountable for making it actually work across the business." },
-              { emoji: '⏳', title: "IT's backlog is 18 months deep", body: "You know where AI could help. Your ops team knows. But the engineering roadmap is full, and this keeps getting bumped in favor of product features." },
+              {
+                icon: (
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <rect x="3" y="5" width="14" height="10" rx="2" stroke="#4B7FFF" strokeWidth="1.5"/>
+                    <path d="M7 5V4a1 1 0 011-1h4a1 1 0 011 1v1" stroke="#4B7FFF" strokeWidth="1.5"/>
+                    <path d="M7 10h6M7 13h4" stroke="#4B7FFF" strokeWidth="1.5" strokeLinecap="round"/>
+                  </svg>
+                ),
+                title: 'The subscription graveyard',
+                body: "You're paying for 8 AI tools that don't talk to each other. ChatGPT here, Notion AI there, some Zapier automations, but no central layer and no measurable ROI.",
+              },
+              {
+                icon: (
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="10" r="8" stroke="#4B7FFF" strokeWidth="1.5"/>
+                    <path d="M7 10h6M10 7v6" stroke="#4B7FFF" strokeWidth="1.5" strokeLinecap="round"/>
+                    <path d="M10 7l-2.5 2.5M10 7l2.5 2.5" stroke="#4B7FFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                ),
+                title: 'The pilot that never launched',
+                body: "Your team ran a proof of concept. It worked in the demo. Then it sat in a repo for six months while everyone went back to their spreadsheets.",
+              },
+              {
+                icon: (
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="7" r="3" stroke="#4B7FFF" strokeWidth="1.5"/>
+                    <path d="M4 17c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#4B7FFF" strokeWidth="1.5" strokeLinecap="round"/>
+                    <path d="M14 10l2 2M16 10l-2 2" stroke="#4B7FFF" strokeWidth="1.5" strokeLinecap="round"/>
+                  </svg>
+                ),
+                title: 'No one owns the AI layer',
+                body: "Everybody's using AI their own way. There's no system, no standard, and no one accountable for making it actually work across the business.",
+              },
+              {
+                icon: (
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="10" r="8" stroke="#4B7FFF" strokeWidth="1.5"/>
+                    <path d="M10 6v4l3 2" stroke="#4B7FFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                ),
+                title: "IT's backlog is 18 months deep",
+                body: "You know where AI could help. Your ops team knows. But the engineering roadmap is full, and this keeps getting bumped in favor of product features.",
+              },
             ].map((card) => (
               <div key={card.title} className="border rounded-2xl p-6 card-hover" style={{ background: '#162035', borderColor: '#1E2D47' }}>
-                <div className="text-2xl mb-3">{card.emoji}</div>
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-3" style={{ background: 'rgba(75,127,255,0.1)' }}>
+                  {card.icon}
+                </div>
                 <h3 className="font-bold mb-2" style={{ color: '#DCE3EF' }}>{card.title}</h3>
                 <p className="text-sm leading-relaxed" style={{ color: '#8892A4' }}>{card.body}</p>
               </div>
@@ -131,7 +178,7 @@ export default function Home() {
                 <span className="font-bold" style={{ color: '#DCE3EF' }}>$2,500</span>
               </div>
               <h3 className="font-bold text-lg mb-2" style={{ color: '#DCE3EF' }}>AI Operations Audit</h3>
-              <p className="text-sm leading-relaxed flex-1" style={{ color: '#8892A4' }}>A 3-week structured engagement: intake questionnaire, 4–6 stakeholder discovery sessions, full opportunity analysis, and a prioritized implementation roadmap with live walkthrough.</p>
+              <p className="text-sm leading-relaxed flex-1" style={{ color: '#8892A4' }}>A 3-week engagement: we sit down with your team, map where hours are bleeding out, and hand you a prioritized roadmap with exact timelines and cost estimates — then walk you through it live.</p>
               <div className="mt-5 pt-5 border-t text-xs space-y-1.5" style={{ borderColor: '#1E2D47', color: '#4A5568' }}>
                 {['Intake questionnaire','4–6 discovery sessions','Full opportunity analysis','8-page prioritized roadmap','Live walkthrough session'].map(item => (
                   <div key={item} className="flex items-center gap-2"><span style={{ color: '#4B7FFF' }}>→</span> {item}</div>
@@ -185,15 +232,26 @@ export default function Home() {
       <section id="capabilities" className="py-28 md:py-36" style={{ background: '#0C1525' }}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <p className="font-semibold text-sm uppercase tracking-widest mb-3" style={{ color: '#4B7FFF' }}>What we build</p>
+            <p className="font-semibold text-sm uppercase tracking-widest mb-3" style={{ color: '#4B7FFF' }}>What we take off your plate</p>
             <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-4" style={{ color: '#DCE3EF' }}>
-              Common things we build out.
+              Work that runs itself, without your team touching it.
             </h2>
-            <p className="text-lg max-w-xl mx-auto" style={{ color: '#8892A4' }}>We pick the right tool for the job, not the trendy one.</p>
+            <p className="text-lg max-w-xl mx-auto" style={{ color: '#8892A4' }}>Every business has workflows eating hours it shouldn&apos;t. We find them, automate them, and hand them back running.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
+              {
+                icon: (
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M3 7h14M3 7l2-3h10l2 3M3 7v8a2 2 0 002 2h10a2 2 0 002-2V7" stroke="#4B7FFF" strokeWidth="1.5" strokeLinejoin="round"/>
+                    <path d="M8 11l2 2 4-4" stroke="#4B7FFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                ),
+                title: 'Lead & Sales Follow-Up',
+                body: 'Your best leads shouldn\'t wait days for a response. Automated outreach, follow-up sequences, and CRM updates that fire the moment someone enters your pipeline.',
+                stack: 'CRM · Email · AI Agents',
+              },
               {
                 icon: (
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -202,9 +260,22 @@ export default function Home() {
                     <path d="M10 13.5V16" stroke="#4B7FFF" strokeWidth="1.5" strokeLinecap="round"/>
                   </svg>
                 ),
-                title: 'Voice AI',
-                body: 'Inbound and outbound call automation that qualifies leads, handles FAQs, books appointments, and escalates intelligently to humans.',
-                stack: 'Vapi · Claude API · Twilio',
+                title: 'Client Onboarding',
+                body: 'Intake forms, document collection, kickoff emails, project setup — running automatically from the moment a client signs. No manual handoffs.',
+                stack: 'Workflows · Docs · Notifications',
+              },
+              {
+                icon: (
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <rect x="3" y="3" width="6" height="6" rx="1.5" stroke="#4B7FFF" strokeWidth="1.5"/>
+                    <rect x="11" y="3" width="6" height="6" rx="1.5" stroke="#4B7FFF" strokeWidth="1.5"/>
+                    <rect x="3" y="11" width="6" height="6" rx="1.5" stroke="#4B7FFF" strokeWidth="1.5"/>
+                    <path d="M14 11v6M11 14h6" stroke="#4B7FFF" strokeWidth="1.5" strokeLinecap="round"/>
+                  </svg>
+                ),
+                title: 'Data & Reporting',
+                body: 'Stop copy-pasting between tools. We connect your systems and auto-generate the reports your team rebuilds manually every week.',
+                stack: 'APIs · Dashboards · Automation',
               },
               {
                 icon: (
@@ -214,8 +285,19 @@ export default function Home() {
                   </svg>
                 ),
                 title: 'Document Processing',
-                body: 'Auto-extract, classify, and route contracts, invoices, intake forms, and reports, eliminating manual data entry at scale.',
+                body: 'Contracts, invoices, intake forms, compliance docs — AI reads, extracts, routes, and files them automatically. Manual data entry eliminated.',
                 stack: 'Claude API · n8n · Airtable',
+              },
+              {
+                icon: (
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <ellipse cx="10" cy="7" rx="7" ry="4" stroke="#4B7FFF" strokeWidth="1.5"/>
+                    <path d="M3 7v6c0 2.2 3.1 4 7 4s7-1.8 7-4V7" stroke="#4B7FFF" strokeWidth="1.5"/>
+                  </svg>
+                ),
+                title: 'Internal Knowledge & Search',
+                body: 'Your team shouldn\'t spend 20 minutes hunting for a policy doc or past project. AI search over your internal knowledge, SOPs, and history — answers in seconds.',
+                stack: 'pgvector · RAG · Supabase',
               },
               {
                 icon: (
@@ -225,45 +307,8 @@ export default function Home() {
                   </svg>
                 ),
                 title: 'Custom AI Agents',
-                body: 'Purpose-built agents that take actions, not just answers: CRM updates, email drafts, ticket routing, internal approvals, and more.',
+                body: 'Whatever your team does on repeat — ticket routing, email drafts, approval flows, data entry — we build the agent that handles it for your exact workflow.',
                 stack: 'Claude API · LangChain · n8n',
-              },
-              {
-                icon: (
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <ellipse cx="10" cy="7" rx="7" ry="4" stroke="#4B7FFF" strokeWidth="1.5"/>
-                    <path d="M3 7v6c0 2.2 3.1 4 7 4s7-1.8 7-4V7" stroke="#4B7FFF" strokeWidth="1.5"/>
-                  </svg>
-                ),
-                title: 'RAG Knowledge Systems',
-                body: 'Searchable AI over your internal docs, SOPs, support history, and knowledge base, so your team and customers always find the right answer.',
-                stack: 'pgvector · Claude API · Supabase',
-              },
-              {
-                icon: (
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <rect x="2" y="5" width="5" height="4" rx="1.5" stroke="#4B7FFF" strokeWidth="1.5"/>
-                    <rect x="13" y="5" width="5" height="4" rx="1.5" stroke="#4B7FFF" strokeWidth="1.5"/>
-                    <rect x="7.5" y="11" width="5" height="4" rx="1.5" stroke="#4B7FFF" strokeWidth="1.5"/>
-                    <path d="M7 7h1M12 7h1M10 11V9M7 9H13" stroke="#4B7FFF" strokeWidth="1.5" strokeLinecap="round"/>
-                  </svg>
-                ),
-                title: 'Workflow Automation',
-                body: 'Connect your entire stack and eliminate the repetitive work between tools, from CRM handoffs to onboarding sequences to reporting pipelines.',
-                stack: 'n8n · Make.com · Zapier',
-              },
-              {
-                icon: (
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <rect x="2" y="2" width="7" height="7" rx="1.5" stroke="#4B7FFF" strokeWidth="1.5"/>
-                    <rect x="11" y="2" width="7" height="7" rx="1.5" stroke="#4B7FFF" strokeWidth="1.5"/>
-                    <rect x="2" y="11" width="7" height="7" rx="1.5" stroke="#4B7FFF" strokeWidth="1.5"/>
-                    <rect x="11" y="11" width="7" height="7" rx="1.5" stroke="#4B7FFF" strokeWidth="1.5"/>
-                  </svg>
-                ),
-                title: 'OpenClaw Deployment',
-                body: "We install, configure, and verticalize OpenClaw for your organization: a 24/7 AI assistant your team can message via Slack, WhatsApp, Telegram, or Discord, with custom skills built for your workflows.",
-                stack: 'OpenClaw · Claude API · n8n',
               },
             ].map((cap) => (
               <div key={cap.title} className="border rounded-2xl p-7 card-hover" style={{ background: '#162035', borderColor: '#1E2D47' }}>
@@ -300,18 +345,18 @@ export default function Home() {
             <div>
               <p className="font-semibold text-sm uppercase tracking-widest mb-3" style={{ color: '#4B7FFF' }}>Who this is for</p>
               <h2 className="text-3xl md:text-4xl font-black tracking-tight mb-6" style={{ color: '#DCE3EF' }}>
-                Built for B2B software companies that need it built, not advised.
+                Built for businesses whose teams are too good to spend their day on repeat work.
               </h2>
               <p className="leading-relaxed mb-8" style={{ color: '#8892A4' }}>
-                You have a product, a team, operational bottlenecks, and a few AI subscriptions that aren&apos;t talking to each other. You need someone who ships.
+                You have a team, real workflows, and a sense that too many hours are going to work that should be automatic. You don&apos;t want a consultant with a deck. You want it built and running.
               </p>
 
               <div className="space-y-3 mb-8">
                 {[
-                  'B2B SaaS or software company, 15–300 employees',
-                  'Real operational bottlenecks eating hours every week',
-                  'Budget for operations tooling ($10K–$200K/yr)',
-                  'Leadership ready to move from evaluation to execution',
+                  'A team spending real hours on repetitive, manual work',
+                  'Clear operational bottlenecks you already know exist',
+                  'Budget to fix it properly, not just patch it',
+                  'Leadership ready to move — not just evaluate',
                 ].map(item => (
                   <div key={item} className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: 'rgba(75,127,255,0.2)' }}>
@@ -325,7 +370,7 @@ export default function Home() {
               </div>
 
               <div className="border rounded-xl p-4 text-sm" style={{ background: '#162035', borderColor: '#1E2D47', color: '#8892A4' }}>
-                <strong style={{ color: '#4A5568' }}>Not a fit:</strong> Enterprise companies that need a 12-month SOW, or solo founders who need a Zapier tutorial. We work best with operators ready to build.
+                <strong style={{ color: '#4A5568' }}>Not a fit:</strong> Enterprises that need an 18-month engagement, or anyone looking for someone to hand them a playbook and walk away. We build it, we hand it off running — you just use it.
               </div>
             </div>
 
@@ -359,10 +404,10 @@ export default function Home() {
           </div>
 
           <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-4" style={{ color: '#DCE3EF' }}>
-            Find out where AI will multiply your operations.
+            Find out where your team is losing the most time — and what to do about it.
           </h2>
           <p className="text-lg leading-relaxed mb-10" style={{ color: '#8892A4' }}>
-            Answer 10 questions. Get a personalized AI readiness score, a breakdown of your highest-impact opportunities, and a clear next step.
+            Answer 10 questions. Get a personalized score, a breakdown of where hours are leaking, and a clear first step — in under 5 minutes.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
@@ -391,12 +436,12 @@ export default function Home() {
               <p className="font-semibold text-sm uppercase tracking-widest mb-4" style={{ color: '#4B7FFF' }}>Ready to get started?</p>
               <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-4" style={{ color: '#DCE3EF' }}>Book your AI Operations Audit</h2>
               <p className="text-lg leading-relaxed max-w-xl mx-auto mb-10" style={{ color: '#8892A4' }}>
-                A 3-week structured engagement: intake questionnaire, 4–6 stakeholder discovery sessions across your key business functions, a full opportunity analysis, and an 8-page roadmap with live walkthrough. Flat fee: $2,500.
+                A 3-week engagement. We map your workflows, find where the hours are going, and hand you a prioritized build plan with cost estimates and timelines. Then we walk through it live. Flat fee: $2,500.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10 text-sm">
                 {[
-                  { title: 'Discovery Sessions', desc: '4–6 interviews across leadership, product, CS, and sales' },
+                  { title: 'Workflow Mapping', desc: '3–4 conversations with your team to find exactly where time is bleeding out' },
                   { title: '8-Page Roadmap', desc: 'Workflows mapped, ROI quantified, priorities ranked' },
                   { title: 'Live Walkthrough', desc: 'We present the roadmap and answer every question' },
                 ].map(item => (
@@ -410,7 +455,7 @@ export default function Home() {
               <div className="rounded-2xl overflow-hidden">
                 <CalEmbed />
               </div>
-              <p className="text-sm mt-4" style={{ color: '#4A5568' }}>Flat fee $2,500. Typically scheduled within 5 business days.</p>
+              <p className="text-sm mt-4" style={{ color: '#4A5568' }}>Flat fee $2,500. First session typically within 5 business days.</p>
             </div>
           </div>
         </div>
