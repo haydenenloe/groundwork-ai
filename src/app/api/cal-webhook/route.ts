@@ -268,6 +268,32 @@ export async function POST(req: NextRequest) {
       }
 
       await createNotionLead({ name, email, company, website, startTime, enriched })
+
+      // Schedule meeting prep brief 1 hour before the meeting
+      const meetingTime = new Date(startTime).getTime()
+      const prepTime = meetingTime - 60 * 60 * 1000 // 1hr before
+      if (prepTime > Date.now()) {
+        const prepSummary = enriched ? `Company: ${company}. ${enriched.summary || ''} AI opportunity: ${enriched.ai_opportunity || 'Not analyzed'}. Call prep tips: ${(enriched.call_prep_tips || []).join('; ')}` : `Company: ${company}. No website provided — research manually before the call.`
+        await fetch('https://api.openclaw.ai/v1/cron/jobs', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${process.env.OPENCLAW_GATEWAY_TOKEN}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: `Meeting Prep: ${company}`,
+            schedule: { kind: 'at', at: new Date(prepTime).toISOString() },
+            sessionTarget: 'isolated',
+            payload: {
+              kind: 'agentTurn',
+              model: 'anthropic/claude-haiku-4-5',
+              timeoutSeconds: 60,
+              message: `Post a meeting prep brief to Discord #groundwork-ai (channel 1486415426757070889) for Hayden's upcoming call in 1 hour.\n\nMeeting: ${company}\nContact: ${name} (${email})\nMeeting time: ${new Date(startTime).toLocaleString('en-US', { timeZone: 'America/Denver', dateStyle: 'full', timeStyle: 'short' })} MT\n\n${prepSummary}\n\nFormat:\n**📞 Meeting in 1 hour: ${company}**\nWith: ${name} (${email})\n\n**Company:** [2-3 sentence overview]\n**AI Opportunity:** [what you researched]\n**3 talking points:**\n1. ...\n2. ...\n3. ...\n\nPost using the message tool with channel=discord, target=1486415426757070889.`,
+            },
+            delivery: { mode: 'announce', channel: 'discord', to: '1486415426757070889' },
+          }),
+        }).catch(e => console.error('Failed to schedule meeting prep:', e.message))
+      }
     } catch (err: any) {
       console.error('cal-webhook enrichment error:', err.message)
     }
