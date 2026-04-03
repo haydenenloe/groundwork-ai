@@ -13,12 +13,13 @@ export default function Home() {
 
         <div className="relative max-w-7xl mx-auto px-6 py-32 md:py-40 text-center">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[1.02] mb-8" style={{ color: '#DCE3EF' }}>
-            Stop losing hours to work<br className="hidden md:block" />
+            Stop losing hours to work{' '}
+            <br className="hidden md:block" />
             <span className="grad-text">that should run itself.</span>
           </h1>
 
           <p className="max-w-2xl mx-auto text-xl md:text-2xl leading-relaxed mb-12" style={{ color: '#8892A4' }}>
-            We build AI systems that handle your team&apos;s most repetitive, time-consuming work — so they can focus on what actually moves the business. Done for you. Running in weeks.
+            We build AI systems that handle your team&apos;s most repetitive, time-consuming work so they can focus on what actually moves the business. Done for you. Running in weeks.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
@@ -117,8 +118,8 @@ export default function Home() {
                     <path d="M10 6v4l3 2" stroke="#4B7FFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 ),
-                title: "IT's backlog is 18 months deep",
-                body: "You know where AI could help. Your ops team knows. But the engineering roadmap is full, and this keeps getting bumped in favor of product features.",
+                title: "The roadmap is already full",
+                body: "You know where AI could help. Your ops team knows. But the engineering roadmap is full, and this keeps getting bumped in favor of other priorities.",
               },
             ].map((card) => (
               <div key={card.title} className="border rounded-2xl p-6 card-hover" style={{ background: '#162035', borderColor: '#1E2D47' }}>
@@ -131,12 +132,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-12 rounded-2xl p-8 text-center" style={{ background: 'rgba(75,127,255,0.1)', border: '1px solid rgba(75,127,255,0.2)' }}>
-            <p className="font-semibold text-lg" style={{ color: '#DCE3EF' }}>
-              We&apos;re not a big consulting firm with 40 slides and no execution.<br className="hidden md:block" />
-              We&apos;re a specialized AI operations team that <em>builds the system</em> and hands it to your team running.
-            </p>
-          </div>
+
         </div>
       </section>
 
@@ -178,7 +174,7 @@ export default function Home() {
                 <span className="font-bold" style={{ color: '#DCE3EF' }}>$2,500</span>
               </div>
               <h3 className="font-bold text-lg mb-2" style={{ color: '#DCE3EF' }}>AI Operations Audit</h3>
-              <p className="text-sm leading-relaxed flex-1" style={{ color: '#8892A4' }}>A 3-week engagement: we sit down with your team, map where hours are bleeding out, and hand you a prioritized roadmap with exact timelines and cost estimates — then walk you through it live.</p>
+              <p className="text-sm leading-relaxed flex-1" style={{ color: '#8892A4' }}>A 3-week engagement: we sit down with your team, map where hours are bleeding out, and hand you a prioritized roadmap with exact timelines and cost estimates, then walk you through it live.</p>
               <div className="mt-5 pt-5 border-t text-xs space-y-1.5" style={{ borderColor: '#1E2D47', color: '#4A5568' }}>
                 {['Intake questionnaire','4–6 discovery sessions','Full opportunity analysis','8-page prioritized roadmap','Live walkthrough session'].map(item => (
                   <div key={item} className="flex items-center gap-2"><span style={{ color: '#4B7FFF' }}>→</span> {item}</div>
@@ -261,7 +257,7 @@ export default function Home() {
                   </svg>
                 ),
                 title: 'Client Onboarding',
-                body: 'Intake forms, document collection, kickoff emails, project setup — running automatically from the moment a client signs. No manual handoffs.',
+                body: 'Intake forms, document collection, kickoff emails, project setup, running automatically from the moment a client signs. No manual handoffs.',
                 stack: 'Workflows · Docs · Notifications',
               },
               {
@@ -285,7 +281,7 @@ export default function Home() {
                   </svg>
                 ),
                 title: 'Document Processing',
-                body: 'Contracts, invoices, intake forms, compliance docs — AI reads, extracts, routes, and files them automatically. Manual data entry eliminated.',
+                body: 'Contracts, invoices, intake forms, compliance docs. AI reads, extracts, routes, and files them automatically. Manual data entry eliminated.',
                 stack: 'Claude API · n8n · Airtable',
               },
               {
@@ -296,7 +292,7 @@ export default function Home() {
                   </svg>
                 ),
                 title: 'Internal Knowledge & Search',
-                body: 'Your team shouldn\'t spend 20 minutes hunting for a policy doc or past project. AI search over your internal knowledge, SOPs, and history — answers in seconds.',
+                body: 'Your team shouldn\'t spend 20 minutes hunting for a policy doc or past project. AI search over your internal knowledge, SOPs, and history. Answers in seconds.',
                 stack: 'pgvector · RAG · Supabase',
               },
               {
@@ -307,7 +303,7 @@ export default function Home() {
                   </svg>
                 ),
                 title: 'Custom AI Agents',
-                body: 'Whatever your team does on repeat — ticket routing, email drafts, approval flows, data entry — we build the agent that handles it for your exact workflow.',
+                body: 'Whatever your team does on repeat: ticket routing, email drafts, approval flows, data entry. We build the agent that handles it for your exact workflow.',
                 stack: 'Claude API · LangChain · n8n',
               },
             ].map((cap) => (
@@ -316,8 +312,7 @@ export default function Home() {
                   {cap.icon}
                 </div>
                 <h3 className="font-bold text-lg mb-2" style={{ color: '#DCE3EF' }}>{cap.title}</h3>
-                <p className="text-sm leading-relaxed mb-4" style={{ color: '#8892A4' }}>{cap.body}</p>
-                <div className="text-xs font-mono px-3 py-2 rounded-lg" style={{ background: '#070B14', color: '#4A5568' }}>{cap.stack}</div>
+                <p className="text-sm leading-relaxed" style={{ color: '#8892A4' }}>{cap.body}</p>
               </div>
             ))}
           </div>
@@ -348,7 +343,7 @@ export default function Home() {
                 Built for businesses whose teams are too good to spend their day on repeat work.
               </h2>
               <p className="leading-relaxed mb-8" style={{ color: '#8892A4' }}>
-                You have a team, real workflows, and a sense that too many hours are going to work that should be automatic. You don&apos;t want a consultant with a deck. You want it built and running.
+                You have a team, real workflows, and a sense that too many hours are going to work that should be automatic. You want it built, handed off, and running.
               </p>
 
               <div className="space-y-3 mb-8">
@@ -356,7 +351,7 @@ export default function Home() {
                   'A team spending real hours on repetitive, manual work',
                   'Clear operational bottlenecks you already know exist',
                   'Budget to fix it properly, not just patch it',
-                  'Leadership ready to move — not just evaluate',
+                  'Leadership ready to move, not just evaluate',
                 ].map(item => (
                   <div key={item} className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: 'rgba(75,127,255,0.2)' }}>
@@ -370,7 +365,7 @@ export default function Home() {
               </div>
 
               <div className="border rounded-xl p-4 text-sm" style={{ background: '#162035', borderColor: '#1E2D47', color: '#8892A4' }}>
-                <strong style={{ color: '#4A5568' }}>Not a fit:</strong> Enterprises that need an 18-month engagement, or anyone looking for someone to hand them a playbook and walk away. We build it, we hand it off running — you just use it.
+                <strong style={{ color: '#4A5568' }}>Not a fit:</strong> Enterprises that need an 18-month engagement, or anyone looking for someone to hand them a playbook and walk away. We build it, we hand it off running. You just use it..
               </div>
             </div>
 
@@ -404,10 +399,10 @@ export default function Home() {
           </div>
 
           <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-4" style={{ color: '#DCE3EF' }}>
-            Find out where your team is losing the most time — and what to do about it.
+            Find out where your team is losing the most time, and what to do about it.
           </h2>
           <p className="text-lg leading-relaxed mb-10" style={{ color: '#8892A4' }}>
-            Answer 10 questions. Get a personalized score, a breakdown of where hours are leaking, and a clear first step — in under 5 minutes.
+            Answer 10 questions. Get a personalized score, a breakdown of where hours are leaking, and a clear first step, in under 5 minutes.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
