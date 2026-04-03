@@ -1,6 +1,7 @@
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
-import CalEmbed from '@/components/CalEmbed'
+import ApplyForm from '@/components/ApplyForm'
+import FaqAccordion from '@/components/FaqAccordion'
 
 export default function Home() {
   return (
@@ -131,8 +132,6 @@ export default function Home() {
               </div>
             ))}
           </div>
-
-
         </div>
       </section>
 
@@ -224,8 +223,94 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ========== BEFORE / AFTER ========== */}
+      <section className="py-28 md:py-36" style={{ background: '#0C1525' }}>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <p className="font-semibold text-sm uppercase tracking-widest mb-3" style={{ color: '#4B7FFF' }}>The transformation</p>
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-4" style={{ color: '#DCE3EF' }}>
+              What changes when your team stops doing it manually.
+            </h2>
+            <p className="text-lg max-w-xl mx-auto" style={{ color: '#8892A4' }}>Real workflows. Real time recovered.</p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+            {[
+              {
+                title: 'Lead Follow-Up',
+                before: 'Leads sit for 24-72 hours. Reps manually check the CRM, write follow-ups, update status.',
+                after: 'Every lead gets a response in minutes. CRM updates itself. Reps close deals instead of doing admin.',
+              },
+              {
+                title: 'Client Onboarding',
+                before: 'Someone emails the intake form. Waits. Chases. Copies data into the system by hand.',
+                after: 'Signing a contract triggers everything automatically. Intake collected, project created, kickoff scheduled.',
+              },
+              {
+                title: 'Weekly Reporting',
+                before: 'Someone spends 3-4 hours every Friday pulling numbers and building the deck.',
+                after: 'Report generates and sends itself. Reviewed in 10 minutes instead of built in 4 hours.',
+              },
+              {
+                title: 'Document Processing',
+                before: 'Invoices, contracts, and intake forms reviewed and entered by hand. Errors happen.',
+                after: 'Documents read, extracted, routed, and filed automatically. Team reviews exceptions only.',
+              },
+            ].map((card) => (
+              <div
+                key={card.title}
+                className="rounded-2xl overflow-hidden"
+                style={{ background: '#162035', border: '1px solid #1E2D47' }}
+              >
+                {/* Title row */}
+                <div className="px-6 pt-5 pb-4 text-center border-b" style={{ borderColor: '#1E2D47' }}>
+                  <span
+                    className="text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full"
+                    style={{ background: 'rgba(75,127,255,0.1)', color: '#4B7FFF' }}
+                  >
+                    {card.title}
+                  </span>
+                </div>
+
+                {/* Before / After columns */}
+                <div className="grid grid-cols-2">
+                  {/* Before */}
+                  <div className="px-5 py-5 border-r" style={{ borderColor: '#1E2D47' }}>
+                    <p
+                      className="text-[10px] font-bold uppercase tracking-widest mb-3"
+                      style={{ color: '#4A5568' }}
+                    >
+                      Before
+                    </p>
+                    <p className="text-sm leading-relaxed" style={{ color: '#4A5568' }}>
+                      {card.before}
+                    </p>
+                  </div>
+
+                  {/* After */}
+                  <div
+                    className="px-5 py-5 rounded-r-lg"
+                    style={{ background: 'rgba(75,127,255,0.06)' }}
+                  >
+                    <p
+                      className="text-[10px] font-bold uppercase tracking-widest mb-3"
+                      style={{ color: '#4B7FFF' }}
+                    >
+                      After
+                    </p>
+                    <p className="text-sm leading-relaxed" style={{ color: '#DCE3EF' }}>
+                      {card.after}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ========== CAPABILITIES ========== */}
-      <section id="capabilities" className="py-28 md:py-36" style={{ background: '#0C1525' }}>
+      <section id="capabilities" className="py-28 md:py-36">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <p className="font-semibold text-sm uppercase tracking-widest mb-3" style={{ color: '#4B7FFF' }}>What we take off your plate</p>
@@ -332,7 +417,7 @@ export default function Home() {
       </section>
 
       {/* ========== WHO IT'S FOR + PROCESS ========== */}
-      <section id="process" className="py-28 md:py-36">
+      <section id="process" className="py-28 md:py-36" style={{ background: '#0C1525' }}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
@@ -377,7 +462,7 @@ export default function Home() {
                 { n: '2', title: 'Build', body: "We build the implementation from the audit roadmap. Production system, integrated into your stack, your team trained to use it. Delivered in 4–12 weeks." },
                 { n: '3', title: 'Run', body: "Optional monthly retainer to maintain, monitor, and iterate. As your business grows, the AI layer grows with it, no ripping and replacing." },
               ].map(step => (
-                <div key={step.n} className="flex gap-5 border rounded-2xl p-6 card-hover" style={{ background: '#0C1525', borderColor: '#1E2D47' }}>
+                <div key={step.n} className="flex gap-5 border rounded-2xl p-6 card-hover" style={{ background: '#162035', borderColor: '#1E2D47' }}>
                   <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 font-black text-white text-lg" style={{ background: '#4B7FFF' }}>{step.n}</div>
                   <div>
                     <h3 className="font-bold mb-1" style={{ color: '#DCE3EF' }}>{step.title}</h3>
@@ -390,8 +475,65 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ========== FOUNDER ========== */}
+      <section className="py-28 md:py-36">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+            {/* Left: Text */}
+            <div>
+              <p className="font-semibold text-sm uppercase tracking-widest mb-3" style={{ color: '#4B7FFF' }}>Who builds this</p>
+              <h2 className="text-3xl md:text-4xl font-black tracking-tight mb-6" style={{ color: '#DCE3EF' }}>
+                Built by someone who runs on the same systems.
+              </h2>
+              <p className="leading-relaxed mb-8" style={{ color: '#8892A4' }}>
+                I&apos;m Hayden. I started Groundwork AI because I spent years watching capable teams lose hours every week to work that should have been automatic. I build the systems that fix that — and run my own operation on them. Every workflow we build for clients, I&apos;ve stress-tested on my own business first.
+              </p>
+              <a
+                href="#audit"
+                className="inline-flex items-center gap-2 font-semibold text-sm transition-colors"
+                style={{ color: '#4B7FFF' }}
+              >
+                Work with us →
+              </a>
+            </div>
+
+            {/* Right: Stat boxes */}
+            <div className="space-y-4">
+              {[
+                { stat: '15+ hrs/week', desc: 'Saved on my own operations' },
+                { stat: '2 weeks', desc: 'Average time to first automation live' },
+                { stat: '100%', desc: 'Done for you, not taught to you' },
+              ].map((item) => (
+                <div
+                  key={item.stat}
+                  className="border rounded-2xl p-6 card-hover"
+                  style={{ background: '#162035', borderColor: '#1E2D47' }}
+                >
+                  <p className="text-3xl font-black mb-1" style={{ color: '#4B7FFF' }}>{item.stat}</p>
+                  <p className="text-sm" style={{ color: '#8892A4' }}>{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========== FAQ ========== */}
+      <section className="py-28 md:py-36" style={{ background: '#0C1525' }}>
+        <div className="max-w-3xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <p className="font-semibold text-sm uppercase tracking-widest mb-3" style={{ color: '#4B7FFF' }}>Common questions</p>
+            <h2 className="text-3xl md:text-4xl font-black tracking-tight" style={{ color: '#DCE3EF' }}>
+              Questions worth asking.
+            </h2>
+          </div>
+          <FaqAccordion />
+        </div>
+      </section>
+
       {/* ========== QUIZ CTA ========== */}
-      <section id="quiz" className="py-28 md:py-36 relative overflow-hidden" style={{ background: '#0C1525' }}>
+      <section id="quiz" className="py-28 md:py-36 relative overflow-hidden">
         <div className="absolute inset-0 hero-glow pointer-events-none" />
         <div className="relative max-w-4xl mx-auto px-8 text-center">
           <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold mb-8" style={{ background: 'rgba(75,127,255,0.1)', border: '1px solid rgba(75,127,255,0.2)', color: '#4B7FFF' }}>
@@ -423,7 +565,7 @@ export default function Home() {
       </section>
 
       {/* ========== AUDIT CTA ========== */}
-      <section id="audit" className="py-28 md:py-36">
+      <section id="audit" className="py-28 md:py-36" style={{ background: '#0C1525' }}>
         <div className="max-w-5xl mx-auto px-8">
           <div className="border rounded-3xl p-10 md:p-14 text-center relative overflow-hidden" style={{ background: '#0C1525', borderColor: 'rgba(75,127,255,0.2)' }}>
             <div className="absolute inset-0 hero-glow pointer-events-none opacity-60" />
@@ -447,10 +589,10 @@ export default function Home() {
                 ))}
               </div>
 
-              <div className="rounded-2xl overflow-hidden">
-                <CalEmbed />
+              <div className="max-w-lg mx-auto">
+                <ApplyForm />
               </div>
-              <p className="text-sm mt-4" style={{ color: '#4A5568' }}>Flat fee $2,500. First session typically within 5 business days.</p>
+              <p className="text-sm mt-6" style={{ color: '#4A5568' }}>Flat fee $2,500. First session typically within 5 business days.</p>
             </div>
           </div>
         </div>
