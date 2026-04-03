@@ -5,7 +5,7 @@ import { useState } from 'react'
 const faqs = [
   {
     q: 'Do I need technical staff to work with you?',
-    a: 'No. We handle everything — scoping, building, integrating, and handing off. Your team needs to know how to use it, not build it.',
+    a: 'No. We handle all the technical work: scoping, building, integrating, and deploying. Your team needs to know how to use it, not how to build it. We make sure they do.',
   },
   {
     q: 'How is this different from just using Zapier or Make?',
@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     q: 'What kinds of businesses do you work with?',
-    a: "We've worked with HR tech companies, logistics operations, cybersecurity firms, and more. If your team has workflows they repeat every day, we can automate them. Industry doesn't matter — repetitive work does.",
+    a: "We've worked with HR tech companies, logistics operations, cybersecurity firms, and more. If your team has workflows they repeat every day, we can automate them. Industry doesn't matter. If the work repeats, it can be automated.",
   },
   {
     q: 'How long does an implementation take?',
@@ -21,11 +21,11 @@ const faqs = [
   },
   {
     q: "What if my team resists the change?",
-    a: "We design for adoption, not just function. Your team is trained, the handoff is documented, and we stay on during the transition. Most teams are relieved, not resistant — it means less manual work for them.",
+    a: "We design for adoption, not just function. Your team is trained, the handoff is documented, and we stay on during the transition. Most teams are relieved, not resistant. It means less manual work for them.",
   },
   {
     q: 'What exactly does the $2,500 audit include?',
-    a: "Three weeks of workflow discovery — usually 3-4 conversations with your team — followed by an 8-page prioritized roadmap with cost estimates, timelines, and a live walkthrough. It's a standalone deliverable with no obligation to continue.",
+    a: "Three weeks of workflow discovery, usually 3-4 conversations with your team, followed by an 8-page prioritized roadmap with cost estimates, timelines, and a live walkthrough. It's a standalone deliverable with no obligation to continue.",
   },
 ]
 

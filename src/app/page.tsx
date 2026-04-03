@@ -20,7 +20,7 @@ export default function Home() {
           </h1>
 
           <p className="max-w-2xl mx-auto text-xl md:text-2xl leading-relaxed mb-12" style={{ color: '#8892A4' }}>
-            We build AI systems that handle your team&apos;s most repetitive, time-consuming work so they can focus on what actually moves the business. Done for you. Running in weeks.
+            We build AI systems that handle your team&apos;s most repetitive, time-consuming work so they can focus on what actually moves the business. You focus on the work. We handle the systems running it.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
@@ -46,7 +46,7 @@ export default function Home() {
                 <circle cx="8" cy="8" r="7" stroke="#4B7FFF" strokeWidth="1.5"/>
                 <path d="M5 8l2 2 4-4" stroke="#4B7FFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-              <span>Done for you, not handed off for you to figure out</span>
+              <span>You focus on your business. We handle the systems running it.</span>
             </div>
             <div className="flex items-center gap-2">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -191,7 +191,7 @@ export default function Home() {
                 <span className="text-sm font-medium" style={{ color: '#8892A4' }}>$15K–$75K</span>
               </div>
               <h3 className="font-bold text-lg mb-2" style={{ color: '#DCE3EF' }}>Implementation</h3>
-              <p className="text-sm leading-relaxed flex-1" style={{ color: '#8892A4' }}>We build the AI systems identified in your audit: production-grade, handed off working and integrated into your existing stack.</p>
+              <p className="text-sm leading-relaxed flex-1" style={{ color: '#8892A4' }}>We build the AI systems identified in your audit: production-grade, integrated into your existing stack, and handed off with your team trained to use them.</p>
               <div className="mt-5 pt-5 border-t text-xs space-y-1.5" style={{ borderColor: '#1E2D47', color: '#4A5568' }}>
                 {['OpenClaw business deployment','Voice AI & call automation','Document processing','Custom AI agents','RAG knowledge systems','Workflow automation'].map(item => (
                   <div key={item} className="flex items-center gap-2"><span style={{ color: '#4B7FFF' }}>→</span> {item}</div>
@@ -317,7 +317,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-4" style={{ color: '#DCE3EF' }}>
               Work that runs itself, without your team touching it.
             </h2>
-            <p className="text-lg max-w-xl mx-auto" style={{ color: '#8892A4' }}>Every business has workflows eating hours it shouldn&apos;t. We find them, automate them, and hand them back running.</p>
+            <p className="text-lg max-w-xl mx-auto" style={{ color: '#8892A4' }}>Every business has workflows eating hours it shouldn&apos;t. We find them, build the systems that handle them, and make sure your team is using them.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -428,7 +428,7 @@ export default function Home() {
                 Built for businesses whose teams are too good to spend their day on repeat work.
               </h2>
               <p className="leading-relaxed mb-8" style={{ color: '#8892A4' }}>
-                You have a team, real workflows, and a sense that too many hours are going to work that should be automatic. You want it built, handed off, and running.
+                You have a team, real workflows, and a sense that too many hours are going to work that should be automatic. You want it built, deployed, and your team using it.
               </p>
 
               <div className="space-y-3 mb-8">
@@ -450,7 +450,7 @@ export default function Home() {
               </div>
 
               <div className="border rounded-xl p-4 text-sm" style={{ background: '#162035', borderColor: '#1E2D47', color: '#8892A4' }}>
-                <strong style={{ color: '#4A5568' }}>Not a fit:</strong> Enterprises that need an 18-month engagement, or anyone looking for someone to hand them a playbook and walk away. We build it, we hand it off running. You just use it..
+                <strong style={{ color: '#4A5568' }}>Not a fit:</strong> Enterprises that need an 18-month engagement, or anyone looking for someone to hand them a playbook and walk away. We build it, deploy it, and make sure your team is using it. What we don&apos;t do is hand you a playbook and disappear.
               </div>
             </div>
 
@@ -487,7 +487,7 @@ export default function Home() {
                 Built by someone who runs on the same systems.
               </h2>
               <p className="leading-relaxed mb-8" style={{ color: '#8892A4' }}>
-                I&apos;m Hayden. I started Groundwork AI because I spent years watching capable teams lose hours every week to work that should have been automatic. I build the systems that fix that — and run my own operation on them. Every workflow we build for clients, I&apos;ve stress-tested on my own business first.
+                I&apos;m Hayden. I started Groundwork AI because I spent years watching capable teams lose hours every week to work that should have been automatic. I build the systems that fix that, and run my own operation on them. Every workflow we build for clients, I&apos;ve stress-tested on my own business first.
               </p>
               <a
                 href="#audit"
@@ -503,7 +503,7 @@ export default function Home() {
               {[
                 { stat: '15+ hrs/week', desc: 'Saved on my own operations' },
                 { stat: '2 weeks', desc: 'Average time to first automation live' },
-                { stat: '100%', desc: 'Done for you, not taught to you' },
+                { stat: '100%', desc: 'Built, deployed, and your team trained to use it' },
               ].map((item) => (
                 <div
                   key={item.stat}
