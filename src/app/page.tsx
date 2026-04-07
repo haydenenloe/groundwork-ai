@@ -135,6 +135,111 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ========== SERVICES / PRICING ========== */}
+      <section id="pricing" className="py-28 md:py-36">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <p className="font-semibold text-sm uppercase tracking-widest mb-3" style={{ color: '#4B7FFF' }}>Services</p>
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-4" style={{ color: '#DCE3EF' }}>
+              A clear path from insight to automation.
+            </h2>
+            <p className="text-lg max-w-xl mx-auto" style={{ color: '#8892A4' }}>Every engagement delivers standalone value. Start where it makes sense for your team.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {/* Card 1: AI Operations Snapshot */}
+            <div className="border rounded-2xl p-7 card-hover flex flex-col" style={{ background: '#162035', borderColor: '#1E2D47' }}>
+              <div className="flex items-start justify-between mb-4">
+                <span className="font-bold text-xs px-3 py-1 rounded-full" style={{ background: 'rgba(75,127,255,0.1)', color: '#4B7FFF' }}>AUTOMATED</span>
+                <span className="font-bold text-lg" style={{ color: '#DCE3EF' }}>$500</span>
+              </div>
+              <h3 className="font-bold text-xl mb-2" style={{ color: '#DCE3EF' }}>AI Operations Snapshot</h3>
+              <p className="text-sm leading-relaxed mb-5" style={{ color: '#8892A4' }}>Upload your SOPs and process docs. AI identifies your top automation opportunities ranked by impact and ROI, delivered in 24 hours.</p>
+              <div className="mt-auto pt-5 border-t text-xs space-y-2" style={{ borderColor: '#1E2D47', color: '#4A5568' }}>
+                {[
+                  'Automated, delivered in 24 hours',
+                  'Upload SOPs and process docs',
+                  'Top opportunities ranked by impact and ROI',
+                ].map(item => (
+                  <div key={item} className="flex items-start gap-2">
+                    <span className="flex-shrink-0 mt-0.5" style={{ color: '#4B7FFF' }}>→</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <a
+                href="/tools/sop-analyzer"
+                className="mt-6 block text-center font-semibold text-sm py-3 rounded-lg transition-colors"
+                style={{ background: '#4B7FFF', color: '#fff' }}
+              >
+                Get Your Snapshot →
+              </a>
+            </div>
+
+            {/* Card 2: Full AI Audit */}
+            <div className="border rounded-2xl p-7 card-hover flex flex-col relative overflow-hidden" style={{ background: '#162035', borderColor: 'rgba(75,127,255,0.3)' }}>
+              <div className="absolute top-0 right-0 text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl tracking-widest" style={{ background: '#4B7FFF' }}>MOST POPULAR</div>
+              <div className="flex items-start justify-between mb-4 mt-2">
+                <span className="font-bold text-xs px-3 py-1 rounded-full" style={{ background: 'rgba(75,127,255,0.1)', color: '#4B7FFF' }}>HUMAN-LED</span>
+                <span className="font-bold text-lg" style={{ color: '#DCE3EF' }}>$2,500</span>
+              </div>
+              <h3 className="font-bold text-xl mb-2" style={{ color: '#DCE3EF' }}>Full AI Audit</h3>
+              <p className="text-sm leading-relaxed mb-5" style={{ color: '#8892A4' }}>A 3-week human-led, agent-assisted engagement. Everything in the Snapshot plus exactly how to build it, with a live walkthrough.</p>
+              <div className="mt-auto pt-5 border-t text-xs space-y-2" style={{ borderColor: '#1E2D47', color: '#4A5568' }}>
+                {[
+                  '3-week human-led, agent-assisted engagement',
+                  '4-6 discovery interviews across key functions',
+                  'Full AI Operations Roadmap (7+ pages) with live walkthrough',
+                  'Everything in the Snapshot plus exactly how to build it',
+                ].map(item => (
+                  <div key={item} className="flex items-start gap-2">
+                    <span className="flex-shrink-0 mt-0.5" style={{ color: '#4B7FFF' }}>→</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <a
+                href="#audit"
+                className="mt-6 block text-center font-semibold text-sm py-3 rounded-lg transition-colors"
+                style={{ background: '#4B7FFF', color: '#fff' }}
+              >
+                Book an Audit →
+              </a>
+            </div>
+
+            {/* Card 3: AI Agent Retainer */}
+            <div className="border rounded-2xl p-7 card-hover flex flex-col" style={{ background: '#162035', borderColor: '#1E2D47' }}>
+              <div className="flex items-start justify-between mb-4">
+                <span className="font-bold text-xs px-3 py-1 rounded-full" style={{ background: 'rgba(75,127,255,0.1)', color: '#4B7FFF' }}>ONGOING</span>
+                <span className="font-bold text-lg" style={{ color: '#DCE3EF' }}>$2K–$4K/mo</span>
+              </div>
+              <h3 className="font-bold text-xl mb-2" style={{ color: '#DCE3EF' }}>AI Agent Retainer</h3>
+              <p className="text-sm leading-relaxed mb-5" style={{ color: '#8892A4' }}>No large upfront project cost. Month 1 we build your first AI agent. From there, we maintain, expand, and improve your agent stack as your business grows.</p>
+              <div className="mt-auto pt-5 border-t text-xs space-y-2" style={{ borderColor: '#1E2D47', color: '#4A5568' }}>
+                {[
+                  'No large upfront project cost',
+                  'Month 1: build your first AI agent',
+                  'Ongoing: maintain, expand, and improve your agent stack',
+                  'Cancel anytime',
+                ].map(item => (
+                  <div key={item} className="flex items-start gap-2">
+                    <span className="flex-shrink-0 mt-0.5" style={{ color: '#4B7FFF' }}>→</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <a
+                href="#audit"
+                className="mt-6 block text-center font-semibold text-sm py-3 rounded-lg transition-colors border"
+                style={{ borderColor: '#4B7FFF', color: '#4B7FFF' }}
+              >
+                Talk to Us →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ========== SERVICE LADDER ========== */}
       <section id="services" className="py-28 md:py-36">
         <div className="max-w-7xl mx-auto px-6">
