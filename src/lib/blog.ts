@@ -9,6 +9,14 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'ai-agents-fragmented',
+    title: 'Your AI Agents Are Fragmented. Here\'s Why They\'re Underdelivering.',
+    date: '2026-05-05',
+    summary: 'Nearly half of enterprises are already running AI agents. Most are falling short — not because the technology is bad, but because the deployment is. Here\'s what\'s actually going wrong.',
+    readTime: '6 min read',
+    tags: ['AI Operations', 'Automation'],
+  },
+  {
     slug: 'why-ai-projects-fail',
     title: 'Why 40% of AI Projects Fail — And How to Not Be One of Them',
     date: '2026-04-21',
