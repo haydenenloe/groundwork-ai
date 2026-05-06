@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
 import Logo from './Logo'
 
 export default function Nav() {
@@ -30,25 +29,21 @@ export default function Nav() {
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium" style={{ color: '#8892A4' }}>
-          <a href="/#services" className="hover:text-body transition-colors">Services</a>
-          <a href="/#capabilities" className="hover:text-body transition-colors">What We Build</a>
-          <a href="/#process" className="hover:text-body transition-colors">Process</a>
-          <a href="/#quiz" className="hover:text-body transition-colors">Readiness Quiz</a>
+          <a href="/#how-it-works" className="hover:text-body transition-colors">How It Works</a>
+          <a href="/#pricing" className="hover:text-body transition-colors">Pricing</a>
+          <a href="/blog" className="hover:text-body transition-colors">Blog</a>
         </div>
 
         {/* CTA */}
         <div className="hidden md:flex items-center gap-3">
-          <a href="/#quiz" className="text-sm font-medium transition-colors px-4 py-2" style={{ color: '#8892A4' }}>
-            Take the Quiz
-          </a>
           <a
-            href="/#audit"
+            href="/#book"
             className="text-white font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors"
             style={{ background: '#4B7FFF' }}
             onMouseEnter={e => (e.currentTarget.style.background = '#7AA3FF')}
             onMouseLeave={e => (e.currentTarget.style.background = '#4B7FFF')}
           >
-            Book an Audit
+            Book a Discovery Call
           </a>
         </div>
 
@@ -70,17 +65,16 @@ export default function Nav() {
       {/* Mobile menu */}
       {menuOpen && (
         <div className="md:hidden border-t px-6 py-4 space-y-3 text-sm font-medium" style={{ background: '#0C1525', borderColor: '#1E2D47', color: '#8892A4' }}>
-          <a href="/#services" className="block py-1 hover:text-body" onClick={() => setMenuOpen(false)}>Services</a>
-          <a href="/#capabilities" className="block py-1 hover:text-body" onClick={() => setMenuOpen(false)}>What We Build</a>
-          <a href="/#process" className="block py-1 hover:text-body" onClick={() => setMenuOpen(false)}>Process</a>
-          <a href="/#quiz" className="block py-1 hover:text-body" onClick={() => setMenuOpen(false)}>Readiness Quiz</a>
+          <a href="/#how-it-works" className="block py-1 hover:text-body" onClick={() => setMenuOpen(false)}>How It Works</a>
+          <a href="/#pricing" className="block py-1 hover:text-body" onClick={() => setMenuOpen(false)}>Pricing</a>
+          <a href="/blog" className="block py-1 hover:text-body" onClick={() => setMenuOpen(false)}>Blog</a>
           <a
-            href="/#audit"
+            href="/#book"
             className="block mt-3 text-white font-semibold px-5 py-3 rounded-lg text-center"
             style={{ background: '#4B7FFF' }}
             onClick={() => setMenuOpen(false)}
           >
-            Book an Audit
+            Book a Discovery Call
           </a>
         </div>
       )}
