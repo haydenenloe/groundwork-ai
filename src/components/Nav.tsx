@@ -29,9 +29,11 @@ export default function Nav() {
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium" style={{ color: '#8892A4' }}>
-          <a href="/#how-it-works" className="hover:text-body transition-colors">How It Works</a>
+          <a href="/#services" className="hover:text-body transition-colors">How We Work</a>
+          <a href="/#audit" className="hover:text-body transition-colors">The Audit</a>
+          <a href="/#retainer" className="hover:text-body transition-colors">The Retainer</a>
           <a href="/#pricing" className="hover:text-body transition-colors">Pricing</a>
-          <a href="/blog" className="hover:text-body transition-colors">Blog</a>
+          <a href="/quiz" className="hover:text-body transition-colors" style={{ color: '#4B7FFF', opacity: 0.8 }}>Free Assessment</a>
         </div>
 
         {/* CTA */}
@@ -65,9 +67,11 @@ export default function Nav() {
       {/* Mobile menu */}
       {menuOpen && (
         <div className="md:hidden border-t px-6 py-4 space-y-3 text-sm font-medium" style={{ background: '#0C1525', borderColor: '#1E2D47', color: '#8892A4' }}>
-          <a href="/#how-it-works" className="block py-1 hover:text-body" onClick={() => setMenuOpen(false)}>How It Works</a>
+          <a href="/#services" className="block py-1 hover:text-body" onClick={() => setMenuOpen(false)}>How We Work</a>
+          <a href="/#audit" className="block py-1 hover:text-body" onClick={() => setMenuOpen(false)}>The Audit</a>
+          <a href="/#retainer" className="block py-1 hover:text-body" onClick={() => setMenuOpen(false)}>The Retainer</a>
           <a href="/#pricing" className="block py-1 hover:text-body" onClick={() => setMenuOpen(false)}>Pricing</a>
-          <a href="/blog" className="block py-1 hover:text-body" onClick={() => setMenuOpen(false)}>Blog</a>
+          <a href="/quiz" className="block py-1 hover:text-body" style={{ color: '#4B7FFF' }} onClick={() => setMenuOpen(false)}>Free Assessment</a>
           <a
             href="/#book"
             className="block mt-3 text-white font-semibold px-5 py-3 rounded-lg text-center"

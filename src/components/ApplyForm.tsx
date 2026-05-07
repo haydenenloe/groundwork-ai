@@ -159,7 +159,7 @@ export default function ApplyForm() {
           cursor: state === 'loading' ? 'not-allowed' : 'pointer',
         }}
       >
-        {state === 'loading' ? 'Sending...' : 'Request an Audit →'}
+        {state === 'loading' ? 'Sending...' : 'Book a Discovery Call →'}
       </button>
 
       <style jsx>{`

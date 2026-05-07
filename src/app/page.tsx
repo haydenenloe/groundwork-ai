@@ -105,39 +105,227 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ========== 3. MONTHLY OPERATING SYSTEM ========== */}
-      <section id="how-it-works" className="py-28 md:py-36">
+      {/* ========== ASSESSMENT (TOP) ========== */}
+      <section className="py-24 md:py-32">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: '#4B7FFF' }}>Not sure where to start</p>
+          <h2 className="text-3xl md:text-4xl font-black tracking-tight mb-5" style={{ color: '#DCE3EF' }}>
+            Find out where AI will have the highest ROI in your business.
+          </h2>
+          <p className="text-lg leading-relaxed mb-10" style={{ color: '#8892A4' }}>
+            The free AI Readiness Assessment scores your operations across ten dimensions and tells you exactly where to focus first. Takes five minutes.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-5">
+            <a
+              href="/quiz"
+              className="inline-block text-white font-bold text-base px-8 py-4 rounded-xl transition-colors"
+              style={{ background: '#4B7FFF', boxShadow: '0 10px 15px -3px rgba(75,127,255,0.2)' }}
+            >
+              Take the Free Assessment
+            </a>
+            <a
+              href="#book"
+              className="inline-block font-bold text-base px-8 py-4 rounded-xl border transition-colors"
+              style={{ borderColor: '#4B7FFF', color: '#4B7FFF' }}
+            >
+              Book a Discovery Call
+            </a>
+          </div>
+          <p className="text-sm" style={{ color: '#4A5568' }}>Already know what you want to automate? Skip the assessment and book a call directly.</p>
+        </div>
+      </section>
+
+      {/* ========== 3. HOW WE WORK ========== */}
+      <section id="services" className="py-28 md:py-36">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: '#4B7FFF' }}>How it works</p>
+            <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: '#4B7FFF' }}>How we work</p>
             <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-4" style={{ color: '#DCE3EF' }}>
-              A monthly cadence that runs whether<br className="hidden md:block" /> you think about it or not.
+              Three ways to work with us.
             </h2>
             <p className="text-lg max-w-2xl mx-auto" style={{ color: '#8892A4' }}>
-              No ambiguity. No wondering what we are doing this month. Every client runs on the same four-week operating system.
+              Every engagement is different. Choose the path that matches where you are.
             </p>
           </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            {/* Card 1: The Audit */}
+            <div
+              className="border rounded-2xl p-8 flex flex-col gap-4 card-hover"
+              style={{ background: '#162035', borderColor: '#1E2D47' }}
+            >
+              <h3 className="font-black text-xl" style={{ color: '#DCE3EF' }}>The Audit</h3>
+              <p className="text-sm leading-relaxed flex-1" style={{ color: '#8892A4' }}>
+                You are not sure where AI fits in your business. We spend two weeks with your team, map your operations, and hand you a prioritized roadmap with ROI estimates for every opportunity we find.
+              </p>
+              <a
+                href="#audit"
+                className="flex items-center gap-1.5 text-sm font-semibold transition-opacity hover:opacity-70"
+                style={{ color: '#4B7FFF' }}
+              >
+                See what the audit delivers <ArrowRight size={14} />
+              </a>
+            </div>
+
+            {/* Card 2: Standalone Build */}
+            <div
+              className="border rounded-2xl p-8 flex flex-col gap-4 card-hover"
+              style={{ background: '#162035', borderColor: '#1E2D47' }}
+            >
+              <h3 className="font-black text-xl" style={{ color: '#DCE3EF' }}>Standalone Build</h3>
+              <p className="text-sm leading-relaxed flex-1" style={{ color: '#8892A4' }}>
+                You already know what you want automated. We scope it, build it, integrate it into your existing tools, and train your team to use it. Fixed price. You own it when it is done.
+              </p>
+              <a
+                href="#book"
+                className="flex items-center gap-1.5 text-sm font-semibold transition-opacity hover:opacity-70"
+                style={{ color: '#4B7FFF' }}
+              >
+                Get a quote <ArrowRight size={14} />
+              </a>
+            </div>
+
+            {/* Card 3: Monthly Retainer */}
+            <div
+              className="border rounded-2xl p-8 flex flex-col gap-4 card-hover"
+              style={{ background: '#162035', borderColor: '#1E2D47' }}
+            >
+              <h3 className="font-black text-xl" style={{ color: '#DCE3EF' }}>Monthly Retainer</h3>
+              <p className="text-sm leading-relaxed flex-1" style={{ color: '#8892A4' }}>
+                You want an embedded AI operations team. New automations every month, maintenance, team training, and strategic advisory. One flat monthly fee. Cancel anytime.
+              </p>
+              <a
+                href="#retainer"
+                className="flex items-center gap-1.5 text-sm font-semibold transition-opacity hover:opacity-70"
+                style={{ color: '#4B7FFF' }}
+              >
+                See how the retainer works <ArrowRight size={14} />
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ========== 4. THE AUDIT ========== */}
+      <section id="audit" className="py-28 md:py-36" style={{ background: '#0C1525' }}>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: '#4B7FFF' }}>The audit</p>
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-4" style={{ color: '#DCE3EF' }}>
+              Find exactly where AI fits in your business.
+            </h2>
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#8892A4' }}>
+              For companies that want to identify the right problem before they start building. Two weeks of structured discovery with a clear deliverable at the end.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+            {/* Left column: How it works */}
+            <div>
+              <h4 className="font-black text-lg mb-8" style={{ color: '#DCE3EF' }}>How it works</h4>
+              <div className="flex flex-col gap-8">
+                {[
+                  {
+                    num: '1',
+                    body: 'We schedule two to four discovery conversations with key people on your team. Operations, finance, sales, whoever owns the workflows that take the most time.',
+                  },
+                  {
+                    num: '2',
+                    body: 'We listen for patterns. Where is time going? What breaks repeatedly? What does the team wish ran automatically? We are looking for the highest-leverage place to start.',
+                  },
+                  {
+                    num: '3',
+                    body: 'We synthesize everything. Every opportunity ranked by impact, effort, and ROI. The most important ones get full build specifications.',
+                  },
+                  {
+                    num: '4',
+                    body: 'We deliver your AI Operations Roadmap and walk through it live. You leave knowing exactly what to build, in what order, and what each one is worth.',
+                  },
+                ].map((step) => (
+                  <div key={step.num} className="flex gap-5">
+                    <div
+                      className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-black text-sm"
+                      style={{ background: 'rgba(75,127,255,0.12)', color: '#4B7FFF' }}
+                    >
+                      {step.num}
+                    </div>
+                    <p className="text-sm leading-relaxed pt-1" style={{ color: '#8892A4' }}>{step.body}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right column: What you receive */}
+            <div>
+              <h4 className="font-black text-lg mb-8" style={{ color: '#DCE3EF' }}>What you receive</h4>
+              <div
+                className="border rounded-2xl p-8 mb-6"
+                style={{ background: '#162035', borderColor: 'rgba(75,127,255,0.3)' }}
+              >
+                <div className="flex flex-col gap-3">
+                  {[
+                    'Full AI Operations Roadmap (written, not a slide deck)',
+                    'Every opportunity ranked by impact and ROI',
+                    'Build specifications for the top three initiatives',
+                    'Cost and timeline estimates for each',
+                    'A clear recommendation on where to start',
+                    '60-minute live walkthrough session with Q&A',
+                  ].map((item) => (
+                    <div key={item} className="flex items-start gap-3 text-sm" style={{ color: '#DCE3EF' }}>
+                      <span className="mt-0.5 flex-shrink-0" style={{ color: '#4B7FFF' }}>
+                        <ArrowRight size={14} />
+                      </span>
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <p className="text-sm leading-relaxed" style={{ color: '#8892A4' }}>
+                If you move forward to a build or retainer after the audit, the $2,500 applies toward your first month.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ========== 5. THE RETAINER ========== */}
+      <section id="retainer" className="py-28 md:py-36">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: '#4B7FFF' }}>The retainer</p>
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-4" style={{ color: '#DCE3EF' }}>
+              Your AI operations, running every month.
+            </h2>
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#8892A4' }}>
+              An embedded team that builds, maintains, trains, and reports. Every month. No wondering what we are doing. No drift.
+            </p>
+          </div>
+
+          {/* Four-week cadence cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
             {[
               {
                 week: 'Week 1',
                 title: 'Review',
-                body: 'We audit what is running, review performance against baseline, and align on priorities for the month. You know exactly what is working and what is next.',
+                body: 'We audit what is running, review performance against baseline, and align on priorities for the month. You know exactly what is working and what comes next.',
               },
               {
                 week: 'Week 2',
                 title: 'Build',
-                body: 'One or two new automations built and deployed. Integrated into your existing tools. Tested before your team sees it.',
+                body: 'New automations built and deployed. Integrated into your existing tools. Tested before your team sees them.',
               },
               {
                 week: 'Week 3',
                 title: 'Train',
-                body: 'Your team learns the new system. We confirm adoption, gather feedback, and make adjustments. AI that your people actually use.',
+                body: 'Your team learns what is new. We confirm adoption, collect feedback, and make adjustments. AI that your people actually use.',
               },
               {
                 week: 'Week 4',
                 title: 'Report',
-                body: 'Impact measured and delivered. Hours reclaimed, costs avoided, and outcomes documented. Next month pre-planned so there is never a gap.',
+                body: 'Impact measured and delivered. Hours reclaimed, costs avoided, outcomes documented. Next month pre-planned.',
               },
             ].map((item) => (
               <div
@@ -151,130 +339,61 @@ export default function Home() {
               </div>
             ))}
           </div>
+
           {/* Callout */}
           <div
-            className="rounded-2xl p-8 text-center border max-w-3xl mx-auto"
+            className="rounded-2xl p-8 text-center border mb-12"
             style={{ background: 'rgba(75,127,255,0.06)', borderColor: 'rgba(75,127,255,0.25)' }}
           >
             <p className="text-base md:text-lg leading-relaxed" style={{ color: '#DCE3EF' }}>
-              This runs every month. The systems compound. What starts as one automation in month one becomes an operations layer by month six.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ========== 4. THE 90-DAY ROADMAP ========== */}
-      <section id="roadmap" className="py-28 md:py-36" style={{ background: '#0C1525' }}>
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: '#4B7FFF' }}>The engagement</p>
-            <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-4" style={{ color: '#DCE3EF' }}>
-              You will never wonder what comes next.
-            </h2>
-            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#8892A4' }}>
-              Within two weeks of starting, you have a prioritized 90-day roadmap. Every month after that is execution.
+              Every month builds on the last. What starts as one automation becomes an operations layer. The systems compound.
             </p>
           </div>
 
-          {/* Timeline steps */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
-            {[
-              {
-                step: '01',
-                period: 'Week 1 to 2',
-                title: 'Discovery',
-                body: 'We assess your operations, map your workflows, and identify the six to twelve highest-ROI automation opportunities. Every initiative is ranked by impact, effort, and cost.',
-              },
-              {
-                step: '02',
-                period: 'Week 2',
-                title: 'Roadmap Delivered',
-                body: 'You receive a complete 90-day roadmap. Initiatives prioritized. Departments sequenced. Expected outcomes defined. Quick wins identified. No client should ever be figuring out what is next.',
-              },
-              {
-                step: '03',
-                period: 'Month 1 to 3',
-                title: 'Execution',
-                body: 'The monthly operating system runs against the roadmap. First automation live by day 30. Second by day 60. Full AI operations scorecard delivered at day 90.',
-              },
-              {
-                step: '04',
-                period: 'Quarter 2 and beyond',
-                title: 'Expand',
-                body: 'Roadmap refreshes each quarter. Scope expands as the systems compound. Momentum builds.',
-              },
-            ].map((item) => (
-              <div
-                key={item.step}
-                className="border rounded-2xl p-7 flex flex-col gap-3 card-hover"
-                style={{ background: '#162035', borderColor: '#1E2D47' }}
-              >
-                <div className="flex items-center gap-3">
-                  <span className="font-black text-3xl" style={{ color: 'rgba(75,127,255,0.3)' }}>{item.step}</span>
-                  <span className="text-xs font-bold uppercase tracking-widest" style={{ color: '#4B7FFF' }}>{item.period}</span>
-                </div>
-                <h3 className="font-black text-lg" style={{ color: '#DCE3EF' }}>{item.title}</h3>
-                <p className="text-sm leading-relaxed" style={{ color: '#8892A4' }}>{item.body}</p>
+          {/* Two-column grid: included / doesn't change */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <div>
+              <h4 className="font-black text-lg mb-6" style={{ color: '#DCE3EF' }}>What is included</h4>
+              <div className="flex flex-col gap-3">
+                {[
+                  'Monthly build sprint (one to two new automations)',
+                  'All maintenance and bug fixes',
+                  'Monthly team training session',
+                  'Strategy and advisory',
+                  'Monthly impact report',
+                  'Cancel anytime',
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-3 text-sm" style={{ color: '#DCE3EF' }}>
+                    <span className="mt-0.5 flex-shrink-0" style={{ color: '#4B7FFF' }}>
+                      <ArrowRight size={14} />
+                    </span>
+                    {item}
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-
-          {/* What the roadmap includes */}
-          <div
-            className="border rounded-2xl p-8 max-w-3xl mx-auto"
-            style={{ background: '#162035', borderColor: 'rgba(75,127,255,0.3)' }}
-          >
-            <h4 className="font-black text-lg mb-6" style={{ color: '#DCE3EF' }}>What the roadmap includes</h4>
-            <div className="flex flex-col gap-3">
-              {[
-                '6 to 12 AI initiatives identified and prioritized',
-                'Department activation sequence defined',
-                'Expected outcomes for each phase',
-                'Quick wins identified for early momentum',
-                'Success metrics established before work begins',
-                'Full build specs for month one',
-              ].map((item) => (
-                <div key={item} className="flex items-start gap-3 text-sm" style={{ color: '#DCE3EF' }}>
-                  <span className="mt-0.5 flex-shrink-0" style={{ color: '#4B7FFF' }}>
-                    <ArrowRight size={14} />
-                  </span>
-                  {item}
-                </div>
-              ))}
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* ========== 5. AI READINESS ASSESSMENT ========== */}
-      <section id="assessment" className="py-28 md:py-36">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: '#4B7FFF' }}>Not sure where to start</p>
-          <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-6" style={{ color: '#DCE3EF' }}>
-            Find out where AI will have the highest ROI in your business.
-          </h2>
-          <p className="text-lg leading-relaxed mb-10" style={{ color: '#8892A4' }}>
-            The free AI Readiness Assessment scores your operations across ten dimensions and tells you exactly where to focus first. Takes five minutes. Results are instant.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-            <a
-              href="/quiz"
-              className="inline-block text-white font-bold text-base px-8 py-4 rounded-xl transition-colors"
-              style={{ background: '#4B7FFF', boxShadow: '0 10px 15px -3px rgba(75,127,255,0.2)' }}
-            >
-              Take the Free Assessment
-            </a>
-            <a
-              href="#book"
-              className="inline-block font-bold text-base px-8 py-4 rounded-xl border transition-colors hover:bg-white hover:text-black"
-              style={{ borderColor: '#4B7FFF', color: '#4B7FFF' }}
-            >
-              Book a Discovery Call
-            </a>
+            <div>
+              <h4 className="font-black text-lg mb-6" style={{ color: '#DCE3EF' }}>What does not change</h4>
+              <div className="flex flex-col gap-3">
+                {[
+                  'Flat monthly fee, no surprise invoices',
+                  'Same contact person every month',
+                  'Every system we build, you own',
+                  'If something does not work, we fix it',
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-3 text-sm" style={{ color: '#DCE3EF' }}>
+                    <span className="mt-0.5 flex-shrink-0" style={{ color: '#4B7FFF' }}>
+                      <ArrowRight size={14} />
+                    </span>
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+
           </div>
-          <p className="text-sm" style={{ color: '#4A5568' }}>
-            Already know what you want to automate? Skip the assessment and book a call directly.
-          </p>
         </div>
       </section>
 
@@ -492,6 +611,36 @@ export default function Home() {
               It covers your entire AI operations layer, not one role. And every system we build is guaranteed to work or we keep building until it does.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* ========== ASSESSMENT (BOTTOM) ========== */}
+      <section className="py-24 md:py-32">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: '#4B7FFF' }}>Not sure where to start</p>
+          <h2 className="text-3xl md:text-4xl font-black tracking-tight mb-5" style={{ color: '#DCE3EF' }}>
+            Find out where AI will have the highest ROI in your business.
+          </h2>
+          <p className="text-lg leading-relaxed mb-10" style={{ color: '#8892A4' }}>
+            The free AI Readiness Assessment scores your operations across ten dimensions and tells you exactly where to focus first. Takes five minutes.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-5">
+            <a
+              href="/quiz"
+              className="inline-block text-white font-bold text-base px-8 py-4 rounded-xl transition-colors"
+              style={{ background: '#4B7FFF', boxShadow: '0 10px 15px -3px rgba(75,127,255,0.2)' }}
+            >
+              Take the Free Assessment
+            </a>
+            <a
+              href="#book"
+              className="inline-block font-bold text-base px-8 py-4 rounded-xl border transition-colors"
+              style={{ borderColor: '#4B7FFF', color: '#4B7FFF' }}
+            >
+              Book a Discovery Call
+            </a>
+          </div>
+          <p className="text-sm" style={{ color: '#4A5568' }}>Already know what you want to automate? Skip the assessment and book a call directly.</p>
         </div>
       </section>
 
