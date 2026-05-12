@@ -9,6 +9,14 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'ai-layoffs-dont-work',
+    title: 'Cutting Headcount with AI Isn\'t a Strategy. Here\'s What Actually Works.',
+    date: '2026-05-12',
+    summary: 'A Gartner study found that 80% of companies used AI to cut staff — and none of it correlated to better ROI. Here\'s what the companies actually winning with AI are doing instead.',
+    readTime: '5 min read',
+    tags: ['AI Operations', 'ROI'],
+  },
+  {
     slug: 'ai-agents-fragmented',
     title: 'Your AI Agents Are Fragmented. Here\'s Why They\'re Underdelivering.',
     date: '2026-05-05',
