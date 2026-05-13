@@ -406,7 +406,7 @@ export default function Home() {
               Clear pricing. No surprises.
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
 
             {/* Card 1 — AI Operations Audit */}
             <div
@@ -423,7 +423,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="font-black text-xl mb-2" style={{ color: '#DCE3EF' }}>AI Operations Audit</h3>
-                <p className="font-black text-3xl" style={{ color: '#DCE3EF' }}>$2,500</p>
+                <p className="text-sm" style={{ color: '#8892A4' }}>Priced based on company size</p>
               </div>
               <p className="text-sm leading-relaxed" style={{ color: '#8892A4' }}>
                 For teams that want to find the right problem before they build. Two weeks of discovery, a full prioritized roadmap with ROI estimates, and a live walkthrough session.
@@ -435,6 +435,7 @@ export default function Home() {
                   'Prioritized opportunity matrix',
                   'Full AI Operations Roadmap',
                   'Live walkthrough and Q&A',
+                  'Audit cost applied toward retainer if you continue',
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-2 text-sm" style={{ color: '#DCE3EF' }}>
                     <span className="mt-0.5 flex-shrink-0" style={{ color: '#4B7FFF' }}>
@@ -453,7 +454,7 @@ export default function Home() {
               </a>
             </div>
 
-            {/* Card 2 — Standalone Build (highlighted) */}
+            {/* Card 2 — Monthly Retainer (highlighted) */}
             <div
               className="border rounded-2xl p-8 flex flex-col gap-5 card-hover relative"
               style={{ background: '#162035', borderColor: 'rgba(75,127,255,0.5)', boxShadow: '0 0 40px rgba(75,127,255,0.12)' }}
@@ -471,23 +472,25 @@ export default function Home() {
                   className="text-xs font-bold uppercase tracking-widest px-2 py-1 rounded"
                   style={{ background: 'rgba(75,127,255,0.1)', color: '#4B7FFF' }}
                 >
-                  FIXED PRICE
+                  ONGOING
                 </span>
               </div>
               <div>
-                <h3 className="font-black text-xl mb-2" style={{ color: '#DCE3EF' }}>Standalone Build</h3>
-                <p className="font-black text-3xl" style={{ color: '#DCE3EF' }}>Starting at $5,000</p>
+                <h3 className="font-black text-xl mb-2" style={{ color: '#DCE3EF' }}>Monthly Retainer</h3>
+                <p className="text-sm" style={{ color: '#8892A4' }}>Priced based on scope</p>
               </div>
               <p className="text-sm leading-relaxed" style={{ color: '#8892A4' }}>
-                Already know what you want automated? We scope it, build it, deploy it, and train your team. Fixed price. You own it when it is done.
+                Your embedded AI operations team. New builds, maintenance, team training, and strategic advisory, all included. The audit can be bundled into your first month.
               </p>
               <div className="flex flex-col gap-2 flex-1">
                 {[
-                  'Scoped before any work begins',
-                  'Built into your existing stack',
-                  'Deployed and tested in production',
-                  'Team trained on day one',
-                  '30 days of support included',
+                  'Monthly build sprint included',
+                  'All maintenance and support',
+                  'Team training every month',
+                  'Strategy and advisory',
+                  'Full transformation reporting',
+                  'Audit included in first month if needed',
+                  'Cancel anytime',
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-2 text-sm" style={{ color: '#DCE3EF' }}>
                     <span className="mt-0.5 flex-shrink-0" style={{ color: '#4B7FFF' }}>
@@ -501,52 +504,6 @@ export default function Home() {
                 href="#book"
                 className="block text-center text-white font-bold text-sm py-3 rounded-xl transition-colors"
                 style={{ background: '#4B7FFF', boxShadow: '0 8px 20px rgba(75,127,255,0.25)' }}
-              >
-                Book a Discovery Call
-              </a>
-            </div>
-
-            {/* Card 3 — Monthly Retainer */}
-            <div
-              className="border rounded-2xl p-8 flex flex-col gap-5 card-hover"
-              style={{ background: '#162035', borderColor: '#1E2D47' }}
-            >
-              <div>
-                <span
-                  className="text-xs font-bold uppercase tracking-widest px-2 py-1 rounded"
-                  style={{ background: 'rgba(75,127,255,0.1)', color: '#4B7FFF' }}
-                >
-                  ONGOING
-                </span>
-              </div>
-              <div>
-                <h3 className="font-black text-xl mb-2" style={{ color: '#DCE3EF' }}>Monthly Retainer</h3>
-                <p className="font-black text-3xl" style={{ color: '#DCE3EF' }}>$5,000<span className="text-lg font-bold"> / month</span></p>
-              </div>
-              <p className="text-sm leading-relaxed" style={{ color: '#8892A4' }}>
-                Your embedded AI operations team. New builds, maintenance, team training, and strategic advisory, all included. One flat monthly fee.
-              </p>
-              <div className="flex flex-col gap-2 flex-1">
-                {[
-                  'Monthly build sprint included',
-                  'All maintenance and support',
-                  'Team training every month',
-                  'Strategy and advisory',
-                  'Full transformation reporting',
-                  'Cancel anytime',
-                ].map((item) => (
-                  <div key={item} className="flex items-start gap-2 text-sm" style={{ color: '#DCE3EF' }}>
-                    <span className="mt-0.5 flex-shrink-0" style={{ color: '#4B7FFF' }}>
-                      <ArrowRight size={13} />
-                    </span>
-                    {item}
-                  </div>
-                ))}
-              </div>
-              <a
-                href="#book"
-                className="block text-center font-bold text-sm py-3 rounded-xl border transition-colors hover:bg-white hover:text-black"
-                style={{ borderColor: '#4B7FFF', color: '#4B7FFF' }}
               >
                 Book a Discovery Call
               </a>
