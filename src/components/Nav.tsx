@@ -33,6 +33,7 @@ export default function Nav() {
           <a href="/#audit" className="hover:text-body transition-colors">The Audit</a>
           <a href="/#retainer" className="hover:text-body transition-colors">The Retainer</a>
           <a href="/#pricing" className="hover:text-body transition-colors">Pricing</a>
+          <a href="/blog" className="hover:text-body transition-colors">Blog</a>
           <a href="/quiz" className="hover:text-body transition-colors" style={{ color: '#4B7FFF', opacity: 0.8 }}>Free Assessment</a>
         </div>
 
@@ -71,6 +72,7 @@ export default function Nav() {
           <a href="/#audit" className="block py-1 hover:text-body" onClick={() => setMenuOpen(false)}>The Audit</a>
           <a href="/#retainer" className="block py-1 hover:text-body" onClick={() => setMenuOpen(false)}>The Retainer</a>
           <a href="/#pricing" className="block py-1 hover:text-body" onClick={() => setMenuOpen(false)}>Pricing</a>
+          <a href="/blog" className="block py-1 hover:text-body" onClick={() => setMenuOpen(false)}>Blog</a>
           <a href="/quiz" className="block py-1 hover:text-body" style={{ color: '#4B7FFF' }} onClick={() => setMenuOpen(false)}>Free Assessment</a>
           <a
             href="/#book"

@@ -147,7 +147,7 @@ export default function Home() {
               Every engagement is different. Choose the path that matches where you are.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
 
             {/* Card 1: The Audit */}
             <div
@@ -167,25 +167,7 @@ export default function Home() {
               </a>
             </div>
 
-            {/* Card 2: Standalone Build */}
-            <div
-              className="border rounded-2xl p-8 flex flex-col gap-4 card-hover"
-              style={{ background: '#162035', borderColor: '#1E2D47' }}
-            >
-              <h3 className="font-black text-xl" style={{ color: '#DCE3EF' }}>Standalone Build</h3>
-              <p className="text-sm leading-relaxed flex-1" style={{ color: '#8892A4' }}>
-                You already know what you want automated. We scope it, build it, integrate it into your existing tools, and train your team to use it. Fixed price. You own it when it is done.
-              </p>
-              <a
-                href="#book"
-                className="flex items-center gap-1.5 text-sm font-semibold transition-opacity hover:opacity-70"
-                style={{ color: '#4B7FFF' }}
-              >
-                Get a quote <ArrowRight size={14} />
-              </a>
-            </div>
-
-            {/* Card 3: Monthly Retainer */}
+            {/* Card 2: Monthly Retainer */}
             <div
               className="border rounded-2xl p-8 flex flex-col gap-4 card-hover"
               style={{ background: '#162035', borderColor: '#1E2D47' }}
