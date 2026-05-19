@@ -9,6 +9,14 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'ai-automation-roi-gap',
+    title: 'Your AI Automation Is Running. So Why Aren\'t You Saving Money?',
+    date: '2026-05-19',
+    summary: 'Most businesses automate the wrong things — and then measure the results wrong. Here\'s the real reason your AI isn\'t showing up in the numbers.',
+    readTime: '5 min read',
+    tags: ['AI Operations', 'ROI'],
+  },
+  {
     slug: 'ai-layoffs-dont-work',
     title: 'Cutting Headcount with AI Isn\'t a Strategy. Here\'s What Actually Works.',
     date: '2026-05-12',
