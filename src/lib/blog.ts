@@ -9,6 +9,14 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'your-operations-arent-ai-ready',
+    title: 'Your Operations Aren\'t AI-Ready. Here\'s How to Tell.',
+    date: '2026-05-26',
+    summary: 'Most companies try to deploy AI before they know what they\'re automating. Here are the four signs your operations aren\'t ready — and what to fix before you build anything.',
+    readTime: '5 min read',
+    tags: ['AI Operations', 'Automation'],
+  },
+  {
     slug: 'ai-automation-roi-gap',
     title: 'Your AI Automation Is Running. So Why Aren\'t You Saving Money?',
     date: '2026-05-19',
