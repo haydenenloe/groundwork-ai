@@ -9,6 +9,14 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'stuck-in-pilot-mode',
+    title: 'You\'re Stuck in AI Pilot Mode. Here\'s Why It Never Ends.',
+    date: '2026-06-02',
+    summary: 'Only 16% of companies have scaled AI enterprise-wide — despite rising investment and successful demos. Here\'s what keeps operations teams trapped in perpetual pilots, and the three things you need to actually scale.',
+    readTime: '6 min read',
+    tags: ['AI Operations', 'Automation'],
+  },
+  {
     slug: 'your-operations-arent-ai-ready',
     title: 'Your Operations Aren\'t AI-Ready. Here\'s How to Tell.',
     date: '2026-05-26',
