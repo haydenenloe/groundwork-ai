@@ -9,6 +9,14 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'the-cost-of-waiting',
+    title: 'The Cost of Waiting to Automate',
+    date: '2026-06-09',
+    summary: 'Every month you defer an automation project, you\'re not saving money — you\'re spending it. Here\'s how to calculate what waiting is actually costing your operation.',
+    readTime: '5 min read',
+    tags: ['AI Operations', 'ROI'],
+  },
+  {
     slug: 'stuck-in-pilot-mode',
     title: 'You\'re Stuck in AI Pilot Mode. Here\'s Why It Never Ends.',
     date: '2026-06-02',
