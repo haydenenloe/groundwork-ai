@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, type ReactNode } from 'react'
-import { Check, MessageSquare, Mail, FileText, Clock, TrendingUp } from 'lucide-react'
+import { Check, MessageSquare, Mail, FileText, Clock, TrendingUp, PhoneMissed, Star, Receipt, CalendarClock } from 'lucide-react'
 
 const SURFACE = '#FFFFFF'
 const ALT = '#F3EFE7'
@@ -82,6 +82,33 @@ const slides: ReactNode[] = [
       ))}
     </div>
     <Chip>Sent to #leadership</Chip>
+  </Frame>,
+
+  <Frame key="missed-call" label="Missed-call agent" icon={PhoneMissed}>
+    <Out>Hi, this is Apex Plumbing. Sorry we missed your call! What can we help with?</Out>
+    <In>Need someone to look at a leak under my sink.</In>
+    <Out>We can come by today between 2 and 4. Want me to lock it in?</Out>
+    <In>Yes please.</In>
+    <Chip>Job booked &middot; today 2&ndash;4 PM</Chip>
+  </Frame>,
+
+  <Frame key="review" label="Review agent" icon={Star}>
+    <Out>Thanks for choosing us, Maria! Would you mind leaving a quick review? It takes about 20 seconds.</Out>
+    <In>Done. You guys were great!</In>
+    <Chip>New 5-star review on Google</Chip>
+  </Frame>,
+
+  <Frame key="payments" label="Payments agent" icon={Receipt}>
+    <Out>Hi Dan, a friendly reminder that invoice #1042 for $2,400 is 5 days past due. Here is a secure pay link.</Out>
+    <In>Oops, paying now.</In>
+    <Chip>Paid &middot; $2,400 collected</Chip>
+  </Frame>,
+
+  <Frame key="reminder" label="Reminder agent" icon={CalendarClock}>
+    <Out>Reminder: your appointment with Bright Smile Dental is tomorrow at 3:00 PM. Reply C to confirm or R to reschedule.</Out>
+    <In>C</In>
+    <Out>You are confirmed. See you then!</Out>
+    <Chip>Confirmed &middot; no-show avoided</Chip>
   </Frame>,
 ]
 
