@@ -47,24 +47,24 @@ export default function ApplyForm() {
       <div className="flex flex-col items-center justify-center py-12 px-6 text-center">
         <div
           className="w-14 h-14 rounded-full flex items-center justify-center mb-5"
-          style={{ background: 'rgba(75,127,255,0.15)', border: '1px solid rgba(75,127,255,0.3)' }}
+          style={{ background: 'rgba(59,91,219,0.1)', border: '1px solid rgba(59,91,219,0.25)' }}
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M5 12l5 5 9-9" stroke="#4B7FFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M5 12l5 5 9-9" stroke="#3B5BDB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </div>
-        <h3 className="text-xl font-bold mb-2" style={{ color: '#DCE3EF' }}>Request received.</h3>
-        <p style={{ color: '#8892A4' }}>We&apos;ll be in touch within 1 business day.</p>
+        <h3 className="text-xl font-semibold mb-2" style={{ color: '#221D17' }}>Request received.</h3>
+        <p style={{ color: '#6F665A' }}>I will be in touch within one business day.</p>
       </div>
     )
   }
 
   const inputStyle: React.CSSProperties = {
-    background: '#0C1525',
-    border: '1px solid #1E2D47',
-    color: '#DCE3EF',
-    borderRadius: '10px',
-    padding: '10px 14px',
+    background: '#FFFFFF',
+    border: '1px solid #E7E0D3',
+    color: '#221D17',
+    borderRadius: '12px',
+    padding: '11px 14px',
     width: '100%',
     fontSize: '14px',
     outline: 'none',
@@ -76,7 +76,7 @@ export default function ApplyForm() {
     marginBottom: '6px',
     fontSize: '14px',
     fontWeight: 500,
-    color: '#DCE3EF',
+    color: '#221D17',
   }
 
   return (
@@ -151,24 +151,29 @@ export default function ApplyForm() {
       <button
         type="submit"
         disabled={state === 'loading'}
-        className="w-full font-bold text-white py-3.5 rounded-xl transition-opacity text-base"
+        className="w-full font-semibold text-white py-3.5 rounded-xl transition-opacity text-base"
         style={{
-          background: '#4B7FFF',
-          boxShadow: '0 10px 15px -3px rgba(75,127,255,0.25)',
+          background: '#3B5BDB',
+          boxShadow: '0 10px 15px -3px rgba(59,91,219,0.25)',
           opacity: state === 'loading' ? 0.7 : 1,
           cursor: state === 'loading' ? 'not-allowed' : 'pointer',
         }}
       >
-        {state === 'loading' ? 'Sending...' : 'Book a Discovery Call →'}
+        {state === 'loading' ? 'Sending...' : 'Book a call →'}
       </button>
 
       <style jsx>{`
-        .focus-blue-ring:focus {
-          border-color: #4B7FFF !important;
-          box-shadow: 0 0 0 3px rgba(75, 127, 255, 0.15);
+        .focus-blue-ring {
+          background: #ffffff !important;
+          border: 1px solid #e7e0d3 !important;
+          color: #221d17 !important;
         }
-        ::placeholder {
-          color: #4A5568;
+        .focus-blue-ring:focus {
+          border-color: #3b5bdb !important;
+          box-shadow: 0 0 0 3px rgba(59, 91, 219, 0.12);
+        }
+        .focus-blue-ring::placeholder {
+          color: #a89f90;
         }
       `}</style>
     </form>
