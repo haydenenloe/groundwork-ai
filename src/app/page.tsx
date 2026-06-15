@@ -1,6 +1,7 @@
 import NavLight from '@/components/NavLight'
 import Reveal from '@/components/Reveal'
 import ApplyForm from '@/components/ApplyForm'
+import HeroShowcase from '@/components/HeroShowcase'
 import { ArrowRight, Check, MessageSquare, Mail, FileText } from 'lucide-react'
 
 const PAPER = '#FBF9F5'
@@ -47,36 +48,9 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Product mockup: reactivation agent thread */}
+          {/* Rotating product mockups */}
           <Reveal delay={120}>
-            <div
-              className="rounded-3xl p-5 md:p-6"
-              style={{ background: SURFACE, border: `1px solid ${LINE}`, boxShadow: '0 30px 60px -30px rgba(34,29,23,0.25)' }}
-            >
-              <div className="flex items-center gap-2 pb-4 mb-4" style={{ borderBottom: `1px solid ${LINE}` }}>
-                <span className="w-2.5 h-2.5 rounded-full" style={{ background: '#E07A5F' }} />
-                <span className="w-2.5 h-2.5 rounded-full" style={{ background: '#E6B84F' }} />
-                <span className="w-2.5 h-2.5 rounded-full" style={{ background: '#81B29A' }} />
-                <span className="ml-2 text-xs font-medium" style={{ color: MUTED }}>Reactivation agent</span>
-              </div>
-              <div className="flex flex-col gap-3 text-sm">
-                <div className="self-end max-w-[80%] px-4 py-2.5 rounded-2xl rounded-br-md text-white" style={{ background: ACCENT }}>
-                  Hi Sarah, following up from a few months back. Still looking into options for your team?
-                </div>
-                <div className="self-start max-w-[80%] px-4 py-2.5 rounded-2xl rounded-bl-md" style={{ background: ALT, color: INK }}>
-                  Actually yes, the timing is better now.
-                </div>
-                <div className="self-end max-w-[80%] px-4 py-2.5 rounded-2xl rounded-br-md text-white" style={{ background: ACCENT }}>
-                  Great. I have Thursday at 2pm or Friday at 10am open.
-                </div>
-                <div className="self-start max-w-[80%] px-4 py-2.5 rounded-2xl rounded-bl-md" style={{ background: ALT, color: INK }}>
-                  Thursday works.
-                </div>
-                <div className="self-center mt-1 inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold" style={{ background: 'rgba(129,178,154,0.18)', color: '#3F6B53' }}>
-                  <Check size={13} /> Meeting booked &middot; Thursday 2:00 PM
-                </div>
-              </div>
-            </div>
+            <HeroShowcase />
           </Reveal>
         </div>
       </section>
@@ -87,7 +61,7 @@ export default function Home() {
           <Reveal>
             <div className="max-w-2xl mb-12">
               <p className="text-sm font-semibold mb-4" style={{ color: ACCENT }}>The problem</p>
-              <h2 className="font-medium tracking-tight" style={{ fontFamily: SERIF, fontSize: 'clamp(1.9rem, 4vw, 2.9rem)', lineHeight: 1.1, color: INK }}>
+              <h2 className="font-medium tracking-tight [text-wrap:balance]" style={{ fontFamily: SERIF, fontSize: 'clamp(1.9rem, 4vw, 2.9rem)', lineHeight: 1.1, color: INK }}>
                 Your team is too busy to get less busy.
               </h2>
             </div>
@@ -107,7 +81,7 @@ export default function Home() {
             ))}
           </div>
           <Reveal>
-            <p className="text-lg leading-relaxed mt-10 max-w-2xl" style={{ color: MUTED }}>
+            <p className="text-lg leading-relaxed mt-10 max-w-3xl [text-wrap:balance]" style={{ color: MUTED }}>
               Everyone knows AI could handle this. No one has time to set it up. That is the whole job.
             </p>
           </Reveal>
