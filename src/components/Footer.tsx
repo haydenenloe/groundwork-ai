@@ -12,10 +12,10 @@ export default function Footer() {
         </div>
 
         <div className="flex gap-6 text-sm" style={{ color: '#4A5568' }}>
-          <a href="/#services" className="hover:text-subtle transition-colors">Services</a>
-          <a href="/#capabilities" className="hover:text-subtle transition-colors">What We Build</a>
-          <a href="/#quiz" className="hover:text-subtle transition-colors">Quiz</a>
-          <a href="/#audit" className="hover:text-subtle transition-colors">Book an Audit</a>
+          <a href="/#services" className="hover:text-subtle transition-colors">How We Work</a>
+          <a href="/#work" className="hover:text-subtle transition-colors">Recent Work</a>
+          <a href="/blog" className="hover:text-subtle transition-colors">Blog</a>
+          <a href="/#book" className="hover:text-subtle transition-colors">Book a Call</a>
         </div>
 
         <p className="text-xs" style={{ color: '#4A5568' }}>© 2026 Groundwork AI. All rights reserved.</p>

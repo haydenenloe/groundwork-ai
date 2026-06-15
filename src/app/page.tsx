@@ -50,12 +50,12 @@ export default function Home() {
       <section id="outcomes" className="py-28 md:py-36" style={{ background: '#0C1525' }}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: '#4B7FFF' }}>The results</p>
+            <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: '#4B7FFF' }}>What we automate</p>
             <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-4" style={{ color: '#DCE3EF' }}>
-              Here is what changes after 90 days.
+              The work AI should be taking off your plate.
             </h2>
             <p className="text-lg max-w-2xl mx-auto" style={{ color: '#8892A4' }}>
-              Every engagement is measured against a baseline. These are real outcomes from the workflows we automate.
+              These are the kinds of workflows we build for. Every engagement starts by finding which of them is quietly costing your team the most.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -105,6 +105,50 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ========== WHAT I'VE BUILT ========== */}
+      <section id="work" className="py-28 md:py-36">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: '#4B7FFF' }}>Recent work</p>
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-4" style={{ color: '#DCE3EF' }}>
+              Real systems, already running.
+            </h2>
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#8892A4' }}>
+              A sample of recent builds. Named case studies and client results are on the way.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                tag: 'Marketing agency',
+                title: 'Lead reactivation agent',
+                body: 'An AI agent that texts a company’s dormant leads, re-engages the ones worth pursuing, and books qualified meetings straight onto the sales team’s calendar. An aging lead list turned back into booked calls, without anyone working it by hand.',
+              },
+              {
+                tag: 'Founder-led product company',
+                title: 'Customer support agent',
+                body: 'An AI agent that drafts fast, on-brand replies to inbound customer emails. Questions get answered in minutes instead of days, and no lead slips through the cracks while the founder is heads-down on the product.',
+              },
+              {
+                tag: 'B2B SaaS, around 50 people',
+                title: 'AI Operations Audit',
+                body: 'Twelve stakeholder interviews across the company, a prioritized AI roadmap with ROI estimates, a ready-to-adopt AI use policy, and a live executive readout. The blueprint for where AI pays off first.',
+              },
+            ].map((card) => (
+              <div
+                key={card.title}
+                className="border rounded-2xl p-8 flex flex-col gap-4 card-hover"
+                style={{ background: '#162035', borderColor: '#1E2D47' }}
+              >
+                <p className="text-xs font-bold uppercase tracking-widest" style={{ color: '#8892A4' }}>{card.tag}</p>
+                <h3 className="font-black text-xl" style={{ color: '#DCE3EF' }}>{card.title}</h3>
+                <p className="text-sm leading-relaxed" style={{ color: '#8892A4' }}>{card.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ========== ASSESSMENT (TOP) ========== */}
       <section className="py-24 md:py-32">
         <div className="max-w-3xl mx-auto px-6 text-center">
@@ -141,7 +185,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: '#4B7FFF' }}>How we work</p>
             <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-4" style={{ color: '#DCE3EF' }}>
-              Three ways to work with us.
+              Two ways to work with us.
             </h2>
             <p className="text-lg max-w-2xl mx-auto" style={{ color: '#8892A4' }}>
               Every engagement is different. Choose the path that matches where you are.
@@ -265,7 +309,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-sm leading-relaxed" style={{ color: '#8892A4' }}>
-                If you move forward to a build or retainer after the audit, the $2,500 applies toward your first month.
+                If you move forward to a retainer after the audit, the $3,500 applies toward your first month.
               </p>
             </div>
 
@@ -405,7 +449,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="font-black text-xl mb-2" style={{ color: '#DCE3EF' }}>AI Operations Audit</h3>
-                <p className="text-sm" style={{ color: '#8892A4' }}>Priced based on company size</p>
+                <p><span className="font-black text-3xl" style={{ color: '#DCE3EF' }}>$3,500</span> <span className="text-sm" style={{ color: '#8892A4' }}>one-time</span></p>
               </div>
               <p className="text-sm leading-relaxed" style={{ color: '#8892A4' }}>
                 For teams that want to find the right problem before they build. Two weeks of discovery, a full prioritized roadmap with ROI estimates, and a live walkthrough session.
@@ -459,7 +503,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="font-black text-xl mb-2" style={{ color: '#DCE3EF' }}>Monthly Retainer</h3>
-                <p className="text-sm" style={{ color: '#8892A4' }}>Priced based on scope</p>
+                <p><span className="text-sm" style={{ color: '#8892A4' }}>from</span> <span className="font-black text-3xl" style={{ color: '#DCE3EF' }}>$3,000</span> <span className="text-sm" style={{ color: '#8892A4' }}>/ month</span></p>
               </div>
               <p className="text-sm leading-relaxed" style={{ color: '#8892A4' }}>
                 Your embedded AI operations team. New builds, maintenance, team training, and strategic advisory, all included. The audit can be bundled into your first month.
@@ -545,9 +589,29 @@ export default function Home() {
             style={{ background: 'rgba(34,197,94,0.06)', borderColor: 'rgba(34,197,94,0.25)' }}
           >
             <p className="text-base md:text-lg leading-relaxed text-center" style={{ color: '#DCE3EF' }}>
-              The monthly retainer is{' '}
-              <span className="font-black" style={{ color: '#22c55e' }}>$60,000 per year</span>.
-              It covers your entire AI operations layer, not one role. And every system we build is guaranteed to work or we keep building until it does.
+              The monthly retainer starts at{' '}
+              <span className="font-black" style={{ color: '#22c55e' }}>$3,000 per month</span>.
+              That is less than the cost of a single hire, and it covers your whole AI operations layer instead of one role. Every system we build is guaranteed to work or we keep building until it does.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ========== ABOUT ========== */}
+      <section id="about" className="py-28 md:py-36" style={{ background: '#0C1525' }}>
+        <div className="max-w-3xl mx-auto px-6">
+          <div className="text-center mb-10">
+            <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: '#4B7FFF' }}>Who is behind it</p>
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-4" style={{ color: '#DCE3EF' }}>
+              You work directly with the person building.
+            </h2>
+          </div>
+          <div className="space-y-5 text-lg leading-relaxed" style={{ color: '#8892A4' }}>
+            <p>
+              Groundwork AI is Hayden Enloe. I hold a master’s in Information Systems, and I build practical AI automations and operations systems for small and mid-sized teams. No account managers, no handoffs, no offshore black box. The person who maps your operations is the person who builds the systems and trains your team to use them.
+            </p>
+            <p>
+              My approach is simple and a little old-fashioned: start with an honest diagnosis instead of a sales pitch, recommend the path that is actually right for you even when it is not the most expensive one, and make sure you own every system I build. The goal is not to sell you AI. It is to give your team back the hours it loses to work that software should be doing.
             </p>
           </div>
         </div>
