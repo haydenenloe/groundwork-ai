@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Logo from '@/components/Logo'
+import NavLight from '@/components/NavLight'
 
 // ─── TYPES ───────────────────────────────────────────────────────────────────
 
@@ -413,20 +413,9 @@ export default function QuizPage() {
 
   return (
     <>
-      {/* Nav */}
-      <header className="fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-md" style={{ background: 'rgba(255,255,255,0.85)', borderColor: '#E7E0D3' }}>
-        <nav className="max-w-4xl mx-auto px-6 h-14 flex items-center justify-between">
-          <a href="/" className="flex items-center gap-2.5">
-            <Logo size={22} />
-            <span className="font-bold tracking-tight" style={{ color: '#221D17' }}>
-              Groundwork <span style={{ color: '#3B5BDB' }}>AI</span>
-            </span>
-          </a>
-          <div className="text-sm" style={{ color: '#6F665A' }}>AI Readiness Quiz</div>
-        </nav>
-      </header>
+      <NavLight />
 
-      <main className="pt-14 min-h-screen flex flex-col grid-bg">
+      <main className="pt-16 min-h-screen flex flex-col grid-bg">
 
         {/* ── INTRO ── */}
         {screen === 'intro' && (
