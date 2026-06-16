@@ -310,7 +310,7 @@ export default function Home() {
       {/* ========== FOOTER ========== */}
       <footer className="py-10" style={{ background: PAPER, borderTop: `1px solid ${LINE}` }}>
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-5">
-          <span className="flex items-center gap-2.5 font-semibold" style={{ color: INK }}>
+          <span id="gw-egg" className="flex items-center gap-2.5 font-semibold select-none" style={{ color: INK, cursor: 'pointer' }}>
             <Logo size={22} />
             <span>Groundwork <span style={{ color: ACCENT }}>AI</span></span>
           </span>

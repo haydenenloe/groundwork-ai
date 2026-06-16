@@ -1,11 +1,10 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 
 export default function HeroFX() {
   const rootRef = useRef<HTMLDivElement>(null)
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  const [spot, setSpot] = useState<{ x: number; y: number } | null>(null)
 
   useEffect(() => {
     const root = rootRef.current
@@ -45,11 +44,9 @@ export default function HeroFX() {
       if (x >= 0 && x <= r.width && y >= 0 && y <= r.height) {
         mouse.x = x
         mouse.y = y
-        if (!reduced) setSpot({ x, y })
       } else {
         mouse.x = -9999
         mouse.y = -9999
-        setSpot(null)
       }
     }
     window.addEventListener('pointermove', onMove)
@@ -108,20 +105,6 @@ export default function HeroFX() {
   return (
     <div ref={rootRef} className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
       <canvas ref={canvasRef} className="absolute inset-0" />
-      {spot && (
-        <div
-          className="absolute rounded-full"
-          style={{
-            left: spot.x,
-            top: spot.y,
-            width: 480,
-            height: 480,
-            transform: 'translate(-50%, -50%)',
-            background: 'radial-gradient(circle, rgba(59,91,219,0.12) 0%, rgba(255,176,102,0.07) 38%, transparent 70%)',
-            transition: 'left 0.12s ease-out, top 0.12s ease-out',
-          }}
-        />
-      )}
     </div>
   )
 }

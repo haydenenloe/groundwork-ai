@@ -46,6 +46,28 @@ export default function BusyworkGame() {
     return () => window.removeEventListener('keydown', onKey)
   }, [])
 
+  // Easter-egg trigger: triple-click the footer logo (#gw-egg)
+  useEffect(() => {
+    let clicks = 0
+    let timer: ReturnType<typeof setTimeout> | undefined
+    const onClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement | null
+      if (!target || !target.closest('#gw-egg')) return
+      clicks++
+      clearTimeout(timer)
+      timer = setTimeout(() => { clicks = 0 }, 1500)
+      if (clicks >= 3) {
+        clicks = 0
+        launch()
+      }
+    }
+    document.addEventListener('click', onClick)
+    return () => {
+      document.removeEventListener('click', onClick)
+      clearTimeout(timer)
+    }
+  }, [])
+
   // timer + spawner while playing
   useEffect(() => {
     if (!open || phase !== 'play') return
