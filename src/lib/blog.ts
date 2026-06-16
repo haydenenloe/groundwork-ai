@@ -9,6 +9,14 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'ai-automation-breaks',
+    title: 'AI Automations Break. Here\'s What to Do About It Before It Happens.',
+    date: '2026-06-16',
+    summary: 'Every AI automation you build will eventually break — silently, often weeks before anyone notices. Here\'s the maintenance system that prevents that.',
+    readTime: '5 min read',
+    tags: ['AI Operations', 'Automation'],
+  },
+  {
     slug: 'the-cost-of-waiting',
     title: 'The Cost of Waiting to Automate',
     date: '2026-06-09',
