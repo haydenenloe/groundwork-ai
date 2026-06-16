@@ -208,7 +208,7 @@ export default function Home() {
               {
                 kind: 'The path', name: 'Monthly Retainer', price: 'from $3,000', unit: '/ month',
                 desc: 'Your embedded AI operations team. New builds, maintenance, training, and advisory, every month.',
-                items: ['One to two new builds a month', 'All maintenance and support', 'Hands-on team training', 'Monthly impact reporting', 'You own everything. Cancel anytime'],
+                items: ['One to two new builds a month', 'All maintenance and support', 'Hands-on team training', 'Monthly impact reporting', 'You own your systems. Cancel anytime'],
                 featured: true,
               },
             ].map((p) => (
@@ -259,7 +259,7 @@ export default function Home() {
           <div className="flex flex-col gap-3">
             {[
               { q: 'How fast will I see something working?', a: 'The audit takes two weeks. If you move to a retainer, the first working system ships inside your first month.' },
-              { q: 'What if it does not work?', a: 'Every system is guaranteed. If a build does not do what we agreed, I keep working on it until it does. You also own everything I build.' },
+              { q: 'What if it does not work?', a: 'Every system is guaranteed. If a build does not do what we agreed, I keep working on it until it does. You own your systems and your data, so you are never locked in.' },
               { q: 'Do we need to be technical?', a: 'No. That is the point of hiring me. I handle the building and integration, and I train your team on the parts they touch.' },
               { q: 'Is our data safe?', a: 'Yes. Client-owned data never goes into AI tools without approval, anything client-facing is reviewed by a person, and the audit includes a written AI use policy.' },
               { q: 'What does the retainer actually include?', a: 'One to two new builds a month, all maintenance, hands-on training, monthly reporting, and advisory. One flat fee, cancel anytime.' },
