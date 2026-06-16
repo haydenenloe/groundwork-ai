@@ -2,6 +2,9 @@ import NavLight from '@/components/NavLight'
 import Reveal from '@/components/Reveal'
 import ApplyForm from '@/components/ApplyForm'
 import HeroShowcase from '@/components/HeroShowcase'
+import HeroFX from '@/components/HeroFX'
+import Magnetic from '@/components/Magnetic'
+import BusyworkGame from '@/components/BusyworkGame'
 import Logo from '@/components/Logo'
 import { ArrowRight, Check, MessageSquare, Mail, FileText } from 'lucide-react'
 
@@ -22,10 +25,7 @@ export default function Home() {
       {/* ========== HERO ========== */}
       <section className="relative overflow-hidden pt-28 pb-20 md:pt-36 md:pb-28">
         {/* soft warm + accent glow */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{ background: 'radial-gradient(ellipse 70% 50% at 75% 0%, rgba(59,91,219,0.10) 0%, transparent 60%), radial-gradient(ellipse 60% 40% at 10% 10%, rgba(255,176,102,0.10) 0%, transparent 55%)' }}
-        />
+        <HeroFX />
         <div className="relative max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-14 items-center">
           <div>
             <p className="text-sm font-semibold mb-5" style={{ color: ACCENT }}>AI operations, built for small teams</p>
@@ -36,13 +36,15 @@ export default function Home() {
               I find where your team&rsquo;s time disappears, build the AI systems that take that work over, and train your people to run them. It starts with a focused two-week audit.
             </p>
             <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
-              <a
-                href="#book"
-                className="inline-flex items-center gap-2 text-white font-semibold px-7 py-3.5 rounded-full transition-transform hover:-translate-y-0.5"
-                style={{ background: ACCENT, boxShadow: '0 10px 24px -8px rgba(59,91,219,0.5)' }}
-              >
-                Book a call <ArrowRight size={17} />
-              </a>
+              <Magnetic>
+                <a
+                  href="#book"
+                  className="inline-flex items-center gap-2 text-white font-semibold px-7 py-3.5 rounded-full transition-transform hover:-translate-y-0.5"
+                  style={{ background: ACCENT, boxShadow: '0 10px 24px -8px rgba(59,91,219,0.5)' }}
+                >
+                  Book a call <ArrowRight size={17} />
+                </a>
+              </Magnetic>
               <a href="#how" className="font-medium transition-opacity hover:opacity-60" style={{ color: INK }}>
                 See how it works
               </a>
@@ -322,6 +324,8 @@ export default function Home() {
           <p className="text-xs" style={{ color: MUTED }}>&copy; 2026 Groundwork AI</p>
         </div>
       </footer>
+
+      <BusyworkGame />
     </div>
   )
 }
