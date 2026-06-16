@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, type ReactNode } from 'react'
+import { useState, useEffect, useRef, type PointerEvent, type ReactNode } from 'react'
 import { Check, MessageSquare, Mail, FileText, Clock, TrendingUp, PhoneMissed, Star, Receipt, CalendarClock } from 'lucide-react'
 
 const SURFACE = '#FFFFFF'
@@ -123,9 +123,25 @@ export default function HeroShowcase() {
     return () => clearInterval(id)
   }, [paused])
 
+  const tiltRef = useRef<HTMLDivElement>(null)
+
+  function tilt(e: PointerEvent<HTMLDivElement>) {
+    const el = tiltRef.current
+    if (!el) return
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    const r = el.getBoundingClientRect()
+    const px = (e.clientX - r.left) / r.width - 0.5
+    const py = (e.clientY - r.top) / r.height - 0.5
+    el.style.transform = `rotateY(${px * 7}deg) rotateX(${-py * 7}deg)`
+  }
+  function untilt() {
+    if (tiltRef.current) tiltRef.current.style.transform = 'rotateY(0deg) rotateX(0deg)'
+  }
+
   return (
-    <div onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
-      <div style={{ display: 'grid' }}>
+    <div onMouseEnter={() => setPaused(true)} onMouseLeave={() => { setPaused(false); untilt() }}>
+      <div style={{ perspective: '1000px' }} onPointerMove={tilt} onPointerLeave={untilt}>
+        <div ref={tiltRef} style={{ display: 'grid', transformStyle: 'preserve-3d', transition: 'transform 0.2s ease-out' }}>
         {slides.map((slide, idx) => (
           <div
             key={idx}
@@ -140,6 +156,7 @@ export default function HeroShowcase() {
             {slide}
           </div>
         ))}
+        </div>
       </div>
       <div className="flex justify-center gap-2 mt-5">
         {slides.map((_, idx) => (
