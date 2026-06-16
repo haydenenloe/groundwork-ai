@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Logo from './Logo'
 
 const ACCENT = '#3B5BDB'
 const INK = '#221D17'
@@ -26,8 +27,9 @@ export default function NavLight() {
       }}
     >
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="/" className="flex items-center gap-2 font-semibold text-lg" style={{ color: INK }}>
-          Groundwork <span style={{ color: ACCENT }}>AI</span>
+        <a href="/" className="flex items-center gap-2.5 font-semibold text-lg" style={{ color: INK }}>
+          <Logo size={26} />
+          <span>Groundwork <span style={{ color: ACCENT }}>AI</span></span>
         </a>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-medium" style={{ color: MUTED }}>

@@ -2,6 +2,7 @@ import NavLight from '@/components/NavLight'
 import Reveal from '@/components/Reveal'
 import ApplyForm from '@/components/ApplyForm'
 import HeroShowcase from '@/components/HeroShowcase'
+import Logo from '@/components/Logo'
 import { ArrowRight, Check, MessageSquare, Mail, FileText } from 'lucide-react'
 
 const PAPER = '#FBF9F5'
@@ -306,7 +307,10 @@ export default function Home() {
       {/* ========== FOOTER ========== */}
       <footer className="py-10" style={{ background: PAPER, borderTop: `1px solid ${LINE}` }}>
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-5">
-          <span className="font-semibold" style={{ color: INK }}>Groundwork <span style={{ color: ACCENT }}>AI</span></span>
+          <span className="flex items-center gap-2.5 font-semibold" style={{ color: INK }}>
+            <Logo size={22} />
+            <span>Groundwork <span style={{ color: ACCENT }}>AI</span></span>
+          </span>
           <div className="flex gap-6 text-sm" style={{ color: MUTED }}>
             <a href="#how" className="hover:opacity-60">How it works</a>
             <a href="#work" className="hover:opacity-60">Work</a>
