@@ -173,14 +173,14 @@ export default function Home() {
             <div>
               <p className="text-sm font-semibold mb-4" style={{ color: ACCENT }}>Who is behind it</p>
               <h2 className="font-medium tracking-tight mb-5" style={{ fontFamily: SERIF, fontSize: 'clamp(1.8rem, 4vw, 2.6rem)', lineHeight: 1.1, color: INK }}>
-                You work directly with the person building.
+                You get the founder in the room.
               </h2>
               <div className="space-y-4 text-base leading-relaxed" style={{ color: MUTED }}>
                 <p>
-                  Groundwork AI is Hayden Enloe. I hold a master&rsquo;s in Information Systems and I build practical AI automations for small and mid-sized teams. No account managers, no handoffs. The person who maps your operations is the person who builds the systems and trains your team to use them.
+                  Groundwork AI is led by Hayden Enloe. I hold a master&rsquo;s in Information Systems and I build practical AI automations for small and mid-sized teams. Work with Groundwork and you get a founder who stays close to the work: in your operations, accountable for what ships, and invested in seeing it pay off.
                 </p>
                 <p>
-                  My approach is simple: an honest diagnosis instead of a sales pitch, the path that is actually right for you, and you own every system I build. The goal is to give your team back the hours it loses to work software should be doing.
+                  The approach is simple. An honest diagnosis instead of a sales pitch, the path that is actually right for you, and systems you own. The goal is to give your team back the hours it loses to work that software should be doing.
                 </p>
               </div>
             </div>
