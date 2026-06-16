@@ -27,7 +27,7 @@ export default function BlogPost() {
           <Link
             href="/blog"
             className="inline-flex items-center gap-2 text-sm font-medium mb-12 transition-colors hover:opacity-80"
-            style={{ color: '#4B7FFF' }}
+            style={{ color: '#3B5BDB' }}
           >
             ← All Posts
           </Link>
@@ -37,22 +37,22 @@ export default function BlogPost() {
             <div className="flex items-center gap-3 mb-6">
               <span
                 className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold"
-                style={{ background: 'rgba(75,127,255,0.1)', border: '1px solid rgba(75,127,255,0.2)', color: '#4B7FFF' }}
+                style={{ background: 'rgba(75,127,255,0.1)', border: '1px solid rgba(75,127,255,0.2)', color: '#3B5BDB' }}
               >
                 AI Operations
               </span>
-              <span className="text-sm" style={{ color: '#8892A4' }}>May 19, 2026</span>
-              <span className="text-sm" style={{ color: '#8892A4' }}>·</span>
-              <span className="text-sm" style={{ color: '#8892A4' }}>5 min read</span>
+              <span className="text-sm" style={{ color: '#6F665A' }}>May 19, 2026</span>
+              <span className="text-sm" style={{ color: '#6F665A' }}>·</span>
+              <span className="text-sm" style={{ color: '#6F665A' }}>5 min read</span>
             </div>
             <h1
               className="text-4xl md:text-5xl font-black tracking-tight leading-tight mb-6"
-              style={{ color: '#DCE3EF' }}
+              style={{ color: '#221D17', fontFamily: "'Fraunces', Georgia, serif" }}
             >
               Your AI Automation Is Running.<br />
               So Why Aren&apos;t You Saving Money?
             </h1>
-            <p className="text-xl leading-relaxed" style={{ color: '#8892A4' }}>
+            <p className="text-xl leading-relaxed" style={{ color: '#6F665A' }}>
               Most businesses automate the wrong things — and then measure the results wrong. Here&apos;s the real reason your AI isn&apos;t showing up in the numbers.
             </p>
           </header>
@@ -61,7 +61,7 @@ export default function BlogPost() {
           <div className="w-full h-px mb-12" style={{ background: 'rgba(75,127,255,0.15)' }} />
 
           {/* Post content */}
-          <article className="prose-custom space-y-6" style={{ color: '#C4CDD9', lineHeight: '1.8', fontSize: '1.0625rem' }}>
+          <article className="prose-custom space-y-6" style={{ color: '#221D17', lineHeight: '1.8', fontSize: '1.0625rem' }}>
 
             <p>
               Something strange happens about six months into a business automation project. The workflows are live. The dashboards are green. The team says the tool is &ldquo;working.&rdquo; But when you look at the financials or the headcount or the throughput numbers, nothing has meaningfully changed.
@@ -71,7 +71,7 @@ export default function BlogPost() {
               This isn&apos;t rare. It&apos;s the default outcome for most AI automation projects. And the reason almost always traces back to one of two problems: you automated the wrong step, or you&apos;re measuring the wrong thing.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               The wrong step problem
             </h2>
 
@@ -91,7 +91,7 @@ export default function BlogPost() {
               The fix is to start with the constraint, not the convenience. What&apos;s the step that, if it disappeared, would make everything downstream faster? Automate that first. If you&apos;re not sure, map the full process and find where work accumulates — where jobs pile up waiting for the next person to get to them. That backlog is your constraint. That&apos;s your target.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               The wrong measurement problem
             </h2>
 
@@ -115,7 +115,7 @@ export default function BlogPost() {
               If you can&apos;t name the business outcome before you build the automation, you probably shouldn&apos;t build it yet.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               The broken process problem (bonus)
             </h2>
 
@@ -135,7 +135,7 @@ export default function BlogPost() {
               The companies that get real ROI from AI automation are almost never the ones who moved fastest. They&apos;re the ones who spent two weeks understanding the process, automated the right step, and measured the business outcome — not the tool usage.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               A quick diagnostic
             </h2>
 
@@ -168,16 +168,16 @@ export default function BlogPost() {
               className="rounded-2xl p-8 mt-12"
               style={{ background: 'rgba(75,127,255,0.06)', border: '1px solid rgba(75,127,255,0.15)' }}
             >
-              <h3 className="text-xl font-bold mb-3" style={{ color: '#DCE3EF' }}>
+              <h3 className="text-xl font-bold mb-3" style={{ color: '#221D17' }}>
                 Not sure which processes are actually worth automating?
               </h3>
-              <p className="mb-6" style={{ color: '#8892A4' }}>
+              <p className="mb-6" style={{ color: '#6F665A' }}>
                 The free AI Readiness Quiz helps you identify where automation will actually move the needle for your business — and where you&apos;d just be spinning wheels. Takes under 5 minutes.
               </p>
               <a
                 href="/quiz"
                 className="inline-flex items-center gap-2 text-white font-bold px-6 py-3 rounded-xl transition-colors"
-                style={{ background: '#4B7FFF' }}
+                style={{ background: '#3B5BDB' }}
               >
                 Take the Free Readiness Quiz →
               </a>
@@ -190,7 +190,7 @@ export default function BlogPost() {
             <Link
               href="/blog"
               className="inline-flex items-center gap-2 text-sm font-medium transition-colors hover:opacity-80"
-              style={{ color: '#4B7FFF' }}
+              style={{ color: '#3B5BDB' }}
             >
               ← Back to all posts
             </Link>

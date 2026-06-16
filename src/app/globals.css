@@ -4,24 +4,24 @@
 @import "tailwindcss";
 
 body {
-  background-color: #070B14;
-  color: #DCE3EF;
+  background-color: #FBF9F5;
+  color: #221D17;
   font-family: 'Inter', system-ui, sans-serif;
 }
 
 .grid-bg {
   background-image:
-    linear-gradient(rgba(75,127,255,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(75,127,255,0.04) 1px, transparent 1px);
+    linear-gradient(rgba(59,91,219,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59,91,219,0.05) 1px, transparent 1px);
   background-size: 64px 64px;
 }
 
 .hero-glow {
-  background: radial-gradient(ellipse 90% 50% at 50% -5%, rgba(75,127,255,0.18) 0%, transparent 65%);
+  background: radial-gradient(ellipse 90% 50% at 50% -5%, rgba(59,91,219,0.10) 0%, transparent 65%);
 }
 
 .grad-text {
-  background: linear-gradient(120deg, #4B7FFF 0%, #7AA3FF 100%);
+  background: linear-gradient(120deg, #3B5BDB 0%, #6E86E8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -32,15 +32,15 @@ body {
 }
 
 .card-hover:hover {
-  border-color: rgba(75,127,255,0.4);
-  box-shadow: 0 0 0 1px rgba(75,127,255,0.2), 0 8px 32px rgba(75,127,255,0.08);
+  border-color: rgba(59,91,219,0.35);
+  box-shadow: 0 8px 32px rgba(34,29,23,0.08);
   transform: translateY(-2px);
 }
 
 .nav-scrolled {
-  background: rgba(7,11,20,0.95);
+  background: rgba(251,249,245,0.9);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid #1E2D47;
+  border-bottom: 1px solid #E7E0D3;
 }
 
 .score-ring {
@@ -62,19 +62,19 @@ body {
 }
 
 .option-btn:hover {
-  border-color: rgba(75,127,255,0.5);
-  background: rgba(75,127,255,0.06);
+  border-color: rgba(59,91,219,0.5);
+  background: rgba(59,91,219,0.05);
 }
 
 .option-btn.selected {
-  border-color: #4B7FFF;
-  background: rgba(75,127,255,0.12);
+  border-color: #3B5BDB;
+  background: rgba(59,91,219,0.1);
 }
 
 .option-dot {
   width: 18px;
   height: 18px;
-  border: 2px solid #1E2D47;
+  border: 2px solid #D8D0C2;
   border-radius: 50%;
   flex-shrink: 0;
   position: relative;
@@ -95,8 +95,8 @@ body {
 }
 
 .option-btn.selected .option-dot {
-  background: #4B7FFF;
-  border-color: #4B7FFF;
+  background: #3B5BDB;
+  border-color: #3B5BDB;
 }
 
 .option-btn.selected .option-dot::after {
@@ -107,7 +107,28 @@ body {
   transition: width 0.4s ease;
 }
 
-/* Light homepage scroll-reveal (additive; used only by the homepage Reveal component) */
+input[type="text"],
+input[type="email"] {
+  background: #FFFFFF;
+  border: 1px solid #E7E0D3;
+  color: #221D17;
+  border-radius: 10px;
+  padding: 12px 16px;
+  width: 100%;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-color: #3B5BDB;
+}
+
+input::placeholder {
+  color: #A89F90;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(16px);
@@ -123,26 +144,4 @@ body {
     transform: none;
     transition: none;
   }
-}
-
-input[type="text"],
-input[type="email"] {
-  background: #0C1525;
-  border: 1px solid #1E2D47;
-  color: #DCE3EF;
-  border-radius: 10px;
-  padding: 12px 16px;
-  width: 100%;
-  font-size: 15px;
-  outline: none;
-  transition: border-color 0.2s;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus {
-  border-color: rgba(75,127,255,0.6);
-}
-
-input::placeholder {
-  color: #4A5568;
 }

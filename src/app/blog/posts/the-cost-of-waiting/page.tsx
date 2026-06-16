@@ -27,7 +27,7 @@ export default function BlogPost() {
           <Link
             href="/blog"
             className="inline-flex items-center gap-2 text-sm font-medium mb-12 transition-colors hover:opacity-80"
-            style={{ color: '#4B7FFF' }}
+            style={{ color: '#3B5BDB' }}
           >
             ← All Posts
           </Link>
@@ -37,22 +37,22 @@ export default function BlogPost() {
             <div className="flex items-center gap-3 mb-6">
               <span
                 className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold"
-                style={{ background: 'rgba(75,127,255,0.1)', border: '1px solid rgba(75,127,255,0.2)', color: '#4B7FFF' }}
+                style={{ background: 'rgba(75,127,255,0.1)', border: '1px solid rgba(75,127,255,0.2)', color: '#3B5BDB' }}
               >
                 AI Operations
               </span>
-              <span className="text-sm" style={{ color: '#8892A4' }}>June 9, 2026</span>
-              <span className="text-sm" style={{ color: '#8892A4' }}>·</span>
-              <span className="text-sm" style={{ color: '#8892A4' }}>5 min read</span>
+              <span className="text-sm" style={{ color: '#6F665A' }}>June 9, 2026</span>
+              <span className="text-sm" style={{ color: '#6F665A' }}>·</span>
+              <span className="text-sm" style={{ color: '#6F665A' }}>5 min read</span>
             </div>
             <h1
               className="text-4xl md:text-5xl font-black tracking-tight leading-tight mb-6"
-              style={{ color: '#DCE3EF' }}
+              style={{ color: '#221D17', fontFamily: "'Fraunces', Georgia, serif" }}
             >
               The Cost of Waiting<br />
               to Automate
             </h1>
-            <p className="text-xl leading-relaxed" style={{ color: '#8892A4' }}>
+            <p className="text-xl leading-relaxed" style={{ color: '#6F665A' }}>
               Every month you defer an automation project, you&apos;re not saving money — you&apos;re spending it. Here&apos;s how to calculate what waiting is actually costing your operation.
             </p>
           </header>
@@ -61,7 +61,7 @@ export default function BlogPost() {
           <div className="w-full h-px mb-12" style={{ background: 'rgba(75,127,255,0.15)' }} />
 
           {/* Post content */}
-          <article className="prose-custom space-y-6" style={{ color: '#C4CDD9', lineHeight: '1.8', fontSize: '1.0625rem' }}>
+          <article className="prose-custom space-y-6" style={{ color: '#221D17', lineHeight: '1.8', fontSize: '1.0625rem' }}>
 
             <p>
               Most operations leaders I talk to have a list. Not a to-do list — a someday list. Automations they know would save time, processes that should run without a human touching them, repetitive work that drains their team every single week. They know it&apos;s there. They just haven&apos;t done it yet.
@@ -75,7 +75,7 @@ export default function BlogPost() {
               Here&apos;s the thing: waiting isn&apos;t a neutral decision. It has a price. And most people have never actually calculated it.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               Deferral is a spending decision
             </h2>
 
@@ -95,7 +95,7 @@ export default function BlogPost() {
               That&apos;s not a rounding error. That&apos;s a decision.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               The invisible tax on your team
             </h2>
 
@@ -111,7 +111,7 @@ export default function BlogPost() {
               Research on task-switching puts the recovery cost at 15–20 minutes per interruption. Most operations roles involve dozens of these per day. You can&apos;t put a clean dollar figure on it, but you can see it in output quality, error rates, and team retention. Good operations people leave when the work feels like a data entry job.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               The &ldquo;we&apos;re not ready&rdquo; trap
             </h2>
 
@@ -131,7 +131,7 @@ export default function BlogPost() {
               Once you have that proof, the next decision is easier. Then the next one. Momentum is real.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               The competitive gap is opening up
             </h2>
 
@@ -147,7 +147,7 @@ export default function BlogPost() {
               The gap isn&apos;t permanent. But it is real, and it widens every quarter you wait.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               A practical way to start this week
             </h2>
 
@@ -168,16 +168,16 @@ export default function BlogPost() {
               className="rounded-2xl p-8 mt-12"
               style={{ background: 'rgba(75,127,255,0.06)', border: '1px solid rgba(75,127,255,0.15)' }}
             >
-              <h3 className="text-xl font-bold mb-3" style={{ color: '#DCE3EF' }}>
+              <h3 className="text-xl font-bold mb-3" style={{ color: '#221D17' }}>
                 Want to know what&apos;s worth automating first?
               </h3>
-              <p className="mb-6" style={{ color: '#8892A4' }}>
+              <p className="mb-6" style={{ color: '#6F665A' }}>
                 The free AI Readiness Quiz takes 5 minutes and gives you a prioritized view of which parts of your operation are the most automatable — along with a rough sense of what each is costing you to do manually.
               </p>
               <a
                 href="/quiz"
                 className="inline-flex items-center gap-2 text-white font-bold px-6 py-3 rounded-xl transition-colors"
-                style={{ background: '#4B7FFF' }}
+                style={{ background: '#3B5BDB' }}
               >
                 Take the Free Readiness Quiz →
               </a>
@@ -190,7 +190,7 @@ export default function BlogPost() {
             <Link
               href="/blog"
               className="inline-flex items-center gap-2 text-sm font-medium transition-colors hover:opacity-80"
-              style={{ color: '#4B7FFF' }}
+              style={{ color: '#3B5BDB' }}
             >
               ← Back to all posts
             </Link>

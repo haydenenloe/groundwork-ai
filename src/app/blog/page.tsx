@@ -21,14 +21,14 @@ export default function BlogPage() {
           <div className="mb-16">
             <div
               className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold mb-6"
-              style={{ background: 'rgba(75,127,255,0.1)', border: '1px solid rgba(75,127,255,0.2)', color: '#4B7FFF' }}
+              style={{ background: 'rgba(75,127,255,0.1)', border: '1px solid rgba(75,127,255,0.2)', color: '#3B5BDB' }}
             >
               The Groundwork Blog
             </div>
-            <h1 className="text-4xl md:text-5xl font-black tracking-tight mb-4" style={{ color: '#DCE3EF' }}>
+            <h1 className="text-4xl md:text-5xl font-black tracking-tight mb-4" style={{ color: '#221D17', fontFamily: "'Fraunces', Georgia, serif" }}>
               No fluff. Just <span className="grad-text">operational AI</span>.
             </h1>
-            <p className="text-lg max-w-xl leading-relaxed" style={{ color: '#8892A4' }}>
+            <p className="text-lg max-w-xl leading-relaxed" style={{ color: '#6F665A' }}>
               Practical guides for operations-heavy businesses building AI systems that actually run.
             </p>
           </div>
@@ -40,32 +40,32 @@ export default function BlogPage() {
                 key={post.slug}
                 href={`/blog/posts/${post.slug}`}
                 className="block group card-hover rounded-2xl p-8"
-                style={{ background: 'rgba(30,45,71,0.4)', border: '1px solid rgba(75,127,255,0.12)' }}
+                style={{ background: '#FFFFFF', border: '1px solid #E7E0D3' }}
               >
                 <div className="flex items-center gap-3 mb-4">
                   {post.tags.map((tag) => (
                     <span
                       key={tag}
                       className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold"
-                      style={{ background: 'rgba(75,127,255,0.1)', border: '1px solid rgba(75,127,255,0.2)', color: '#4B7FFF' }}
+                      style={{ background: 'rgba(75,127,255,0.1)', border: '1px solid rgba(75,127,255,0.2)', color: '#3B5BDB' }}
                     >
                       {tag}
                     </span>
                   ))}
-                  <span className="text-sm ml-auto" style={{ color: '#8892A4' }}>
+                  <span className="text-sm ml-auto" style={{ color: '#6F665A' }}>
                     {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
                   </span>
                 </div>
                 <h2
                   className="text-xl md:text-2xl font-bold mb-3 group-hover:text-blue-400 transition-colors"
-                  style={{ color: '#DCE3EF' }}
+                  style={{ color: '#221D17' }}
                 >
                   {post.title}
                 </h2>
-                <p className="mb-4 leading-relaxed" style={{ color: '#8892A4' }}>
+                <p className="mb-4 leading-relaxed" style={{ color: '#6F665A' }}>
                   {post.summary}
                 </p>
-                <div className="flex items-center gap-2 text-sm font-medium" style={{ color: '#4B7FFF' }}>
+                <div className="flex items-center gap-2 text-sm font-medium" style={{ color: '#3B5BDB' }}>
                   <span>{post.readTime}</span>
                   <span>·</span>
                   <span className="group-hover:underline">Read post →</span>
@@ -76,13 +76,13 @@ export default function BlogPage() {
 
           {/* CTA */}
           <div className="mt-20 text-center">
-            <p className="text-sm mb-4" style={{ color: '#8892A4' }}>
+            <p className="text-sm mb-4" style={{ color: '#6F665A' }}>
               Not sure where your AI journey starts?
             </p>
             <a
               href="/quiz"
-              className="inline-flex items-center gap-2 text-white font-bold px-8 py-4 rounded-xl transition-colors"
-              style={{ background: '#4B7FFF' }}
+              className="inline-flex items-center gap-2 font-bold px-8 py-4 rounded-xl transition-colors"
+              style={{ background: '#3B5BDB', color: '#fff' }}
             >
               Take the Free AI Readiness Quiz →
             </a>

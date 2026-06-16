@@ -27,7 +27,7 @@ export default function BlogPost() {
           <Link
             href="/blog"
             className="inline-flex items-center gap-2 text-sm font-medium mb-12 transition-colors hover:opacity-80"
-            style={{ color: '#4B7FFF' }}
+            style={{ color: '#3B5BDB' }}
           >
             ← All Posts
           </Link>
@@ -37,23 +37,23 @@ export default function BlogPost() {
             <div className="flex items-center gap-3 mb-6">
               <span
                 className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold"
-                style={{ background: 'rgba(75,127,255,0.1)', border: '1px solid rgba(75,127,255,0.2)', color: '#4B7FFF' }}
+                style={{ background: 'rgba(75,127,255,0.1)', border: '1px solid rgba(75,127,255,0.2)', color: '#3B5BDB' }}
               >
                 AI Operations
               </span>
-              <span className="text-sm" style={{ color: '#8892A4' }}>June 16, 2026</span>
-              <span className="text-sm" style={{ color: '#8892A4' }}>·</span>
-              <span className="text-sm" style={{ color: '#8892A4' }}>5 min read</span>
+              <span className="text-sm" style={{ color: '#6F665A' }}>June 16, 2026</span>
+              <span className="text-sm" style={{ color: '#6F665A' }}>·</span>
+              <span className="text-sm" style={{ color: '#6F665A' }}>5 min read</span>
             </div>
             <h1
               className="text-4xl md:text-5xl font-black tracking-tight leading-tight mb-6"
-              style={{ color: '#DCE3EF' }}
+              style={{ color: '#221D17', fontFamily: "'Fraunces', Georgia, serif" }}
             >
               AI Automations Break.<br />
               Here&apos;s What to Do About It<br />
               Before It Happens.
             </h1>
-            <p className="text-xl leading-relaxed" style={{ color: '#8892A4' }}>
+            <p className="text-xl leading-relaxed" style={{ color: '#6F665A' }}>
               Every AI automation you build will eventually break. The teams that handle this well built for it from day one. Here&apos;s what that looks like.
             </p>
           </header>
@@ -62,7 +62,7 @@ export default function BlogPost() {
           <div className="w-full h-px mb-12" style={{ background: 'rgba(75,127,255,0.15)' }} />
 
           {/* Post content */}
-          <article className="prose-custom space-y-6" style={{ color: '#C4CDD9', lineHeight: '1.8', fontSize: '1.0625rem' }}>
+          <article className="prose-custom space-y-6" style={{ color: '#221D17', lineHeight: '1.8', fontSize: '1.0625rem' }}>
 
             <p>
               Nobody talks about this part. You get sold on the automation — the hours saved, the error rate dropping, the team finally free from the tedious work. You build it, it runs, life is good.
@@ -80,7 +80,7 @@ export default function BlogPost() {
               This isn&apos;t a hypothetical. It&apos;s the most common complaint I hear from operations teams six to twelve months after their first AI automation goes live: &ldquo;It stopped working and nobody noticed for two weeks.&rdquo;
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               Why AI automations are fragile in a way SaaS tools aren&apos;t
             </h2>
 
@@ -96,7 +96,7 @@ export default function BlogPost() {
               This is the maintenance problem. And it&apos;s not optional.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               The four things that break AI automations
             </h2>
 
@@ -105,22 +105,22 @@ export default function BlogPost() {
             </p>
 
             <p>
-              <strong style={{ color: '#DCE3EF' }}>1. Model updates.</strong> If you&apos;re using a cloud AI provider, the underlying model will change. Sometimes this is explicit (a version number change you opt into). Often it&apos;s not — providers quietly update models and behavior shifts. Prompts that were tuned for one behavior may degrade. The fix is pinning model versions where possible and treating model upgrades as a deployment event, not a free update.
+              <strong style={{ color: '#221D17' }}>1. Model updates.</strong> If you&apos;re using a cloud AI provider, the underlying model will change. Sometimes this is explicit (a version number change you opt into). Often it&apos;s not — providers quietly update models and behavior shifts. Prompts that were tuned for one behavior may degrade. The fix is pinning model versions where possible and treating model upgrades as a deployment event, not a free update.
             </p>
 
             <p>
-              <strong style={{ color: '#DCE3EF' }}>2. Upstream data changes.</strong> Your automation reads from somewhere — an API, a spreadsheet, an email, a form submission. When that source changes structure, your automation gets unexpected input. A CRM that adds a field. A vendor that reformats their invoice PDF. A team that changes how they fill out intake forms. These aren&apos;t bugs — they&apos;re just drift. But unhandled, they cause failures.
+              <strong style={{ color: '#221D17' }}>2. Upstream data changes.</strong> Your automation reads from somewhere — an API, a spreadsheet, an email, a form submission. When that source changes structure, your automation gets unexpected input. A CRM that adds a field. A vendor that reformats their invoice PDF. A team that changes how they fill out intake forms. These aren&apos;t bugs — they&apos;re just drift. But unhandled, they cause failures.
             </p>
 
             <p>
-              <strong style={{ color: '#DCE3EF' }}>3. Business logic drift.</strong> This one is sneaky. Your automation was built to reflect how your business operated nine months ago. Since then, your pricing changed, your process changed, your team changed. The automation kept running, but it&apos;s now automating something slightly different from what you actually need. You don&apos;t notice until the discrepancy compounds.
+              <strong style={{ color: '#221D17' }}>3. Business logic drift.</strong> This one is sneaky. Your automation was built to reflect how your business operated nine months ago. Since then, your pricing changed, your process changed, your team changed. The automation kept running, but it&apos;s now automating something slightly different from what you actually need. You don&apos;t notice until the discrepancy compounds.
             </p>
 
             <p>
-              <strong style={{ color: '#DCE3EF' }}>4. External API changes.</strong> If your automation touches any third-party service, that service will update, deprecate endpoints, change auth methods, or throttle differently than it used to. This is the most visible failure — usually an error or a dead integration — but it still requires someone paying attention.
+              <strong style={{ color: '#221D17' }}>4. External API changes.</strong> If your automation touches any third-party service, that service will update, deprecate endpoints, change auth methods, or throttle differently than it used to. This is the most visible failure — usually an error or a dead integration — but it still requires someone paying attention.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               Build for observability from the start
             </h2>
 
@@ -136,7 +136,7 @@ export default function BlogPost() {
               None of this is complicated. But almost nobody builds it in during the initial deployment because the focus is on making it work, not on what happens when it doesn&apos;t.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               The minimum viable maintenance system
             </h2>
 
@@ -145,18 +145,18 @@ export default function BlogPost() {
             </p>
 
             <p>
-              <strong style={{ color: '#DCE3EF' }}>A failure alert that goes to a human.</strong> Not a log file. Not a dashboard nobody checks. An actual notification — Slack, email, text — when the automation errors or when output volume drops below a threshold. Someone should be looking at it within hours, not discovering it two weeks later.
+              <strong style={{ color: '#221D17' }}>A failure alert that goes to a human.</strong> Not a log file. Not a dashboard nobody checks. An actual notification — Slack, email, text — when the automation errors or when output volume drops below a threshold. Someone should be looking at it within hours, not discovering it two weeks later.
             </p>
 
             <p>
-              <strong style={{ color: '#DCE3EF' }}>A weekly sample review.</strong> Pick five to ten outputs at random and have someone verify they look right. This catches the slow drift that doesn&apos;t trigger errors — the model behavior shift, the subtle misclassification, the formatting weirdness. Twenty minutes a week prevents months of bad data.
+              <strong style={{ color: '#221D17' }}>A weekly sample review.</strong> Pick five to ten outputs at random and have someone verify they look right. This catches the slow drift that doesn&apos;t trigger errors — the model behavior shift, the subtle misclassification, the formatting weirdness. Twenty minutes a week prevents months of bad data.
             </p>
 
             <p>
-              <strong style={{ color: '#DCE3EF' }}>A quarterly logic review.</strong> Sit down and ask: does this automation still reflect how we actually operate? Is it processing the right inputs? Is the output still going to the right place? Are there edge cases that have appeared since we launched that aren&apos;t handled? This isn&apos;t a rebuild — it&apos;s a fifteen-minute check-in to catch drift before it becomes a problem.
+              <strong style={{ color: '#221D17' }}>A quarterly logic review.</strong> Sit down and ask: does this automation still reflect how we actually operate? Is it processing the right inputs? Is the output still going to the right place? Are there edge cases that have appeared since we launched that aren&apos;t handled? This isn&apos;t a rebuild — it&apos;s a fifteen-minute check-in to catch drift before it becomes a problem.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               Maintenance isn&apos;t a sign the automation failed
             </h2>
 
@@ -185,16 +185,16 @@ export default function BlogPost() {
               className="mt-12 rounded-2xl p-8"
               style={{ background: 'rgba(75,127,255,0.08)', border: '1px solid rgba(75,127,255,0.2)' }}
             >
-              <p className="text-lg font-bold mb-2" style={{ color: '#DCE3EF' }}>
+              <p className="text-lg font-bold mb-2" style={{ color: '#221D17' }}>
                 Not sure which of your processes are actually ready to automate?
               </p>
-              <p className="mb-6" style={{ color: '#8892A4' }}>
+              <p className="mb-6" style={{ color: '#6F665A' }}>
                 The AI Readiness Quiz takes 3 minutes and tells you exactly where to start — and what to fix before you build anything.
               </p>
               <a
                 href="/quiz"
                 className="inline-flex items-center gap-2 text-white font-bold px-6 py-3 rounded-xl transition-opacity hover:opacity-90"
-                style={{ background: '#4B7FFF' }}
+                style={{ background: '#3B5BDB' }}
               >
                 Take the Free Quiz →
               </a>

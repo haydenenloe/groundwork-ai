@@ -17,38 +17,38 @@ export default function PrivacyPage() {
           <div className="mb-12">
             <div
               className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold mb-6"
-              style={{ background: 'rgba(75,127,255,0.1)', border: '1px solid rgba(75,127,255,0.2)', color: '#4B7FFF' }}
+              style={{ background: 'rgba(75,127,255,0.1)', border: '1px solid rgba(75,127,255,0.2)', color: '#3B5BDB' }}
             >
               Legal
             </div>
-            <h1 className="text-4xl md:text-5xl font-black tracking-tight mb-4" style={{ color: '#DCE3EF' }}>
+            <h1 className="text-4xl md:text-5xl font-black tracking-tight mb-4" style={{ color: '#221D17', fontFamily: "'Fraunces', Georgia, serif" }}>
               Privacy Policy
             </h1>
-            <p className="text-base md:text-lg leading-relaxed" style={{ color: '#8892A4' }}>
-              <strong style={{ color: '#DCE3EF' }}>Effective Date:</strong> May 29, 2026
+            <p className="text-base md:text-lg leading-relaxed" style={{ color: '#6F665A' }}>
+              <strong style={{ color: '#221D17' }}>Effective Date:</strong> May 29, 2026
             </p>
           </div>
 
           <div
             className="rounded-2xl p-8 md:p-10 space-y-8 leading-relaxed"
-            style={{ background: 'rgba(30,45,71,0.4)', border: '1px solid rgba(75,127,255,0.12)', color: '#8892A4' }}
+            style={{ background: '#FFFFFF', border: '1px solid #E7E0D3', color: '#6F665A' }}
           >
             <p>
               Groundwork AI (&quot;we,&quot; &quot;our,&quot; &quot;us&quot;) values your privacy. This Privacy Policy explains how we collect, use, and protect your personal information — particularly your phone number and SMS communication preferences.
             </p>
 
             <section className="space-y-4">
-              <h2 className="text-2xl font-bold" style={{ color: '#DCE3EF' }}>How We Use Your Information</h2>
+              <h2 className="text-2xl font-bold" style={{ color: '#221D17' }}>How We Use Your Information</h2>
               <p>
                 Groundwork AI provides messaging services on behalf of our client businesses (&quot;Clients&quot;). When you opt in to receive communications from one of our Clients, your contact information is processed through our messaging platform to deliver those communications. We act solely as a service provider for our Clients and use your information only to facilitate the messages you have consented to receive.
               </p>
               <p>
-                <strong style={{ color: '#DCE3EF' }}>We do not share opt-in data, consent records, or contact information with any third parties for marketing or any other purposes.</strong>
+                <strong style={{ color: '#221D17' }}>We do not share opt-in data, consent records, or contact information with any third parties for marketing or any other purposes.</strong>
               </p>
             </section>
 
             <section className="space-y-4">
-              <h2 className="text-2xl font-bold" style={{ color: '#DCE3EF' }}>Information We Collect</h2>
+              <h2 className="text-2xl font-bold" style={{ color: '#221D17' }}>Information We Collect</h2>
               <p>When you interact with one of our Clients through our messaging platform, we may collect:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Your phone number</li>
@@ -60,7 +60,7 @@ export default function PrivacyPage() {
             </section>
 
             <section className="space-y-4">
-              <h2 className="text-2xl font-bold" style={{ color: '#DCE3EF' }}>How We Use Your Information</h2>
+              <h2 className="text-2xl font-bold" style={{ color: '#221D17' }}>How We Use Your Information</h2>
               <p>We use your information solely to:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Deliver SMS messages from our Clients that you have opted in to receive</li>
@@ -71,25 +71,25 @@ export default function PrivacyPage() {
             </section>
 
             <section className="space-y-4">
-              <h2 className="text-2xl font-bold" style={{ color: '#DCE3EF' }}>SMS Opt-Out</h2>
+              <h2 className="text-2xl font-bold" style={{ color: '#221D17' }}>SMS Opt-Out</h2>
               <p>
-                You can opt out of SMS communications at any time by replying <strong style={{ color: '#DCE3EF' }}>STOP</strong> to any message. Once you opt out, you will receive a confirmation message and no further marketing messages will be sent to you. To re-subscribe, reply <strong style={{ color: '#DCE3EF' }}>START</strong>.
+                You can opt out of SMS communications at any time by replying <strong style={{ color: '#221D17' }}>STOP</strong> to any message. Once you opt out, you will receive a confirmation message and no further marketing messages will be sent to you. To re-subscribe, reply <strong style={{ color: '#221D17' }}>START</strong>.
               </p>
               <p>
-                You may also reply <strong style={{ color: '#DCE3EF' }}>HELP</strong> at any time to receive information about how to contact us.
+                You may also reply <strong style={{ color: '#221D17' }}>HELP</strong> at any time to receive information about how to contact us.
               </p>
               <p>Message and data rates may apply. Frequency of messages varies by Client and conversation.</p>
             </section>
 
             <section className="space-y-4">
-              <h2 className="text-2xl font-bold" style={{ color: '#DCE3EF' }}>Data Retention</h2>
+              <h2 className="text-2xl font-bold" style={{ color: '#221D17' }}>Data Retention</h2>
               <p>
                 We retain your information only as long as necessary to fulfill the purposes outlined in this Privacy Policy or as required by law. Consent records are retained for the duration of our service relationship plus any period required by applicable regulations.
               </p>
             </section>
 
             <section className="space-y-4">
-              <h2 className="text-2xl font-bold" style={{ color: '#DCE3EF' }}>Your Rights</h2>
+              <h2 className="text-2xl font-bold" style={{ color: '#221D17' }}>Your Rights</h2>
               <p>Depending on your jurisdiction, you may have the right to:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Access the personal information we hold about you</li>
@@ -101,16 +101,16 @@ export default function PrivacyPage() {
             </section>
 
             <section className="space-y-4">
-              <h2 className="text-2xl font-bold" style={{ color: '#DCE3EF' }}>Changes to This Policy</h2>
+              <h2 className="text-2xl font-bold" style={{ color: '#221D17' }}>Changes to This Policy</h2>
               <p>
                 We may update this Privacy Policy from time to time. The &quot;Effective Date&quot; at the top will reflect the most recent revision. Material changes will be communicated through reasonable means, such as a notice on our website.
               </p>
             </section>
 
             <section className="space-y-4">
-              <h2 className="text-2xl font-bold" style={{ color: '#DCE3EF' }}>Contact</h2>
+              <h2 className="text-2xl font-bold" style={{ color: '#221D17' }}>Contact</h2>
               <p>
-                <strong style={{ color: '#DCE3EF' }}>Groundwork AI</strong><br />
+                <strong style={{ color: '#221D17' }}>Groundwork AI</strong><br />
                 Email: hayden.enloe@groundwork-ai.dev<br />
                 Website: https://groundwork-ai.dev
               </p>

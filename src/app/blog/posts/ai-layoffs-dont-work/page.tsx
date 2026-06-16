@@ -27,7 +27,7 @@ export default function BlogPost() {
           <Link
             href="/blog"
             className="inline-flex items-center gap-2 text-sm font-medium mb-12 transition-colors hover:opacity-80"
-            style={{ color: '#4B7FFF' }}
+            style={{ color: '#3B5BDB' }}
           >
             ← All Posts
           </Link>
@@ -37,28 +37,28 @@ export default function BlogPost() {
             <div className="flex items-center gap-3 mb-6">
               <span
                 className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold"
-                style={{ background: 'rgba(75,127,255,0.1)', border: '1px solid rgba(75,127,255,0.2)', color: '#4B7FFF' }}
+                style={{ background: 'rgba(75,127,255,0.1)', border: '1px solid rgba(75,127,255,0.2)', color: '#3B5BDB' }}
               >
                 AI Operations
               </span>
               <span
                 className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold"
-                style={{ background: 'rgba(75,127,255,0.1)', border: '1px solid rgba(75,127,255,0.2)', color: '#4B7FFF' }}
+                style={{ background: 'rgba(75,127,255,0.1)', border: '1px solid rgba(75,127,255,0.2)', color: '#3B5BDB' }}
               >
                 ROI
               </span>
-              <span className="text-sm" style={{ color: '#8892A4' }}>May 12, 2026</span>
-              <span className="text-sm" style={{ color: '#8892A4' }}>·</span>
-              <span className="text-sm" style={{ color: '#8892A4' }}>5 min read</span>
+              <span className="text-sm" style={{ color: '#6F665A' }}>May 12, 2026</span>
+              <span className="text-sm" style={{ color: '#6F665A' }}>·</span>
+              <span className="text-sm" style={{ color: '#6F665A' }}>5 min read</span>
             </div>
             <h1
               className="text-4xl md:text-5xl font-black tracking-tight leading-tight mb-6"
-              style={{ color: '#DCE3EF' }}
+              style={{ color: '#221D17', fontFamily: "'Fraunces', Georgia, serif" }}
             >
               Cutting Headcount with AI Isn&apos;t a Strategy.<br />
               Here&apos;s What Actually Works.
             </h1>
-            <p className="text-xl leading-relaxed" style={{ color: '#8892A4' }}>
+            <p className="text-xl leading-relaxed" style={{ color: '#6F665A' }}>
               A Gartner study just confirmed what the numbers have been hinting at for two years: using AI to cut staff doesn&apos;t generate better returns. Here&apos;s what does.
             </p>
           </header>
@@ -67,7 +67,7 @@ export default function BlogPost() {
           <div className="w-full h-px mb-12" style={{ background: 'rgba(75,127,255,0.15)' }} />
 
           {/* Post content */}
-          <article className="prose-custom space-y-6" style={{ color: '#C4CDD9', lineHeight: '1.8', fontSize: '1.0625rem' }}>
+          <article className="prose-custom space-y-6" style={{ color: '#221D17', lineHeight: '1.8', fontSize: '1.0625rem' }}>
 
             <p>
               Gartner published a study this week that should make a lot of executives uncomfortable. Eighty percent of companies surveyed had reduced headcount using AI automation. And there was zero correlation between those layoffs and higher return on investment.
@@ -81,7 +81,7 @@ export default function BlogPost() {
               If your AI strategy is &ldquo;cut costs by eliminating people,&rdquo; the data says that strategy isn&apos;t working. And if you look at how most of these implementations were actually built, it&apos;s not hard to see why.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               Headcount reduction is the wrong target
             </h2>
 
@@ -101,7 +101,7 @@ export default function BlogPost() {
               The companies seeing real returns from AI aren&apos;t asking &ldquo;who can we cut?&rdquo; They&apos;re asking &ldquo;where is our operation leaking capacity?&rdquo; That&apos;s a completely different question, and it leads to completely different results.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               The right framing: capacity, not headcount
             </h2>
 
@@ -121,7 +121,7 @@ export default function BlogPost() {
               That&apos;s where ROI actually lives. Not in fewer people — in the same people doing more of the work that matters.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               What winning implementations look like
             </h2>
 
@@ -141,7 +141,7 @@ export default function BlogPost() {
               Third, they let the same team do more — they didn&apos;t immediately cut. When a workflow gets automated, the person who used to do it doesn&apos;t disappear from the org chart. They shift to work that was previously backlogged or neglected. Volume goes up. Quality improves. Customers notice. That&apos;s where revenue impact comes from, and it shows up in ways that are harder to attribute but very real.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               The honest conversation to have internally
             </h2>
 
@@ -157,7 +157,7 @@ export default function BlogPost() {
               The companies that will win over the next three years are building operations where AI handles the repeatable work and their people handle the judgment-intensive work. That combination scales. Cutting headcount and hoping the AI covers the gap does not.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               A practical starting point
             </h2>
 
@@ -178,16 +178,16 @@ export default function BlogPost() {
               className="rounded-2xl p-8 mt-12"
               style={{ background: 'rgba(75,127,255,0.06)', border: '1px solid rgba(75,127,255,0.15)' }}
             >
-              <h3 className="text-xl font-bold mb-3" style={{ color: '#DCE3EF' }}>
+              <h3 className="text-xl font-bold mb-3" style={{ color: '#221D17' }}>
                 Want to know where AI can actually move the needle in your operation?
               </h3>
-              <p className="mb-6" style={{ color: '#8892A4' }}>
+              <p className="mb-6" style={{ color: '#6F665A' }}>
                 The free AI Readiness Quiz takes 5 minutes and shows you which parts of your business are the highest-leverage automation targets — before you spend a dollar on implementation.
               </p>
               <a
                 href="/quiz"
                 className="inline-flex items-center gap-2 text-white font-bold px-6 py-3 rounded-xl transition-colors"
-                style={{ background: '#4B7FFF' }}
+                style={{ background: '#3B5BDB' }}
               >
                 Take the Free Readiness Quiz →
               </a>
@@ -200,7 +200,7 @@ export default function BlogPost() {
             <Link
               href="/blog"
               className="inline-flex items-center gap-2 text-sm font-medium transition-colors hover:opacity-80"
-              style={{ color: '#4B7FFF' }}
+              style={{ color: '#3B5BDB' }}
             >
               ← Back to all posts
             </Link>

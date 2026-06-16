@@ -27,7 +27,7 @@ export default function BlogPost() {
           <Link
             href="/blog"
             className="inline-flex items-center gap-2 text-sm font-medium mb-12 transition-colors hover:opacity-80"
-            style={{ color: '#4B7FFF' }}
+            style={{ color: '#3B5BDB' }}
           >
             ← All Posts
           </Link>
@@ -37,22 +37,22 @@ export default function BlogPost() {
             <div className="flex items-center gap-3 mb-6">
               <span
                 className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold"
-                style={{ background: 'rgba(75,127,255,0.1)', border: '1px solid rgba(75,127,255,0.2)', color: '#4B7FFF' }}
+                style={{ background: 'rgba(75,127,255,0.1)', border: '1px solid rgba(75,127,255,0.2)', color: '#3B5BDB' }}
               >
                 AI Operations
               </span>
-              <span className="text-sm" style={{ color: '#8892A4' }}>April 7, 2026</span>
-              <span className="text-sm" style={{ color: '#8892A4' }}>·</span>
-              <span className="text-sm" style={{ color: '#8892A4' }}>5 min read</span>
+              <span className="text-sm" style={{ color: '#6F665A' }}>April 7, 2026</span>
+              <span className="text-sm" style={{ color: '#6F665A' }}>·</span>
+              <span className="text-sm" style={{ color: '#6F665A' }}>5 min read</span>
             </div>
             <h1
               className="text-4xl md:text-5xl font-black tracking-tight leading-tight mb-6"
-              style={{ color: '#DCE3EF' }}
+              style={{ color: '#221D17', fontFamily: "'Fraunces', Georgia, serif" }}
             >
               Stop Buying AI Tools.<br />
               Start Building AI Workflows.
             </h1>
-            <p className="text-xl leading-relaxed" style={{ color: '#8892A4' }}>
+            <p className="text-xl leading-relaxed" style={{ color: '#6F665A' }}>
               Most companies have an AI budget. Almost none have an AI strategy. Here&apos;s what that distinction is costing them.
             </p>
           </header>
@@ -61,7 +61,7 @@ export default function BlogPost() {
           <div className="w-full h-px mb-12" style={{ background: 'rgba(75,127,255,0.15)' }} />
 
           {/* Post content */}
-          <article className="prose-custom space-y-6" style={{ color: '#C4CDD9', lineHeight: '1.8', fontSize: '1.0625rem' }}>
+          <article className="prose-custom space-y-6" style={{ color: '#221D17', lineHeight: '1.8', fontSize: '1.0625rem' }}>
 
             <p>
               Ask any operations manager what AI tools their company uses. You&apos;ll get a list. ChatGPT, Notion AI, a Zapier account someone set up last year, maybe a $300/month tool that three people tried once at an offsite.
@@ -75,7 +75,7 @@ export default function BlogPost() {
               That&apos;s the problem. Companies are buying AI tools the way they used to buy enterprise software — on the assumption that having access to the technology is the same as using it. It&apos;s not.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               Tools are passive. Workflows are active.
             </h2>
 
@@ -95,7 +95,7 @@ export default function BlogPost() {
               That&apos;s what &ldquo;AI in operations&rdquo; actually means when it&apos;s working.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               Where to find your first workflow
             </h2>
 
@@ -115,7 +115,7 @@ export default function BlogPost() {
               The standard we use: if a reasonably smart person could do it in their first week on the job using only what&apos;s on their screen, AI can probably do it automatically.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               The math is simpler than you think
             </h2>
 
@@ -131,7 +131,7 @@ export default function BlogPost() {
               Most of the workflows we build cost between $5K and $25K to implement. The payback period on the labor math alone is typically under 12 months. That&apos;s before you factor in the compounding — once a workflow exists, it scales without adding headcount.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               Why the tool-first approach fails
             </h2>
 
@@ -147,7 +147,7 @@ export default function BlogPost() {
               This is why the companies actually getting ROI from AI right now aren&apos;t the ones with the most tools. They&apos;re the ones who picked three or four specific processes and built reliable automation around each one.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               What to do this week
             </h2>
 
@@ -172,16 +172,16 @@ export default function BlogPost() {
               className="rounded-2xl p-8 mt-12"
               style={{ background: 'rgba(75,127,255,0.06)', border: '1px solid rgba(75,127,255,0.15)' }}
             >
-              <h3 className="text-xl font-bold mb-3" style={{ color: '#DCE3EF' }}>
+              <h3 className="text-xl font-bold mb-3" style={{ color: '#221D17' }}>
                 Not sure where your first workflow is?
               </h3>
-              <p className="mb-6" style={{ color: '#8892A4' }}>
+              <p className="mb-6" style={{ color: '#6F665A' }}>
                 The free AI Readiness Quiz helps you identify which parts of your operation are the most automatable — and gives you a prioritized starting point in under 5 minutes.
               </p>
               <a
                 href="/quiz"
                 className="inline-flex items-center gap-2 text-white font-bold px-6 py-3 rounded-xl transition-colors"
-                style={{ background: '#4B7FFF' }}
+                style={{ background: '#3B5BDB' }}
               >
                 Take the Free Readiness Quiz →
               </a>
@@ -194,7 +194,7 @@ export default function BlogPost() {
             <Link
               href="/blog"
               className="inline-flex items-center gap-2 text-sm font-medium transition-colors hover:opacity-80"
-              style={{ color: '#4B7FFF' }}
+              style={{ color: '#3B5BDB' }}
             >
               ← Back to all posts
             </Link>

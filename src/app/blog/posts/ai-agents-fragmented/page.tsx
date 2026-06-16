@@ -27,7 +27,7 @@ export default function BlogPost() {
           <Link
             href="/blog"
             className="inline-flex items-center gap-2 text-sm font-medium mb-12 transition-colors hover:opacity-80"
-            style={{ color: '#4B7FFF' }}
+            style={{ color: '#3B5BDB' }}
           >
             ← All Posts
           </Link>
@@ -37,22 +37,22 @@ export default function BlogPost() {
             <div className="flex items-center gap-3 mb-6">
               <span
                 className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold"
-                style={{ background: 'rgba(75,127,255,0.1)', border: '1px solid rgba(75,127,255,0.2)', color: '#4B7FFF' }}
+                style={{ background: 'rgba(75,127,255,0.1)', border: '1px solid rgba(75,127,255,0.2)', color: '#3B5BDB' }}
               >
                 AI Operations
               </span>
-              <span className="text-sm" style={{ color: '#8892A4' }}>May 5, 2026</span>
-              <span className="text-sm" style={{ color: '#8892A4' }}>·</span>
-              <span className="text-sm" style={{ color: '#8892A4' }}>6 min read</span>
+              <span className="text-sm" style={{ color: '#6F665A' }}>May 5, 2026</span>
+              <span className="text-sm" style={{ color: '#6F665A' }}>·</span>
+              <span className="text-sm" style={{ color: '#6F665A' }}>6 min read</span>
             </div>
             <h1
               className="text-4xl md:text-5xl font-black tracking-tight leading-tight mb-6"
-              style={{ color: '#DCE3EF' }}
+              style={{ color: '#221D17', fontFamily: "'Fraunces', Georgia, serif" }}
             >
               Your AI Agents Are Fragmented.<br />
               Here&apos;s Why They&apos;re Underdelivering.
             </h1>
-            <p className="text-xl leading-relaxed" style={{ color: '#8892A4' }}>
+            <p className="text-xl leading-relaxed" style={{ color: '#6F665A' }}>
               Nearly half of enterprises are already running AI agents. Most of them are falling short — not because the technology is bad, but because the deployment is.
             </p>
           </header>
@@ -61,7 +61,7 @@ export default function BlogPost() {
           <div className="w-full h-px mb-12" style={{ background: 'rgba(75,127,255,0.15)' }} />
 
           {/* Post content */}
-          <article className="prose-custom space-y-6" style={{ color: '#C4CDD9', lineHeight: '1.8', fontSize: '1.0625rem' }}>
+          <article className="prose-custom space-y-6" style={{ color: '#221D17', lineHeight: '1.8', fontSize: '1.0625rem' }}>
 
             <p>
               A recent industry survey found that 45% of enterprises are already using AI agents in some form. Another 25% are actively piloting them. So by most measures, AI agent adoption is well underway.
@@ -75,7 +75,7 @@ export default function BlogPost() {
               That&apos;s not a technology problem. It&apos;s a deployment problem. And it&apos;s happening in a pretty predictable pattern.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               What &ldquo;fragmented&rdquo; actually looks like
             </h2>
 
@@ -91,7 +91,7 @@ export default function BlogPost() {
               Fragmented AI looks busy. It doesn&apos;t compound.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               The compounding problem
             </h2>
 
@@ -111,7 +111,7 @@ export default function BlogPost() {
               Fragmented agents don&apos;t produce this. Connected workflows do.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               Why companies end up fragmented in the first place
             </h2>
 
@@ -131,7 +131,7 @@ export default function BlogPost() {
               The companies getting real ROI from AI right now made a different choice. They identified two or three workflows that cross functional lines — things that touch multiple teams, multiple systems — and built connected automation around those. Not tools. Workflows.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               How to audit what you actually have
             </h2>
 
@@ -147,7 +147,7 @@ export default function BlogPost() {
               Every manual handoff is a connection point for a workflow. And if that handoff crosses team boundaries, it&apos;s likely a high-value one — because the friction there is invisible to any single person but expensive to the whole operation.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               The fix is simpler than most companies think
             </h2>
 
@@ -171,7 +171,7 @@ export default function BlogPost() {
               Fragmentation happens when AI is added one tool at a time without a workflow view. The fix is thinking in workflows first, then figuring out which tools support them — not the other way around.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               The honest benchmark
             </h2>
 
@@ -192,16 +192,16 @@ export default function BlogPost() {
               className="rounded-2xl p-8 mt-12"
               style={{ background: 'rgba(75,127,255,0.06)', border: '1px solid rgba(75,127,255,0.15)' }}
             >
-              <h3 className="text-xl font-bold mb-3" style={{ color: '#DCE3EF' }}>
+              <h3 className="text-xl font-bold mb-3" style={{ color: '#221D17' }}>
                 Want to know which workflows in your operation are worth automating first?
               </h3>
-              <p className="mb-6" style={{ color: '#8892A4' }}>
+              <p className="mb-6" style={{ color: '#6F665A' }}>
                 The free AI Readiness Quiz takes five minutes and gives you a prioritized view of where AI will actually move the needle for your team — before you spend a dollar on implementation.
               </p>
               <a
                 href="/quiz"
                 className="inline-flex items-center gap-2 text-white font-bold px-6 py-3 rounded-xl transition-colors"
-                style={{ background: '#4B7FFF' }}
+                style={{ background: '#3B5BDB' }}
               >
                 Take the Free Readiness Quiz →
               </a>
@@ -214,7 +214,7 @@ export default function BlogPost() {
             <Link
               href="/blog"
               className="inline-flex items-center gap-2 text-sm font-medium transition-colors hover:opacity-80"
-              style={{ color: '#4B7FFF' }}
+              style={{ color: '#3B5BDB' }}
             >
               ← Back to all posts
             </Link>

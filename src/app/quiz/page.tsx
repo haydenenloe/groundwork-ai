@@ -134,21 +134,21 @@ const tiers: Tier[] = [
     desc: "You have the right conditions taking shape: real pain points, some internal buy-in, and a sense of what needs to change. A few gaps to close before full implementation makes sense, but you're closer than you think.",
     ctaTitle: 'Ready to identify your best opportunities?',
     ctaDesc: 'An AI Operations Audit will map your 2–3 highest-value workflows, quantify the cost of inaction, and give you a clear 30/60/90-day roadmap.',
-    ctaBtn: 'Book an AI Audit ($2,500)', ctaHref: '/#audit', color: '#4B7FFF',
+    ctaBtn: 'Book an AI Audit ($2,500)', ctaHref: '/#audit', color: '#3B5BDB',
   },
   {
     range: [59, 79], title: 'AI-Ready', emoji: '🚀',
     desc: "Strong foundation. You have real pain, internal alignment, and the capacity to act. You're at the point where a focused audit translates directly into a implementation roadmap and deliver measurable ROI within 90 days.",
     ctaTitle: "You're ready. Let's map the build.",
     ctaDesc: "Book an AI Operations Audit. We'll turn your highest-friction workflows into a production implementation plan with timelines and cost estimates.",
-    ctaBtn: 'Book an AI Audit ($2,500)', ctaHref: '/#audit', color: '#4B7FFF',
+    ctaBtn: 'Book an AI Audit ($2,500)', ctaHref: '/#audit', color: '#3B5BDB',
   },
   {
     range: [80, 100], title: 'AI-First', emoji: '⚡',
     desc: "You're already operating with an AI mindset. The gap isn't vision; it's execution bandwidth. You need a specialist who can move fast, build to production standards, and hand off systems that your team actually uses.",
     ctaTitle: "Skip the theory. Let's build.",
     ctaDesc: "Book a 15-minute call and we'll scope your first implementation directly. You know what you need. Let's talk specifics.",
-    ctaBtn: "Book a Call. Let's Talk.", ctaHref: '/#audit', color: '#4B7FFF',
+    ctaBtn: "Book a Call. Let's Talk.", ctaHref: '/#audit', color: '#3B5BDB',
   },
 ]
 
@@ -414,15 +414,15 @@ export default function QuizPage() {
   return (
     <>
       {/* Nav */}
-      <header className="fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-md" style={{ background: 'rgba(7,11,20,0.8)', borderColor: '#1E2D47' }}>
+      <header className="fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-md" style={{ background: 'rgba(255,255,255,0.85)', borderColor: '#E7E0D3' }}>
         <nav className="max-w-4xl mx-auto px-6 h-14 flex items-center justify-between">
           <a href="/" className="flex items-center gap-2.5">
             <Logo size={22} />
-            <span className="font-bold tracking-tight" style={{ color: '#DCE3EF' }}>
-              Groundwork <span style={{ color: '#4B7FFF' }}>AI</span>
+            <span className="font-bold tracking-tight" style={{ color: '#221D17' }}>
+              Groundwork <span style={{ color: '#3B5BDB' }}>AI</span>
             </span>
           </a>
-          <div className="text-sm" style={{ color: '#8892A4' }}>AI Readiness Quiz</div>
+          <div className="text-sm" style={{ color: '#6F665A' }}>AI Readiness Quiz</div>
         </nav>
       </header>
 
@@ -434,23 +434,23 @@ export default function QuizPage() {
             <div className="max-w-xl w-full text-center relative">
               <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 80% 50% at 50% 0%, rgba(75,127,255,0.15) 0%, transparent 65%)' }} />
               <div className="relative">
-                <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold mb-8" style={{ background: 'rgba(75,127,255,0.1)', border: '1px solid rgba(75,127,255,0.2)', color: '#4B7FFF' }}>
+                <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold mb-8" style={{ background: 'rgba(75,127,255,0.1)', border: '1px solid rgba(75,127,255,0.2)', color: '#3B5BDB' }}>
                   Free · 5 minutes · Instant results
                 </div>
-                <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-tight mb-5" style={{ color: '#DCE3EF' }}>
+                <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-tight mb-5" style={{ color: '#221D17', fontFamily: "'Fraunces', Georgia, serif" }}>
                   How AI-ready is<br /><span className="grad-text">your business?</span>
                 </h1>
-                <p className="text-lg leading-relaxed mb-10" style={{ color: '#8892A4' }}>
+                <p className="text-lg leading-relaxed mb-10" style={{ color: '#6F665A' }}>
                   10 questions. Get a personalized readiness score, your highest-ROI opportunities, and a clear recommended next step.
                 </p>
-                <div className="border rounded-2xl p-6 mb-8 text-left space-y-3" style={{ background: '#0C1525', borderColor: '#1E2D47' }}>
+                <div className="border rounded-2xl p-6 mb-8 text-left space-y-3" style={{ background: '#FFFFFF', borderColor: '#E7E0D3' }}>
                   {[
                     'Scored across 10 readiness dimensions',
                     'Personalized recommendations based on your answers',
                     'No fluff. Specific, actionable output.',
                   ].map(item => (
-                    <div key={item} className="flex items-center gap-3 text-sm" style={{ color: '#DCE3EF' }}>
-                      <span className="w-7 h-7 rounded-lg flex items-center justify-center font-bold flex-shrink-0 text-xs" style={{ background: 'rgba(75,127,255,0.1)', color: '#4B7FFF' }}>✓</span>
+                    <div key={item} className="flex items-center gap-3 text-sm" style={{ color: '#221D17' }}>
+                      <span className="w-7 h-7 rounded-lg flex items-center justify-center font-bold flex-shrink-0 text-xs" style={{ background: 'rgba(75,127,255,0.1)', color: '#3B5BDB' }}>✓</span>
                       {item}
                     </div>
                   ))}
@@ -458,11 +458,11 @@ export default function QuizPage() {
                 <button
                   onClick={startQuiz}
                   className="w-full text-white font-bold text-lg py-4 rounded-xl transition-colors"
-                  style={{ background: '#4B7FFF', boxShadow: '0 10px 15px -3px rgba(75,127,255,0.2)' }}
+                  style={{ background: '#3B5BDB', boxShadow: '0 10px 15px -3px rgba(75,127,255,0.2)' }}
                 >
                   Start the Quiz →
                 </button>
-                <p className="text-sm mt-4" style={{ color: '#4A5568' }}>Takes about 3–5 minutes. No commitment required.</p>
+                <p className="text-sm mt-4" style={{ color: '#8A8170' }}>Takes about 3–5 minutes. No commitment required.</p>
               </div>
             </div>
           </div>
@@ -473,23 +473,23 @@ export default function QuizPage() {
           <div className="flex-1 flex flex-col px-6 py-8">
             {/* Progress */}
             <div className="max-w-2xl mx-auto w-full mb-8">
-              <div className="flex items-center justify-between text-sm mb-3" style={{ color: '#8892A4' }}>
+              <div className="flex items-center justify-between text-sm mb-3" style={{ color: '#6F665A' }}>
                 <span>Question {currentQ + 1} of {questions.length}</span>
                 <span>{pct}%</span>
               </div>
-              <div className="h-1.5 rounded-full overflow-hidden" style={{ background: '#162035' }}>
-                <div className="progress-bar h-full rounded-full" style={{ width: `${pct}%`, background: '#4B7FFF' }} />
+              <div className="h-1.5 rounded-full overflow-hidden" style={{ background: '#E7E0D3' }}>
+                <div className="progress-bar h-full rounded-full" style={{ width: `${pct}%`, background: '#3B5BDB' }} />
               </div>
             </div>
 
             {/* Question card */}
             <div className="max-w-2xl mx-auto w-full flex-1 flex flex-col slide-in" key={currentQ}>
               <div>
-                <p className="font-semibold text-xs uppercase tracking-widest mb-3" style={{ color: '#4B7FFF' }}>{q.category}</p>
-                <h2 className="text-2xl md:text-3xl font-black tracking-tight leading-tight mb-3" style={{ color: '#DCE3EF' }}>{q.text}</h2>
+                <p className="font-semibold text-xs uppercase tracking-widest mb-3" style={{ color: '#3B5BDB' }}>{q.category}</p>
+                <h2 className="text-2xl md:text-3xl font-black tracking-tight leading-tight mb-3" style={{ color: '#221D17' }}>{q.text}</h2>
                 {q.hint && (
                   <div className="mb-5">
-                    <a href={q.hint.href} target="_blank" rel="noreferrer" className="text-sm hover:underline" style={{ color: '#4B7FFF' }}>{q.hint.label}</a>
+                    <a href={q.hint.href} target="_blank" rel="noreferrer" className="text-sm hover:underline" style={{ color: '#3B5BDB' }}>{q.hint.label}</a>
                   </div>
                 )}
                 <div className="space-y-3">
@@ -499,11 +499,11 @@ export default function QuizPage() {
                       <button
                         key={opt.label}
                         className={`option-btn w-full flex items-center gap-4 border rounded-xl px-5 py-4 text-left ${selected ? 'selected' : ''}`}
-                        style={{ background: '#0C1525', borderColor: '#1E2D47' }}
+                        style={{ background: '#FFFFFF', borderColor: '#E7E0D3' }}
                         onClick={() => selectOption(opt)}
                       >
                         <div className={`option-dot ${selected ? 'bg-blue border-blue' : ''}`} />
-                        <span className="text-sm font-medium leading-tight" style={{ color: '#DCE3EF' }}>{opt.label}</span>
+                        <span className="text-sm font-medium leading-tight" style={{ color: '#221D17' }}>{opt.label}</span>
                       </button>
                     )
                   })}
@@ -511,11 +511,11 @@ export default function QuizPage() {
               </div>
 
               {/* Nav buttons */}
-              <div className="flex items-center justify-between mt-10 pt-6 border-t" style={{ borderColor: '#1E2D47' }}>
+              <div className="flex items-center justify-between mt-10 pt-6 border-t" style={{ borderColor: '#E7E0D3' }}>
                 <button
                   onClick={goBack}
                   className="flex items-center gap-2 text-sm font-medium transition-colors"
-                  style={{ color: '#8892A4', visibility: currentQ === 0 ? 'hidden' : 'visible' }}
+                  style={{ color: '#6F665A', visibility: currentQ === 0 ? 'hidden' : 'visible' }}
                 >
                   <svg width="16" height="16" fill="none" viewBox="0 0 16 16">
                     <path d="M10 12L6 8l4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -526,7 +526,7 @@ export default function QuizPage() {
                   onClick={goNext}
                   disabled={!answers[q.id]}
                   className="text-white font-semibold text-sm px-8 py-3 rounded-xl transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
-                  style={{ background: '#4B7FFF' }}
+                  style={{ background: '#3B5BDB' }}
                 >
                   Next →
                 </button>
@@ -541,31 +541,31 @@ export default function QuizPage() {
             <div className="max-w-lg w-full">
               <div className="text-center mb-8">
                 <div className="text-4xl mb-4">🎯</div>
-                <h2 className="text-3xl font-black tracking-tight mb-3" style={{ color: '#DCE3EF' }}>Your results are ready.</h2>
-                <p style={{ color: '#8892A4' }}>Enter your details to see your personalized AI readiness score and recommendations.</p>
+                <h2 className="text-3xl font-black tracking-tight mb-3" style={{ color: '#221D17' }}>Your results are ready.</h2>
+                <p style={{ color: '#6F665A' }}>Enter your details to see your personalized AI readiness score and recommendations.</p>
               </div>
-              <div className="border rounded-2xl p-8 space-y-4" style={{ background: '#0C1525', borderColor: '#1E2D47' }}>
+              <div className="border rounded-2xl p-8 space-y-4" style={{ background: '#FFFFFF', borderColor: '#E7E0D3' }}>
                 <div>
-                  <label className="block text-sm font-medium mb-2" style={{ color: '#DCE3EF' }}>Your name</label>
+                  <label className="block text-sm font-medium mb-2" style={{ color: '#221D17' }}>Your name</label>
                   <input type="text" placeholder="Jane Smith" value={captureData.name} onChange={e => setCaptureData(d => ({ ...d, name: e.target.value }))} />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2" style={{ color: '#DCE3EF' }}>Work email</label>
+                  <label className="block text-sm font-medium mb-2" style={{ color: '#221D17' }}>Work email</label>
                   <input type="email" placeholder="jane@company.com" value={captureData.email} onChange={e => setCaptureData(d => ({ ...d, email: e.target.value }))} />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2" style={{ color: '#DCE3EF' }}>Company name</label>
+                  <label className="block text-sm font-medium mb-2" style={{ color: '#221D17' }}>Company name</label>
                   <input type="text" placeholder="Acme Corp" value={captureData.company} onChange={e => setCaptureData(d => ({ ...d, company: e.target.value }))} />
                 </div>
                 <button
                   onClick={submitCapture}
                   disabled={submitting || !captureData.email}
                   className="w-full text-white font-bold py-4 rounded-xl mt-2 transition-colors disabled:opacity-50"
-                  style={{ background: '#4B7FFF' }}
+                  style={{ background: '#3B5BDB' }}
                 >
                   {submitting ? 'Calculating...' : 'See My Results →'}
                 </button>
-                <p className="text-xs text-center" style={{ color: '#4A5568' }}>No spam. We&apos;ll only reach out if it&apos;s relevant to your score.</p>
+                <p className="text-xs text-center" style={{ color: '#8A8170' }}>No spam. We&apos;ll only reach out if it&apos;s relevant to your score.</p>
               </div>
             </div>
           </div>
@@ -578,12 +578,12 @@ export default function QuizPage() {
 
               {/* Score header */}
               <div className="text-center mb-12">
-                <p className="font-semibold text-sm uppercase tracking-widest mb-4" style={{ color: '#4B7FFF' }}>Your AI Readiness Score</p>
+                <p className="font-semibold text-sm uppercase tracking-widest mb-4" style={{ color: '#3B5BDB' }}>Your AI Readiness Score</p>
 
                 {/* Score ring */}
                 <div className="relative inline-flex items-center justify-center mb-6">
                   <svg width="160" height="160" viewBox="0 0 160 160" className="-rotate-90">
-                    <circle cx="80" cy="80" r="68" fill="none" stroke="#162035" strokeWidth="12"/>
+                    <circle cx="80" cy="80" r="68" fill="none" stroke="#E7E0D3" strokeWidth="12"/>
                     <circle
                       cx="80" cy="80" r="68" fill="none"
                       stroke={tier.color} strokeWidth="12"
@@ -593,18 +593,18 @@ export default function QuizPage() {
                     />
                   </svg>
                   <div className="absolute text-center">
-                    <div className="text-5xl font-black" style={{ color: '#DCE3EF' }}>{displayedScore}</div>
-                    <div className="text-sm" style={{ color: '#8892A4' }}>/100</div>
+                    <div className="text-5xl font-black" style={{ color: '#221D17' }}>{displayedScore}</div>
+                    <div className="text-sm" style={{ color: '#6F665A' }}>/100</div>
                   </div>
                 </div>
 
-                <h2 className="text-3xl md:text-4xl font-black tracking-tight mb-3" style={{ color: '#DCE3EF' }}>{tier.emoji} {tier.title}</h2>
-                <p className="text-lg max-w-xl mx-auto leading-relaxed" style={{ color: '#8892A4' }}>{tier.desc}</p>
+                <h2 className="text-3xl md:text-4xl font-black tracking-tight mb-3" style={{ color: '#221D17' }}>{tier.emoji} {tier.title}</h2>
+                <p className="text-lg max-w-xl mx-auto leading-relaxed" style={{ color: '#6F665A' }}>{tier.desc}</p>
               </div>
 
               {/* Score breakdown */}
-              <div className="border rounded-2xl p-6 mb-8" style={{ background: '#0C1525', borderColor: '#1E2D47' }}>
-                <h3 className="font-bold mb-5" style={{ color: '#DCE3EF' }}>Score Breakdown</h3>
+              <div className="border rounded-2xl p-6 mb-8" style={{ background: '#FFFFFF', borderColor: '#E7E0D3' }}>
+                <h3 className="font-bold mb-5" style={{ color: '#221D17' }}>Score Breakdown</h3>
                 <div className="space-y-4">
                   {dimensions.map(dim => {
                     const dq = questions.find(q => q.id === dim.key)
@@ -612,14 +612,14 @@ export default function QuizPage() {
                     if (!dq || !ans) return null
                     const maxPts = Math.max(...dq.options.map(o => o.pts))
                     const dpct = Math.round((ans.pts / maxPts) * 100)
-                    const barColor = dpct >= 80 ? '#4B7FFF' : dpct >= 50 ? '#F59E0B' : '#ef4444'
+                    const barColor = dpct >= 80 ? '#3B5BDB' : dpct >= 50 ? '#F59E0B' : '#ef4444'
                     return (
                       <div key={dim.key}>
                         <div className="flex justify-between text-sm mb-1.5">
-                          <span className="font-medium" style={{ color: '#DCE3EF' }}>{dim.label}</span>
-                          <span style={{ color: '#8892A4' }}>{dpct}%</span>
+                          <span className="font-medium" style={{ color: '#221D17' }}>{dim.label}</span>
+                          <span style={{ color: '#6F665A' }}>{dpct}%</span>
                         </div>
-                        <div className="h-2 rounded-full overflow-hidden" style={{ background: '#162035' }}>
+                        <div className="h-2 rounded-full overflow-hidden" style={{ background: '#E7E0D3' }}>
                           <div className="h-full rounded-full transition-all duration-700" style={{ width: `${dpct}%`, background: barColor }} />
                         </div>
                       </div>
@@ -630,14 +630,14 @@ export default function QuizPage() {
 
               {/* Key insights */}
               <div className="mb-8">
-                <h3 className="font-bold mb-4" style={{ color: '#DCE3EF' }}>Key Insights</h3>
+                <h3 className="font-bold mb-4" style={{ color: '#221D17' }}>Key Insights</h3>
                 <div className="space-y-3">
                   {generateInsights(score, answers).map((ins, i) => (
-                    <div key={i} className="flex items-start gap-3 border rounded-xl p-4" style={{ background: '#0C1525', borderColor: '#1E2D47' }}>
+                    <div key={i} className="flex items-start gap-3 border rounded-xl p-4" style={{ background: '#FFFFFF', borderColor: '#E7E0D3' }}>
                       <span className="text-xl flex-shrink-0">{ins.icon}</span>
                       <div>
-                        <div className="font-semibold text-sm mb-0.5" style={{ color: '#DCE3EF' }}>{ins.title}</div>
-                        <div className="text-sm leading-relaxed" style={{ color: '#8892A4' }}>{ins.body}</div>
+                        <div className="font-semibold text-sm mb-0.5" style={{ color: '#221D17' }}>{ins.title}</div>
+                        <div className="text-sm leading-relaxed" style={{ color: '#6F665A' }}>{ins.body}</div>
                       </div>
                     </div>
                   ))}
@@ -646,21 +646,21 @@ export default function QuizPage() {
 
               {/* CTA */}
               <div className="rounded-2xl p-8 text-center" style={{ background: 'rgba(75,127,255,0.1)', border: '1px solid rgba(75,127,255,0.2)' }}>
-                <h3 className="font-black text-2xl mb-3" style={{ color: '#DCE3EF' }}>{tier.ctaTitle}</h3>
-                <p className="mb-6" style={{ color: '#8892A4' }}>{tier.ctaDesc}</p>
+                <h3 className="font-black text-2xl mb-3" style={{ color: '#221D17' }}>{tier.ctaTitle}</h3>
+                <p className="mb-6" style={{ color: '#6F665A' }}>{tier.ctaDesc}</p>
                 <a
                   href={tier.ctaHref}
                   className="inline-block text-white font-bold px-10 py-4 rounded-xl transition-colors"
-                  style={{ background: '#4B7FFF' }}
+                  style={{ background: '#3B5BDB' }}
                 >
                   {tier.ctaBtn}
                 </a>
                 <div className="mt-4 flex items-center justify-center gap-6">
-                  <a href="/" className="text-sm transition-colors hover:text-subtle" style={{ color: '#4A5568' }}>← Back to Groundwork AI</a>
+                  <a href="/" className="text-sm transition-colors hover:text-subtle" style={{ color: '#8A8170' }}>← Back to Groundwork AI</a>
                   <button
                     onClick={downloadResults}
                     className="text-sm transition-colors hover:text-subtle flex items-center gap-1.5"
-                    style={{ color: '#4A5568' }}
+                    style={{ color: '#8A8170' }}
                   >
                     <svg width="14" height="14" fill="none" viewBox="0 0 16 16">
                       <path d="M8 1v9M4 6l4 4 4-4M2 13h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>

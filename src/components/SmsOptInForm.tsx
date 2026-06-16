@@ -38,8 +38,8 @@ export default function SmsOptInForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="space-y-2">
-        <label htmlFor="name" className="block text-sm font-semibold" style={{ color: '#DCE3EF' }}>
-          Name <span style={{ color: '#8892A4' }}>(optional)</span>
+        <label htmlFor="name" className="block text-sm font-semibold" style={{ color: '#221D17' }}>
+          Name <span style={{ color: '#6F665A' }}>(optional)</span>
         </label>
         <input
           id="name"
@@ -49,13 +49,13 @@ export default function SmsOptInForm() {
           onChange={(event) => setName(event.target.value)}
           placeholder="Your name"
           className="w-full rounded-xl px-4 py-3 outline-none transition"
-          style={{ background: 'rgba(12,21,37,0.8)', border: '1px solid rgba(75,127,255,0.18)', color: '#DCE3EF' }}
+          style={{ background: '#FFFFFF', border: '1px solid #E7E0D3', color: '#221D17' }}
         />
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="phone" className="block text-sm font-semibold" style={{ color: '#DCE3EF' }}>
-          Phone number <span style={{ color: '#4B7FFF' }}>*</span>
+        <label htmlFor="phone" className="block text-sm font-semibold" style={{ color: '#221D17' }}>
+          Phone number <span style={{ color: '#3B5BDB' }}>*</span>
         </label>
         <input
           id="phone"
@@ -68,22 +68,22 @@ export default function SmsOptInForm() {
           onChange={(event) => setPhone(event.target.value)}
           placeholder="+1 (555) 123-4567"
           className="w-full rounded-xl px-4 py-3 outline-none transition"
-          style={{ background: 'rgba(12,21,37,0.8)', border: '1px solid rgba(75,127,255,0.18)', color: '#DCE3EF' }}
+          style={{ background: '#FFFFFF', border: '1px solid #E7E0D3', color: '#221D17' }}
         />
       </div>
 
-      <label className="flex gap-3 rounded-xl p-4 cursor-pointer" style={{ background: 'rgba(12,21,37,0.55)', border: '1px solid rgba(75,127,255,0.14)' }}>
+      <label className="flex gap-3 rounded-xl p-4 cursor-pointer" style={{ background: '#FFFFFF', border: '1px solid #E7E0D3' }}>
         <input
           name="consent"
           type="checkbox"
           required
           checked={consent}
           onChange={(event) => setConsent(event.target.checked)}
-          className="mt-1 h-5 w-5 shrink-0 accent-[#4B7FFF]"
+          className="mt-1 h-5 w-5 shrink-0 accent-[#3B5BDB]"
         />
-        <span className="text-sm leading-relaxed" style={{ color: '#DCE3EF' }}>
+        <span className="text-sm leading-relaxed" style={{ color: '#221D17' }}>
           I authorize Groundwork AI to send automated text messages to the phone number provided about its services and updates. Message and data rates may apply. Message frequency varies. Text HELP for help or STOP to opt out at any time. Consent is not a condition of any purchase. See our{' '}
-          <a href="https://groundwork-ai.dev/privacy" className="underline" style={{ color: '#4B7FFF' }}>
+          <a href="https://groundwork-ai.dev/privacy" className="underline" style={{ color: '#3B5BDB' }}>
             Privacy Policy
           </a>.
         </span>
@@ -92,8 +92,8 @@ export default function SmsOptInForm() {
       <button
         type="submit"
         disabled={status === 'loading'}
-        className="w-full rounded-xl px-6 py-4 font-bold text-white transition disabled:opacity-60"
-        style={{ background: '#4B7FFF' }}
+        className="w-full rounded-xl px-6 py-4 font-semibold text-white transition disabled:opacity-60"
+        style={{ background: '#3B5BDB' }}
       >
         {status === 'loading' ? 'Subscribing…' : 'Subscribe'}
       </button>
@@ -103,8 +103,8 @@ export default function SmsOptInForm() {
           className="rounded-xl px-4 py-3 text-sm"
           style={{
             background: status === 'success' ? 'rgba(34,197,94,0.12)' : 'rgba(239,68,68,0.12)',
-            border: status === 'success' ? '1px solid rgba(34,197,94,0.25)' : '1px solid rgba(239,68,68,0.25)',
-            color: status === 'success' ? '#86efac' : '#fca5a5',
+            border: status === 'success' ? '1px solid rgba(34,197,94,0.3)' : '1px solid rgba(239,68,68,0.3)',
+            color: status === 'success' ? '#15803D' : '#B91C1C',
           }}
         >
           {message}

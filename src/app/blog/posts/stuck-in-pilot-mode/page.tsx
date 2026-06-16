@@ -27,7 +27,7 @@ export default function BlogPost() {
           <Link
             href="/blog"
             className="inline-flex items-center gap-2 text-sm font-medium mb-12 transition-colors hover:opacity-80"
-            style={{ color: '#4B7FFF' }}
+            style={{ color: '#3B5BDB' }}
           >
             ← All Posts
           </Link>
@@ -37,22 +37,22 @@ export default function BlogPost() {
             <div className="flex items-center gap-3 mb-6">
               <span
                 className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold"
-                style={{ background: 'rgba(75,127,255,0.1)', border: '1px solid rgba(75,127,255,0.2)', color: '#4B7FFF' }}
+                style={{ background: 'rgba(75,127,255,0.1)', border: '1px solid rgba(75,127,255,0.2)', color: '#3B5BDB' }}
               >
                 AI Operations
               </span>
-              <span className="text-sm" style={{ color: '#8892A4' }}>June 2, 2026</span>
-              <span className="text-sm" style={{ color: '#8892A4' }}>·</span>
-              <span className="text-sm" style={{ color: '#8892A4' }}>6 min read</span>
+              <span className="text-sm" style={{ color: '#6F665A' }}>June 2, 2026</span>
+              <span className="text-sm" style={{ color: '#6F665A' }}>·</span>
+              <span className="text-sm" style={{ color: '#6F665A' }}>6 min read</span>
             </div>
             <h1
               className="text-4xl md:text-5xl font-black tracking-tight leading-tight mb-6"
-              style={{ color: '#DCE3EF' }}
+              style={{ color: '#221D17', fontFamily: "'Fraunces', Georgia, serif" }}
             >
               You&apos;re Stuck in AI Pilot Mode.<br />
               Here&apos;s Why It Never Ends.
             </h1>
-            <p className="text-xl leading-relaxed" style={{ color: '#8892A4' }}>
+            <p className="text-xl leading-relaxed" style={{ color: '#6F665A' }}>
               Only 16% of companies have scaled AI enterprise-wide — despite years of investment and no shortage of successful demos. The bottleneck isn&apos;t the technology. It&apos;s something happening inside the organization.
             </p>
           </header>
@@ -61,7 +61,7 @@ export default function BlogPost() {
           <div className="w-full h-px mb-12" style={{ background: 'rgba(75,127,255,0.15)' }} />
 
           {/* Post content */}
-          <article className="prose-custom space-y-6" style={{ color: '#C4CDD9', lineHeight: '1.8', fontSize: '1.0625rem' }}>
+          <article className="prose-custom space-y-6" style={{ color: '#221D17', lineHeight: '1.8', fontSize: '1.0625rem' }}>
 
             <p>
               A new IBM study surveyed 2,000 CEOs and found something that should alarm every operations team: only 16% of companies have scaled AI enterprise-wide. Meanwhile, investment in AI keeps going up. Budgets are growing. Tool stacks are expanding. Everyone has a pilot running somewhere.
@@ -75,7 +75,7 @@ export default function BlogPost() {
               That&apos;s not a technology problem. The models are capable. The tools are mature enough. The problem is a set of organizational patterns that make scaling impossible — and most teams don&apos;t know they&apos;re in them.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               The pilot trap is comfortable
             </h2>
 
@@ -95,43 +95,43 @@ export default function BlogPost() {
               Every time someone asks &ldquo;why hasn&apos;t this scaled?&rdquo; the answer is some version of &ldquo;we&apos;re still evaluating.&rdquo; Evaluation becomes a permanent state. And the ROI stays theoretical.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               What actually keeps companies in pilot mode
             </h2>
 
             <p>
-              <strong style={{ color: '#DCE3EF' }}>No one owns the output.</strong> Pilots have project sponsors. Production systems need operational owners — someone responsible for the output every single day, not just when something goes wrong. If no one&apos;s name is on the ongoing performance of the system, it doesn&apos;t get maintained. It drifts. Eventually it gets quietly shut down because &ldquo;it wasn&apos;t working as well as it used to.&rdquo;
+              <strong style={{ color: '#221D17' }}>No one owns the output.</strong> Pilots have project sponsors. Production systems need operational owners — someone responsible for the output every single day, not just when something goes wrong. If no one&apos;s name is on the ongoing performance of the system, it doesn&apos;t get maintained. It drifts. Eventually it gets quietly shut down because &ldquo;it wasn&apos;t working as well as it used to.&rdquo;
             </p>
 
             <p>
-              <strong style={{ color: '#DCE3EF' }}>The success criteria don&apos;t translate to operations.</strong> Pilots get evaluated on accuracy, speed, or user satisfaction scores. Real production systems get evaluated on business outcomes — cost per transaction, time saved per week, error rate reduction. These are different questions. If you never bridge from &ldquo;the demo worked great&rdquo; to &ldquo;this reduced our processing time by 40%,&rdquo; you&apos;re not measuring anything the business actually cares about.
+              <strong style={{ color: '#221D17' }}>The success criteria don&apos;t translate to operations.</strong> Pilots get evaluated on accuracy, speed, or user satisfaction scores. Real production systems get evaluated on business outcomes — cost per transaction, time saved per week, error rate reduction. These are different questions. If you never bridge from &ldquo;the demo worked great&rdquo; to &ldquo;this reduced our processing time by 40%,&rdquo; you&apos;re not measuring anything the business actually cares about.
             </p>
 
             <p>
-              <strong style={{ color: '#DCE3EF' }}>The workflow wasn&apos;t changed to accommodate the system.</strong> AI tools get bolted onto existing workflows instead of redesigning the workflow around the AI. So operators end up doing both — running the old process as a fallback while also feeding the AI system. That&apos;s not automation. That&apos;s extra work with a fancier dashboard. The system fails to deliver ROI, not because it doesn&apos;t work, but because the workflow was never updated to trust it.
+              <strong style={{ color: '#221D17' }}>The workflow wasn&apos;t changed to accommodate the system.</strong> AI tools get bolted onto existing workflows instead of redesigning the workflow around the AI. So operators end up doing both — running the old process as a fallback while also feeding the AI system. That&apos;s not automation. That&apos;s extra work with a fancier dashboard. The system fails to deliver ROI, not because it doesn&apos;t work, but because the workflow was never updated to trust it.
             </p>
 
             <p>
-              <strong style={{ color: '#DCE3EF' }}>Exceptions become excuses.</strong> Every process has edge cases. Pilots surface them. Then instead of deciding how to handle them — automate with a fallback, route to a human, flag for review — teams freeze. &ldquo;It can&apos;t handle this type of case&rdquo; becomes the reason the whole thing stays in testing. But production systems don&apos;t need to handle 100% of cases automatically. They need to handle 80% automatically and route the remaining 20% cleanly.
+              <strong style={{ color: '#221D17' }}>Exceptions become excuses.</strong> Every process has edge cases. Pilots surface them. Then instead of deciding how to handle them — automate with a fallback, route to a human, flag for review — teams freeze. &ldquo;It can&apos;t handle this type of case&rdquo; becomes the reason the whole thing stays in testing. But production systems don&apos;t need to handle 100% of cases automatically. They need to handle 80% automatically and route the remaining 20% cleanly.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               The three things you need to actually scale
             </h2>
 
             <p>
-              <strong style={{ color: '#DCE3EF' }}>A decision about what stays human.</strong> This isn&apos;t about capability — it&apos;s about accountability. Some decisions need a person attached to them for legal, regulatory, or relationship reasons. Define that boundary clearly before you deploy. Then let everything outside that boundary run.
+              <strong style={{ color: '#221D17' }}>A decision about what stays human.</strong> This isn&apos;t about capability — it&apos;s about accountability. Some decisions need a person attached to them for legal, regulatory, or relationship reasons. Define that boundary clearly before you deploy. Then let everything outside that boundary run.
             </p>
 
             <p>
-              <strong style={{ color: '#DCE3EF' }}>A real handoff protocol.</strong> When the AI produces an output — a drafted response, a processed document, a routed request — who reviews it, how, and how fast? If the answer is &ldquo;it goes into a queue and someone gets to it eventually,&rdquo; you haven&apos;t designed a workflow. You&apos;ve just moved the bottleneck. Production AI needs a human-in-the-loop design that&apos;s fast enough to not defeat the purpose.
+              <strong style={{ color: '#221D17' }}>A real handoff protocol.</strong> When the AI produces an output — a drafted response, a processed document, a routed request — who reviews it, how, and how fast? If the answer is &ldquo;it goes into a queue and someone gets to it eventually,&rdquo; you haven&apos;t designed a workflow. You&apos;ve just moved the bottleneck. Production AI needs a human-in-the-loop design that&apos;s fast enough to not defeat the purpose.
             </p>
 
             <p>
-              <strong style={{ color: '#DCE3EF' }}>Someone responsible for the system, not just the project.</strong> The person who built the pilot usually isn&apos;t the person who runs the production system. That handoff is where most scaling dies. Make the operations owner part of the pilot from the start — not brought in at the end to &ldquo;receive&rdquo; something they didn&apos;t help design.
+              <strong style={{ color: '#221D17' }}>Someone responsible for the system, not just the project.</strong> The person who built the pilot usually isn&apos;t the person who runs the production system. That handoff is where most scaling dies. Make the operations owner part of the pilot from the start — not brought in at the end to &ldquo;receive&rdquo; something they didn&apos;t help design.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               The uncomfortable math
             </h2>
 
@@ -156,16 +156,16 @@ export default function BlogPost() {
               className="rounded-2xl p-8 mt-12"
               style={{ background: 'rgba(75,127,255,0.06)', border: '1px solid rgba(75,127,255,0.15)' }}
             >
-              <h3 className="text-xl font-bold mb-3" style={{ color: '#DCE3EF' }}>
+              <h3 className="text-xl font-bold mb-3" style={{ color: '#221D17' }}>
                 Wondering where your AI is actually stuck?
               </h3>
-              <p className="mb-6" style={{ color: '#8892A4' }}>
+              <p className="mb-6" style={{ color: '#6F665A' }}>
                 The free AI Readiness Quiz takes 5 minutes and shows you exactly where your operations stand — which processes are ready to deploy, what&apos;s blocking scale, and where the highest-ROI automation opportunities are.
               </p>
               <a
                 href="/quiz"
                 className="inline-flex items-center gap-2 text-white font-bold px-6 py-3 rounded-xl transition-colors"
-                style={{ background: '#4B7FFF' }}
+                style={{ background: '#3B5BDB' }}
               >
                 Take the Free Readiness Quiz →
               </a>
@@ -178,7 +178,7 @@ export default function BlogPost() {
             <Link
               href="/blog"
               className="inline-flex items-center gap-2 text-sm font-medium transition-colors hover:opacity-80"
-              style={{ color: '#4B7FFF' }}
+              style={{ color: '#3B5BDB' }}
             >
               ← Back to all posts
             </Link>

@@ -27,7 +27,7 @@ export default function BlogPost() {
           <Link
             href="/blog"
             className="inline-flex items-center gap-2 text-sm font-medium mb-12 transition-colors hover:opacity-80"
-            style={{ color: '#4B7FFF' }}
+            style={{ color: '#3B5BDB' }}
           >
             ← All Posts
           </Link>
@@ -37,22 +37,22 @@ export default function BlogPost() {
             <div className="flex items-center gap-3 mb-6">
               <span
                 className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold"
-                style={{ background: 'rgba(75,127,255,0.1)', border: '1px solid rgba(75,127,255,0.2)', color: '#4B7FFF' }}
+                style={{ background: 'rgba(75,127,255,0.1)', border: '1px solid rgba(75,127,255,0.2)', color: '#3B5BDB' }}
               >
                 AI Operations
               </span>
-              <span className="text-sm" style={{ color: '#8892A4' }}>April 21, 2026</span>
-              <span className="text-sm" style={{ color: '#8892A4' }}>·</span>
-              <span className="text-sm" style={{ color: '#8892A4' }}>6 min read</span>
+              <span className="text-sm" style={{ color: '#6F665A' }}>April 21, 2026</span>
+              <span className="text-sm" style={{ color: '#6F665A' }}>·</span>
+              <span className="text-sm" style={{ color: '#6F665A' }}>6 min read</span>
             </div>
             <h1
               className="text-4xl md:text-5xl font-black tracking-tight leading-tight mb-6"
-              style={{ color: '#DCE3EF' }}
+              style={{ color: '#221D17', fontFamily: "'Fraunces', Georgia, serif" }}
             >
               Why 40% of AI Projects Fail —<br />
               And How to Not Be One of Them
             </h1>
-            <p className="text-xl leading-relaxed" style={{ color: '#8892A4' }}>
+            <p className="text-xl leading-relaxed" style={{ color: '#6F665A' }}>
               Gartner predicts 40% of AI agent projects will be scrapped by 2027. The reason isn&apos;t the technology. It&apos;s how most companies approach the work.
             </p>
           </header>
@@ -61,7 +61,7 @@ export default function BlogPost() {
           <div className="w-full h-px mb-12" style={{ background: 'rgba(75,127,255,0.15)' }} />
 
           {/* Post content */}
-          <article className="prose-custom space-y-6" style={{ color: '#C4CDD9', lineHeight: '1.8', fontSize: '1.0625rem' }}>
+          <article className="prose-custom space-y-6" style={{ color: '#221D17', lineHeight: '1.8', fontSize: '1.0625rem' }}>
 
             <p>
               Gartner dropped a stat recently that didn&apos;t get the attention it deserved: over 40% of agentic AI projects will be abandoned by 2027. Not paused. Scrapped.
@@ -75,7 +75,7 @@ export default function BlogPost() {
               Here&apos;s what&apos;s actually happening, and what the 60% who succeed are doing differently.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               The pattern that kills AI projects
             </h2>
 
@@ -95,7 +95,7 @@ export default function BlogPost() {
               The failure point isn&apos;t the AI. It&apos;s that the company tried to layer AI on top of their existing process instead of rebuilding the process around what AI can actually do.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               Layering vs. redesigning
             </h2>
 
@@ -111,7 +111,7 @@ export default function BlogPost() {
               The companies getting real ROI from AI right now — the ones seeing 30–40% productivity gains that the research keeps citing — are redesigners. They&apos;re not more technically sophisticated. They&apos;re just asking a harder question upfront.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               The two questions that separate winners from the scrapped 40%
             </h2>
 
@@ -120,18 +120,18 @@ export default function BlogPost() {
             </p>
 
             <p>
-              <strong style={{ color: '#DCE3EF' }}>1. What is the exact trigger?</strong> AI systems run on triggers — an email arrives, a form is submitted, a record is created, a schedule fires. If your workflow doesn&apos;t have a clear, definable trigger, it can&apos;t be automated. It&apos;s still a human-initiated process, just with an AI in the loop.
+              <strong style={{ color: '#221D17' }}>1. What is the exact trigger?</strong> AI systems run on triggers — an email arrives, a form is submitted, a record is created, a schedule fires. If your workflow doesn&apos;t have a clear, definable trigger, it can&apos;t be automated. It&apos;s still a human-initiated process, just with an AI in the loop.
             </p>
 
             <p>
-              <strong style={{ color: '#DCE3EF' }}>2. What does done look like?</strong> You need to be able to define a finished output clearly enough that a system can produce it without asking for clarification. &ldquo;Summarize this call&rdquo; is vague. &ldquo;Extract action items, assign owners, and post to the project Slack channel&rdquo; is buildable.
+              <strong style={{ color: '#221D17' }}>2. What does done look like?</strong> You need to be able to define a finished output clearly enough that a system can produce it without asking for clarification. &ldquo;Summarize this call&rdquo; is vague. &ldquo;Extract action items, assign owners, and post to the project Slack channel&rdquo; is buildable.
             </p>
 
             <p>
               If you can&apos;t answer both questions cleanly, the project isn&apos;t ready to build. Go back and scope it tighter. Most failed AI projects skip this step because it&apos;s unsexy, and they pay for it six months later.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               Start boring, not bold
             </h2>
 
@@ -155,7 +155,7 @@ export default function BlogPost() {
               The 60% who succeed at AI aren&atml;t chasing the headline use case. They&apos;re stacking boring wins.
             </p>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#DCE3EF' }}>
+            <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#221D17' }}>
               What to do before you build anything
             </h2>
 
@@ -180,16 +180,16 @@ export default function BlogPost() {
               className="rounded-2xl p-8 mt-12"
               style={{ background: 'rgba(75,127,255,0.06)', border: '1px solid rgba(75,127,255,0.15)' }}
             >
-              <h3 className="text-xl font-bold mb-3" style={{ color: '#DCE3EF' }}>
+              <h3 className="text-xl font-bold mb-3" style={{ color: '#221D17' }}>
                 Want to know where your operation is most automatable?
               </h3>
-              <p className="mb-6" style={{ color: '#8892A4' }}>
+              <p className="mb-6" style={{ color: '#6F665A' }}>
                 The free AI Readiness Quiz takes 5 minutes and gives you a prioritized map of where AI can move the needle fastest in your business — before you spend a dollar on implementation.
               </p>
               <a
                 href="/quiz"
                 className="inline-flex items-center gap-2 text-white font-bold px-6 py-3 rounded-xl transition-colors"
-                style={{ background: '#4B7FFF' }}
+                style={{ background: '#3B5BDB' }}
               >
                 Take the Free Readiness Quiz →
               </a>
@@ -202,7 +202,7 @@ export default function BlogPost() {
             <Link
               href="/blog"
               className="inline-flex items-center gap-2 text-sm font-medium transition-colors hover:opacity-80"
-              style={{ color: '#4B7FFF' }}
+              style={{ color: '#3B5BDB' }}
             >
               ← Back to all posts
             </Link>

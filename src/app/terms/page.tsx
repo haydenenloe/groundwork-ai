@@ -17,21 +17,21 @@ export default function TermsPage() {
           <div className="mb-12">
             <div
               className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold mb-6"
-              style={{ background: 'rgba(75,127,255,0.1)', border: '1px solid rgba(75,127,255,0.2)', color: '#4B7FFF' }}
+              style={{ background: 'rgba(75,127,255,0.1)', border: '1px solid rgba(75,127,255,0.2)', color: '#3B5BDB' }}
             >
               Legal
             </div>
-            <h1 className="text-4xl md:text-5xl font-black tracking-tight mb-4" style={{ color: '#DCE3EF' }}>
+            <h1 className="text-4xl md:text-5xl font-black tracking-tight mb-4" style={{ color: '#221D17', fontFamily: "'Fraunces', Georgia, serif" }}>
               Groundwork AI SMS Terms and Conditions
             </h1>
-            <p className="text-base md:text-lg leading-relaxed" style={{ color: '#8892A4' }}>
-              <strong style={{ color: '#DCE3EF' }}>Effective Date:</strong> May 29, 2026
+            <p className="text-base md:text-lg leading-relaxed" style={{ color: '#6F665A' }}>
+              <strong style={{ color: '#221D17' }}>Effective Date:</strong> May 29, 2026
             </p>
           </div>
 
           <div
             className="rounded-2xl p-8 md:p-10 space-y-8 leading-relaxed"
-            style={{ background: 'rgba(30,45,71,0.4)', border: '1px solid rgba(75,127,255,0.12)', color: '#8892A4' }}
+            style={{ background: '#FFFFFF', border: '1px solid #E7E0D3', color: '#6F665A' }}
           >
             <p>
               These terms and conditions apply to messages sent to and from Enloe Ventures LLC DBA Groundwork AI.
@@ -54,7 +54,7 @@ export default function TermsPage() {
                 As always, message and data rates may apply for any messages sent to you from us and to us from you. Message frequency varies. If you have any questions about your text plan or data plan, it is best to contact your wireless provider.
               </li>
               <li>
-                If you have any questions regarding privacy, please read our privacy policy: <a href="/privacy" className="underline" style={{ color: '#4B7FFF' }}>https://groundwork-ai.dev/privacy</a>
+                If you have any questions regarding privacy, please read our privacy policy: <a href="/privacy" className="underline" style={{ color: '#3B5BDB' }}>https://groundwork-ai.dev/privacy</a>
               </li>
             </ol>
           </div>
