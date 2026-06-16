@@ -161,12 +161,13 @@ export default function Home() {
       <section id="about" className="py-24 md:py-32">
         <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-[auto_1fr] gap-10 md:gap-14 items-center">
           <Reveal>
-            <div
-              className="w-40 h-40 md:w-52 md:h-52 rounded-3xl flex items-center justify-center mx-auto"
-              style={{ background: ALT, border: `1px solid ${LINE}` }}
-            >
-              <span className="font-medium" style={{ fontFamily: SERIF, fontSize: '3rem', color: ACCENT }}>HE</span>
-            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/hayden.jpg"
+              alt="Hayden Enloe, founder of Groundwork AI"
+              className="w-40 h-40 md:w-52 md:h-52 rounded-3xl object-cover mx-auto"
+              style={{ border: `1px solid ${LINE}`, objectPosition: 'center top' }}
+            />
           </Reveal>
           <Reveal delay={100}>
             <div>
