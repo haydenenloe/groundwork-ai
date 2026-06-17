@@ -52,7 +52,12 @@ export default function BusyworkGame() {
     let timer: ReturnType<typeof setTimeout> | undefined
     const onClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement | null
-      if (!target || !target.closest('#gw-egg')) return
+      if (!target) return
+      if (target.closest('#gw-play')) {
+        launch()
+        return
+      }
+      if (!target.closest('#gw-egg')) return
       clicks++
       clearTimeout(timer)
       timer = setTimeout(() => { clicks = 0 }, 1500)

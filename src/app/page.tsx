@@ -6,7 +6,7 @@ import HeroFX from '@/components/HeroFX'
 import Magnetic from '@/components/Magnetic'
 import BusyworkGame from '@/components/BusyworkGame'
 import Logo from '@/components/Logo'
-import { ArrowRight, Check, MessageSquare, Mail, FileText } from 'lucide-react'
+import { ArrowRight, Check, MessageSquare, Mail, FileText, Gamepad2 } from 'lucide-react'
 
 const PAPER = '#FBF9F5'
 const SURFACE = '#FFFFFF'
@@ -320,6 +320,14 @@ export default function Home() {
             <a href="#pricing" className="hover:opacity-60">Pricing</a>
             <a href="/blog" className="hover:opacity-60">Blog</a>
             <a href="#book" className="hover:opacity-60">Book a call</a>
+            <button
+              id="gw-play"
+              type="button"
+              className="inline-flex items-center gap-1.5 hover:opacity-60"
+              style={{ color: 'inherit', cursor: 'pointer', background: 'none', border: 'none', padding: 0, font: 'inherit' }}
+            >
+              <Gamepad2 size={14} /> Play
+            </button>
           </div>
           <p className="text-xs" style={{ color: MUTED }}>&copy; 2026 Groundwork AI</p>
         </div>
