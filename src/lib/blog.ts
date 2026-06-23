@@ -9,6 +9,14 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'document-before-you-automate',
+    title: 'AI Can Run Your Processes. But Only If They\'re Written Down.',
+    date: '2026-06-23',
+    summary: 'The bottleneck in most AI deployments isn\'t the technology — it\'s undocumented tribal knowledge sitting in people\'s heads. Here\'s how to fix that before you build anything.',
+    readTime: '5 min read',
+    tags: ['AI Operations', 'Automation'],
+  },
+  {
     slug: 'ai-automation-breaks',
     title: 'AI Automations Break. Here\'s What to Do About It Before It Happens.',
     date: '2026-06-16',
