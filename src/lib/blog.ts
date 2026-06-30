@@ -9,6 +9,14 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'agentic-ai-beating-expectations',
+    title: 'Why Agentic AI Is Beating Expectations — and What Your Team Is Probably Missing',
+    date: '2026-06-30',
+    summary: 'A recent study found 96% of agentic AI deployments met or exceeded expectations. The companies achieving those results aren\'t doing anything exotic — but most teams are still missing the key distinction between AI tools and AI agents.',
+    readTime: '5 min read',
+    tags: ['AI Operations', 'Automation'],
+  },
+  {
     slug: 'document-before-you-automate',
     title: 'AI Can Run Your Processes. But Only If They\'re Written Down.',
     date: '2026-06-23',
