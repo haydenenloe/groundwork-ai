@@ -33,7 +33,7 @@ export default function Home() {
               AI teammates that own the work, not just help with it.
             </h1>
             <p className="text-lg leading-relaxed mb-8 max-w-md" style={{ color: MUTED }}>
-              Most companies are stuck using AI as an assistant. I build the AI teammates that own a whole workflow, wired into your systems and kept running over time. I find where AI can help most, then build it out for you.
+              Most companies are stuck using AI as an assistant. We build the AI teammates that own a whole workflow, wired into your systems and kept running over time. We find where AI can help most, then build it out for you.
             </p>
             <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
               <Magnetic>
@@ -179,7 +179,7 @@ export default function Home() {
               </h2>
               <div className="space-y-4 text-base leading-relaxed" style={{ color: MUTED }}>
                 <p>
-                  Groundwork AI is led by Hayden Enloe. I hold a master&rsquo;s in Information Systems and I build practical AI automations for small and mid-sized teams. Work with Groundwork and you get a founder who stays close to the work: in your operations, accountable for what ships, and invested in seeing it pay off.
+                  Groundwork AI is led by Hayden Enloe, who holds a master&rsquo;s in Information Systems and builds practical AI automations for small and mid-sized teams. Work with Groundwork and you get a founder who stays close to the work: in your operations, accountable for what ships, and invested in seeing it pay off.
                 </p>
                 <p>
                   The approach is simple. An honest diagnosis instead of a sales pitch, the path that is actually right for you, and systems you own. The goal is to give your team back the hours it loses to work that software should be doing.
@@ -268,8 +268,8 @@ export default function Home() {
           <div className="flex flex-col gap-3">
             {[
               { q: 'How fast will I see something working?', a: 'The audit takes two weeks. If you move to a retainer, the first working system ships inside your first month.' },
-              { q: 'What if it does not work?', a: 'Every system is guaranteed. If a build does not do what we agreed, I keep working on it until it does. You own your systems and your data, so you are never locked in.' },
-              { q: 'Do we need to be technical?', a: 'No. That is the point of hiring me. I handle the building and integration, and I train your team on the parts they touch.' },
+              { q: 'What if it does not work?', a: 'Every system is guaranteed. If a build does not do what we agreed, we keep working on it until it does. You own your systems and your data, so you are never locked in.' },
+              { q: 'Do we need to be technical?', a: 'No. That is the point of working with us. We handle the building and integration, and we train your team on the parts they touch.' },
               { q: 'Is our data safe?', a: 'Yes. Client-owned data never goes into AI tools without approval, anything client-facing is reviewed by a person, and the audit includes a written AI use policy.' },
               { q: 'What does the retainer actually include?', a: 'One to two new builds a month, all maintenance, hands-on training, monthly reporting, and advisory. One flat fee, cancel anytime.' },
             ].map((f) => (
@@ -296,7 +296,7 @@ export default function Home() {
                 Book a call.
               </h2>
               <p className="text-lg leading-relaxed" style={{ color: MUTED }}>
-                Tell me what is eating your team&rsquo;s time. I will tell you what I would build and what it would save you. No pitch, just a diagnosis.
+                Tell us what is eating your team&rsquo;s time. We will tell you what we would build and what it would save you. No pitch, just a diagnosis.
               </p>
             </div>
           </Reveal>
