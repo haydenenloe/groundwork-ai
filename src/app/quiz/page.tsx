@@ -127,21 +127,21 @@ const tiers: Tier[] = [
     desc: "You're in the early stages of your AI journey. The good news: getting started is simpler than most expect. The right first move is identifying one high-friction workflow and building a focused proof of concept around it.",
     ctaTitle: 'Not sure where to start?',
     ctaDesc: 'Our AI Operations Audit maps your workflows and identifies the single highest-ROI opportunity to tackle first. We\'ll give you a concrete roadmap, not a pile of theory.',
-    ctaBtn: 'Book an AI Audit ($2,500)', ctaHref: '/#audit', color: '#F59E0B',
+    ctaBtn: 'Book a strategy call', ctaHref: '/#audit', color: '#F59E0B',
   },
   {
     range: [36, 58], title: 'Building Readiness', emoji: '⚙️',
     desc: "You have the right conditions taking shape: real pain points, some internal buy-in, and a sense of what needs to change. A few gaps to close before full implementation makes sense, but you're closer than you think.",
     ctaTitle: 'Ready to identify your best opportunities?',
     ctaDesc: 'An AI Operations Audit will map your 2–3 highest-value workflows, quantify the cost of inaction, and give you a clear 30/60/90-day roadmap.',
-    ctaBtn: 'Book an AI Audit ($2,500)', ctaHref: '/#audit', color: '#3B5BDB',
+    ctaBtn: 'Book a strategy call', ctaHref: '/#audit', color: '#3B5BDB',
   },
   {
     range: [59, 79], title: 'AI-Ready', emoji: '🚀',
     desc: "Strong foundation. You have real pain, internal alignment, and the capacity to act. You're at the point where a focused audit translates directly into a implementation roadmap and deliver measurable ROI within 90 days.",
     ctaTitle: "You're ready. Let's map the build.",
     ctaDesc: "Book an AI Operations Audit. We'll turn your highest-friction workflows into a production implementation plan with timelines and cost estimates.",
-    ctaBtn: 'Book an AI Audit ($2,500)', ctaHref: '/#audit', color: '#3B5BDB',
+    ctaBtn: 'Book a strategy call', ctaHref: '/#audit', color: '#3B5BDB',
   },
   {
     range: [80, 100], title: 'AI-First', emoji: '⚡',
@@ -204,7 +204,7 @@ function generateInsights(score: number, answers: Record<string, Option>): Insig
   }
 
   if (score >= 65) {
-    ins.push({ icon: '🤖', title: 'You might be a strong OpenClaw candidate', body: 'Given your profile, a company-wide OpenClaw deployment could give your team a 24/7 AI assistant accessible via Slack or WhatsApp, built around your specific workflows.' })
+    ins.push({ icon: '🤖', title: 'You might be a strong OpenClaw candidate', body: 'Given your profile, a company-wide OpenClaw deployment could give your team a 24/7 AI teammate accessible via Slack or WhatsApp, built around your specific workflows.' })
   }
 
   return ins.slice(0, 4)

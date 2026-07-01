@@ -318,7 +318,7 @@ export default function SopAnalyzerPage() {
                   className="inline-block font-bold text-sm px-8 py-3 rounded-xl transition-colors"
                   style={{ background: '#3B5BDB', color: '#fff' }}
                 >
-                  Book a Full AI Audit ($2,500) →
+                  Book a strategy call →
                 </a>
               </div>
             </div>

@@ -30,10 +30,10 @@ export default function Home() {
           <div>
             <p className="text-sm font-semibold mb-5" style={{ color: ACCENT }}>AI operations, built for small teams</p>
             <h1 className="font-medium tracking-tight mb-6" style={{ fontFamily: SERIF, fontSize: 'clamp(2.6rem, 6vw, 4.4rem)', lineHeight: 1.04, color: INK }}>
-              Hand your team&rsquo;s busywork to AI.
+              AI teammates that own the work, not just help with it.
             </h1>
             <p className="text-lg leading-relaxed mb-8 max-w-md" style={{ color: MUTED }}>
-              I find where your team&rsquo;s time disappears, build the AI systems that take that work over, and train your people to run them. It starts with a focused two-week audit.
+              Most companies are stuck using AI as an assistant. I build the AI teammates that own a whole workflow, wired into your systems and kept running over time. I find where AI can help most, then build it out for you.
             </p>
             <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
               <Magnetic>
@@ -104,9 +104,9 @@ export default function Home() {
           </Reveal>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { n: '01', t: 'Find it', b: 'A two-week audit across your team. You get a prioritized roadmap with the ROI of every opportunity, an AI use policy, and a live walkthrough.', tag: '$3,500 audit' },
+              { n: '01', t: 'Find it', b: 'We figure out where AI can actually move the needle for your team, and which build is worth doing first.', tag: null },
               { n: '02', t: 'Build it', b: 'We build the highest-value systems and wire them into the tools you already use. The first one ships in your first month.', tag: null },
-              { n: '03', t: 'Run it', b: 'A monthly cadence: new builds, team training, and improvements. Your operations layer compounds instead of going stale.', tag: 'from $3,000 / mo' },
+              { n: '03', t: 'Run it', b: 'A monthly cadence: new builds, team training, and improvements. Your operations layer compounds instead of going stale.', tag: null },
             ].map((s, i) => (
               <Reveal key={s.n} delay={i * 110}>
                 <div className="rounded-2xl p-8 h-full flex flex-col" style={{ background: SURFACE, border: `1px solid ${LINE}` }}>
@@ -195,25 +195,34 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-6">
           <Reveal>
             <div className="text-center max-w-2xl mx-auto mb-14">
-              <p className="text-sm font-semibold mb-4" style={{ color: ACCENT }}>Pricing</p>
+              <p className="text-sm font-semibold mb-4" style={{ color: ACCENT }}>Ways to work together</p>
               <h2 className="font-medium tracking-tight" style={{ fontFamily: SERIF, fontSize: 'clamp(1.9rem, 4vw, 2.9rem)', lineHeight: 1.1, color: INK }}>
-                Start with the audit. Build from there.
+                Find what&rsquo;s worth building. Then build it.
               </h2>
+              <p className="text-base leading-relaxed mt-5" style={{ color: MUTED }}>
+                Every engagement is scoped to your size and your goals, so we land on pricing together on a quick call. Here is how we can work.
+              </p>
             </div>
           </Reveal>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                kind: 'Start here', name: 'AI Operations Audit', price: '$3,500', unit: 'one-time',
-                desc: 'Find the right problem before you build. Two weeks of discovery, a prioritized roadmap with ROI, and a live walkthrough.',
-                items: ['Interviews across your team', 'Prioritized opportunity roadmap', 'AI use policy draft', 'Live walkthrough and Q&A', 'Applies toward your first retainer month'],
+                kind: 'Diagnose', name: 'AI Operations Audit',
+                desc: 'Not sure where AI fits? We map your workflows and find the highest-ROI place to start, before you build a thing.',
+                items: ['Interviews across your team', 'Prioritized roadmap with ROI', 'AI use policy draft', 'Live walkthrough and Q&A'],
                 featured: false,
               },
               {
-                kind: 'The path', name: 'Monthly Retainer', price: 'from $3,000', unit: '/ month',
-                desc: 'Your embedded AI operations team. New builds, maintenance, training, and advisory, every month.',
-                items: ['One to two new builds a month', 'All maintenance and support', 'Hands-on team training', 'Monthly impact reporting', 'You own your systems. Cancel anytime'],
+                kind: 'Build', name: 'Build & Maintain',
+                desc: 'Put one painful, repetitive workflow on autopilot. We build it, wire it into your tools, and keep it running and improving.',
+                items: ['One high-value build', 'Wired into the tools you use', 'Ongoing maintenance and tuning', 'Live in weeks, not months'],
                 featured: true,
+              },
+              {
+                kind: 'Partner', name: 'Ongoing Partnership',
+                desc: 'Your embedded AI operations partner: a growing team of AI teammates, plus training and strategy, that you can talk to directly.',
+                items: ['New builds every month', 'Team training and strategy', 'AI teammates you can chat with', 'You own your systems. Cancel anytime'],
+                featured: false,
               },
             ].map((p) => (
               <Reveal key={p.name}>
@@ -223,10 +232,6 @@ export default function Home() {
                 >
                   <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: ACCENT }}>{p.kind}</p>
                   <h3 className="text-xl font-semibold mb-2" style={{ color: INK }}>{p.name}</h3>
-                  <p className="mb-4">
-                    <span className="font-medium" style={{ fontFamily: SERIF, fontSize: '2.2rem', color: INK }}>{p.price}</span>
-                    <span className="text-sm ml-1.5" style={{ color: MUTED }}>{p.unit}</span>
-                  </p>
                   <p className="text-sm leading-relaxed mb-6" style={{ color: MUTED }}>{p.desc}</p>
                   <div className="flex flex-col gap-2.5 flex-1">
                     {p.items.map((it) => (

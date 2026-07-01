@@ -24,7 +24,7 @@ const faqs = [
     a: "We design for adoption, not just function. Your team is trained, the handoff is documented, and we stay on during the transition. Most teams are relieved, not resistant. It means less manual work for them.",
   },
   {
-    q: 'What exactly does the $2,500 audit include?',
+    q: 'What exactly does the AI Operations Audit include?',
     a: "Three weeks of workflow discovery, usually 3-4 conversations with your team, followed by an 8-page prioritized roadmap with cost estimates, timelines, and a live walkthrough. It's a standalone deliverable with no obligation to continue.",
   },
 ]
