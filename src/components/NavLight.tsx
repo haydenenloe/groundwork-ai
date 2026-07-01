@@ -22,8 +22,9 @@ export default function NavLight() {
       className="fixed top-0 inset-x-0 z-50 transition-all duration-300"
       style={{
         background: scrolled ? 'rgba(251,249,245,0.85)' : 'transparent',
-        backdropFilter: scrolled ? 'blur(10px)' : 'none',
+        backdropFilter: scrolled ? 'blur(12px)' : 'none',
         borderBottom: scrolled ? '1px solid #E7E0D3' : '1px solid transparent',
+        boxShadow: scrolled ? '0 8px 24px -16px rgba(34,29,23,0.15)' : 'none',
       }}
     >
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -33,18 +34,18 @@ export default function NavLight() {
         </a>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-medium" style={{ color: MUTED }}>
-          <a href="/#how" className="transition-opacity hover:opacity-60">How it works</a>
-          <a href="/#work" className="transition-opacity hover:opacity-60">Work</a>
-          <a href="/#pricing" className="transition-opacity hover:opacity-60">Pricing</a>
-          <a href="/blog" className="transition-opacity hover:opacity-60">Blog</a>
+          <a href="/#how" className="nav-link">How it works</a>
+          <a href="/#work" className="nav-link">Work</a>
+          <a href="/#pricing" className="nav-link">Pricing</a>
+          <a href="/blog" className="nav-link">Blog</a>
         </div>
 
         <div className="hidden md:flex items-center gap-5">
-          <a href="/quiz" className="text-sm font-medium transition-opacity hover:opacity-60" style={{ color: MUTED }}>Assessment</a>
+          <a href="/quiz" className="nav-link text-sm font-medium" style={{ color: MUTED }}>Assessment</a>
           <a
             href="/#book"
-            className="text-white text-sm font-semibold px-4 py-2 rounded-full transition-transform hover:-translate-y-0.5"
-            style={{ background: ACCENT }}
+            className="text-white text-sm font-semibold px-4 py-2 rounded-full transition-all hover:-translate-y-0.5"
+            style={{ background: ACCENT, boxShadow: '0 6px 16px -6px rgba(59,91,219,0.5)' }}
           >
             Book a call
           </a>
