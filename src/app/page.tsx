@@ -5,6 +5,7 @@ import HeroShowcase from '@/components/HeroShowcase'
 import HeroFX from '@/components/HeroFX'
 import Magnetic from '@/components/Magnetic'
 import BusyworkGame from '@/components/BusyworkGame'
+import DemoCard from '@/components/DemoCard'
 import Logo from '@/components/Logo'
 import {
   ArrowRight, Check, MessageSquare, Mail, FileText, Gamepad2,
@@ -79,7 +80,7 @@ export default function Home() {
               , not just help with it.
             </h1>
             <p className="text-lg leading-relaxed mb-9 max-w-md" style={{ color: MUTED }}>
-              Most companies are stuck using AI as an assistant. We build the AI teammates that own a whole workflow, wired into your systems and kept running over time. We find where AI can help most, then build it out for you.
+              Most companies are stuck using AI as an assistant. We build AI sales systems that answer every lead in minutes, follow up until they book, and revive the ones you gave up on. You get booked calls, not software.
             </p>
             <div className="flex flex-wrap items-center gap-x-7 gap-y-4 mb-10">
               <Magnetic>
@@ -255,8 +256,8 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                icon: MessageSquare, tag: 'Marketing agency', t: 'Lead reactivation agent',
-                b: 'Texts a company’s dormant leads, re-engages the ones worth pursuing, and books qualified meetings onto the sales calendar.',
+                icon: MessageSquare, tag: 'Marketing agency', t: 'From dead leads to booked meetings',
+                b: 'An AI sales system texts a company’s dormant leads, re-engages the ones worth pursuing, and books qualified meetings onto the sales calendar. Live SMS thread to calendar event.',
                 r: 'A dead list turned back into booked calls.',
               },
               {
@@ -293,6 +294,49 @@ export default function Home() {
                 </Reveal>
               )
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* ========== DEMOS ========== */}
+      <section id="demos" className="py-24 md:py-32">
+        <div className="max-w-6xl mx-auto px-6">
+          <Reveal>
+            <div className="text-center max-w-2xl mx-auto mb-16">
+              <p className="eyebrow eyebrow--center mb-5 justify-center">Demos</p>
+              <h2 className="font-medium tracking-tight mb-4" style={{ fontFamily: SERIF, fontSize: 'clamp(1.9rem, 4vw, 2.9rem)', lineHeight: 1.1, color: INK }}>
+                Watch them work.
+              </h2>
+              <p className="text-base" style={{ color: MUTED }}>
+                Screen recordings of real systems, walked through by the founder. Unscripted, no slides.
+              </p>
+            </div>
+          </Reveal>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                loomId: undefined,
+                tag: 'Live build · AI sales system',
+                t: 'A dead lead list turned into booked calls',
+                b: 'Watch the reactivation teammate text dormant leads, handle the replies, and book a qualified meeting onto a real sales calendar.',
+              },
+              {
+                loomId: undefined,
+                tag: 'Live build · Email teammate',
+                t: 'Inbound email answered in minutes',
+                b: 'An email teammate reads a real inbound question, drafts an on-brand reply for approval, and keeps the pipeline moving while the owner is heads-down.',
+              },
+              {
+                loomId: undefined,
+                tag: 'The process · AI Operations Audit',
+                t: 'What you get from an audit',
+                b: 'A walkthrough of a finished roadmap: the interviews, the prioritized builds with ROI math, and the AI use policy your team actually follows.',
+              },
+            ].map((d, i) => (
+              <Reveal key={d.t} delay={i * 110}>
+                <DemoCard loomId={d.loomId} tag={d.tag} title={d.t} blurb={d.b} />
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
@@ -351,7 +395,7 @@ export default function Home() {
                 Find what&rsquo;s worth building. Then build it.
               </h2>
               <p className="text-base leading-relaxed mt-5" style={{ color: MUTED }}>
-                Every engagement is scoped to your size and your goals, so we land on pricing together on a quick call. Here is how we can work.
+                Every engagement is scoped to your size and your goals, so we land on pricing together on a quick call. One rule governs every recommendation: the build has to be worth more than it costs, and cost less than the hire it replaces. If it will not, we will tell you. And if your system is not performing in 60 days, we work on it free until it is.
               </p>
             </div>
           </Reveal>
@@ -434,6 +478,7 @@ export default function Home() {
           <div className="flex flex-col gap-3">
             {[
               { q: 'How fast will I see something working?', a: 'The audit takes two weeks. If you move to a retainer, the first working system ships inside your first month.' },
+              { q: 'How does pricing work?', a: 'Builds start at $2,500 one-time, plus a flat monthly care fee of $1,000 to $1,500 that covers hosting, monitoring, and improvements. Partner retainers run $3,000 to $5,000 a month. Exact numbers depend on the workflow, and we anchor them against what the same work would cost you in salary. If the math does not clearly favor you, we will say so on the call.' },
               { q: 'What if it does not work?', a: 'Every system is guaranteed. If a build does not do what we agreed, we keep working on it until it does. You own your systems and your data, so you are never locked in.' },
               { q: 'Do we need to be technical?', a: 'No. That is the point of working with us. We handle the building and integration, and we train your team on the parts they touch.' },
               { q: 'Is our data safe?', a: 'Yes. Client-owned data never goes into AI tools without approval, anything client-facing is reviewed by a person, and the audit includes a written AI use policy.' },
@@ -477,7 +522,7 @@ export default function Home() {
                 <span style={{ fontStyle: 'italic', color: '#8FA3EE' }}>you&rsquo;re losing.</span>
               </h2>
               <p className="text-lg leading-relaxed" style={{ color: 'rgba(251,249,245,0.68)' }}>
-                Tell us what is eating your team&rsquo;s time. We will tell you what we would build and what it would save you. No pitch, just a diagnosis.
+                Book a free teardown call. Tell us what is eating your team&rsquo;s time, and we will map what we would build, what it would replace, and what it would save you. No pitch, just a diagnosis.
               </p>
             </div>
           </Reveal>
@@ -504,6 +549,7 @@ export default function Home() {
             <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm" style={{ color: 'rgba(251,249,245,0.6)' }}>
               <a href="#how" className="transition-colors hover:text-white">How it works</a>
               <a href="#work" className="transition-colors hover:text-white">Work</a>
+              <a href="#demos" className="transition-colors hover:text-white">Demos</a>
               <a href="#pricing" className="transition-colors hover:text-white">Pricing</a>
               <a href="/blog" className="transition-colors hover:text-white">Blog</a>
               <a href="#book" className="transition-colors hover:text-white">Book a call</a>
