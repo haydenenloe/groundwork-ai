@@ -9,6 +9,14 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'ai-investment-roi-paradox',
+    title: 'The More You Spend on AI, the Less You Get Back. Here\'s Why.',
+    date: '2026-07-22',
+    summary: 'Deloitte just published data on a strange pattern: AI investment keeps climbing, but returns stay elusive. The fix isn\'t more technology — it\'s a completely different deployment model.',
+    readTime: '5 min read',
+    tags: ['AI Operations', 'ROI'],
+  },
+  {
     slug: 'agentic-ai-beating-expectations',
     title: 'Why Agentic AI Is Beating Expectations — and What Your Team Is Probably Missing',
     date: '2026-06-30',
