@@ -9,6 +9,14 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'measuring-ai-roi-wrong',
+    title: "You're Measuring AI ROI Wrong. That's Why You Keep Underfunding It.",
+    date: '2026-07-28',
+    summary: "Most operations teams only count labor savings when they evaluate AI. That leaves 30–60% of the actual value unmeasured — and kills future investment before it starts.",
+    readTime: '5 min read',
+    tags: ['AI Operations', 'ROI'],
+  },
+  {
     slug: 'ai-investment-roi-paradox',
     title: 'The More You Spend on AI, the Less You Get Back. Here\'s Why.',
     date: '2026-07-22',
