@@ -285,3 +285,17 @@ input::placeholder {
   from { top: -10%; }
   to { top: 110%; }
 }
+
+/* Discovery chat typing indicator */
+.typing-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #B4A98F;
+  display: inline-block;
+  animation: gw-typing 1s ease-in-out infinite;
+}
+@keyframes gw-typing {
+  0%, 60%, 100% { opacity: 0.3; transform: translateY(0); }
+  30% { opacity: 1; transform: translateY(-3px); }
+}
