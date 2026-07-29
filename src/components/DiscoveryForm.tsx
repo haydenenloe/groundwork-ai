@@ -77,6 +77,7 @@ export default function DiscoveryForm() {
   const [business, setBusiness] = useState({ whatYouDo: '', customers: '', teamSize: '', howYouGrow: '' })
   const [ai, setAi] = useState({ experienceLevel: '', toolsTried: '', whatWorked: '', whatFailed: '', hopes: '' })
   const [processes, setProcesses] = useState<ProcessEntry[]>([emptyProcess()])
+  const [processFiles, setProcessFiles] = useState<File[][]>([[]])
   const [closing, setClosing] = useState({
     biggestBottleneck: '',
     growthBlocker: '',
@@ -124,18 +125,41 @@ export default function DiscoveryForm() {
     setProcesses(prev => prev.map((p, idx) => (idx === i ? { ...p, [key]: value } : p)))
   }
 
+  const updateProcessFiles = (i: number, files: FileList | null) => {
+    setProcessFiles(prev => {
+      const next = [...prev]
+      next[i] = files ? Array.from(files) : []
+      return next
+    })
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setState('loading')
     setErrorMsg('')
 
-    const filled = processes.filter(p => Object.values(p).some(v => v.trim() !== ''))
-
     try {
+      const formData = new FormData()
+      const processIndexes = processes
+        .map((process, index) => ({ process, index }))
+        .filter(({ process, index }) =>
+          Object.values(process).some(v => v.trim() !== '') || (processFiles[index]?.length ?? 0) > 0,
+        )
+
+      formData.append(
+        'payload',
+        JSON.stringify({ contact, business, ai, processes: processIndexes.map(({ process }) => process), closing }),
+      )
+
+      processIndexes.forEach(({ index }, payloadIndex) => {
+        processFiles[index]?.forEach(file => {
+          formData.append(`processFiles:${payloadIndex}`, file)
+        })
+      })
+
       const res = await fetch('/api/discovery', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ contact, business, ai, processes: filled, closing }),
+        body: formData,
       })
       const data = await res.json()
       if (!data.ok) throw new Error(data.error || 'Something went wrong')
@@ -345,7 +369,10 @@ export default function DiscoveryForm() {
                 {processes.length > 1 && (
                   <button
                     type="button"
-                    onClick={() => setProcesses(prev => prev.filter((_, idx) => idx !== i))}
+                    onClick={() => {
+                      setProcesses(prev => prev.filter((_, idx) => idx !== i))
+                      setProcessFiles(prev => prev.filter((_, idx) => idx !== i))
+                    }}
                     className="text-xs px-3 py-1 rounded-lg transition-colors"
                     style={{ border: '1px solid #E7E0D3', color: '#6F665A', background: '#FFFFFF' }}
                   >
@@ -378,13 +405,38 @@ export default function DiscoveryForm() {
                   )}
                 </div>
               ))}
+
+              <div className="mt-5 rounded-xl p-4" style={{ background: '#FFFFFF', border: '1px dashed #CFC5B6' }}>
+                <label style={labelStyle}>Optional: upload documents for this process</label>
+                <span style={hintStyle}>SOPs, drafts, templates, checklists, reports, PDFs, Word docs, CSVs, text files — anything that gives context. Optional. Up to 8 files, 10 MB each.</span>
+                <input
+                  type="file"
+                  multiple
+                  accept=".pdf,.docx,.txt,.md,.csv,.json,.rtf"
+                  onChange={e => updateProcessFiles(i, e.target.files)}
+                  style={inputStyle}
+                  className="focus-blue-ring"
+                />
+                {processFiles[i]?.length > 0 && (
+                  <ul className="mt-3 space-y-1 text-xs" style={{ color: '#6F665A' }}>
+                    {processFiles[i].map(file => (
+                      <li key={`${file.name}-${file.size}`}>
+                        {file.name} · {(file.size / 1024 / 1024).toFixed(2)} MB
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             </div>
           ))}
         </div>
 
         <button
           type="button"
-          onClick={() => setProcesses(prev => [...prev, emptyProcess()])}
+          onClick={() => {
+            setProcesses(prev => [...prev, emptyProcess()])
+            setProcessFiles(prev => [...prev, []])
+          }}
           className="w-full mt-4 py-3 rounded-xl text-sm font-semibold transition-colors"
           style={{ border: '1px dashed #3B5BDB', color: '#3B5BDB', background: 'transparent' }}
         >
