@@ -28,11 +28,12 @@ export default function DiscoveryPage() {
               className="text-4xl md:text-5xl font-black tracking-tight mb-5"
               style={{ color: '#221D17', fontFamily: "'Fraunces', Georgia, serif" }}
             >
-              Let&apos;s find where AI can actually help
+              Let&apos;s get the full picture
             </h1>
             <p className="text-lg leading-relaxed" style={{ color: '#6F665A' }}>
-              This is the conversation we would have on a discovery call. Answer as you go, in your own words. The more
-              you share, the more specific I can be when we meet.
+              You&apos;ve already talked with Hayden. This conversation fills in the detail, so the plan he builds fits
+              how you actually work. Answer in your own words, and attach real documents where you can. The more you
+              share, the better the plan.
             </p>
           </div>
 
