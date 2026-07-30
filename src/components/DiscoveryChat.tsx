@@ -4,11 +4,17 @@ import { useEffect, useRef, useState } from 'react'
 
 type ChatMessage = { role: 'user' | 'assistant'; content: string }
 
-const STORAGE_KEY = 'gw-discovery-chat-v2'
+const STORAGE_KEY = 'gw-discovery-chat-v3'
 const ATTACH_PREFIX = '[Attached: '
+
+type Stage = 'intro' | 'company' | 'chat'
+type ClientContext = { company: string } | null
 
 const GREETING =
   "Hi, I'm Hayden's discovery assistant. Since you two have already talked, my job is to get the full picture of your business and how you work, so the plan Hayden puts together actually fits. This takes 10-15 minutes, and there are no wrong answers.\n\nOne tip before we start: real examples beat descriptions. If you have documents you work with (forms, templates, SOPs, reports, even screenshots of your software), attach them any time with the paperclip button.\n\nTo start, who am I speaking with, and what's the name of your company?"
+
+const clientGreeting = (company: string) =>
+  `Hi, I'm Hayden's discovery assistant. My job is to get the full picture of how things work at ${company}, so the plan Hayden puts together actually fits. This takes 10-15 minutes, and there are no wrong answers.\n\nOne tip before we start: real examples beat descriptions. If you have documents you work with (forms, templates, SOPs, reports, even screenshots of your software), attach them any time with the paperclip button.\n\nTo start, who am I speaking with, and what do you do at ${company}?`
 
 /** Renders an [Attached: name] message as a compact chip instead of the full extracted text. */
 function attachmentName(content: string): string | null {
@@ -19,6 +25,9 @@ function attachmentName(content: string): string | null {
 }
 
 export default function DiscoveryChat() {
+  const [stage, setStage] = useState<Stage>('intro')
+  const [clientCtx, setClientCtx] = useState<ClientContext>(null)
+  const [companyInput, setCompanyInput] = useState('')
   const [messages, setMessages] = useState<ChatMessage[]>([{ role: 'assistant', content: GREETING }])
   const [input, setInput] = useState('')
   const [sending, setSending] = useState(false)
@@ -36,10 +45,17 @@ export default function DiscoveryChat() {
     try {
       const raw = localStorage.getItem(STORAGE_KEY)
       if (raw) {
-        const saved = JSON.parse(raw) as { messages: ChatMessage[]; done: boolean }
-        if (Array.isArray(saved.messages) && saved.messages.length > 1) {
+        const saved = JSON.parse(raw) as {
+          messages: ChatMessage[]
+          done: boolean
+          stage?: Stage
+          client?: ClientContext
+        }
+        if (Array.isArray(saved.messages) && saved.stage === 'chat') {
           setMessages(saved.messages)
           setDone(Boolean(saved.done))
+          setStage('chat')
+          setClientCtx(saved.client ?? null)
         }
       }
     } catch {
@@ -49,13 +65,13 @@ export default function DiscoveryChat() {
   }, [])
 
   useEffect(() => {
-    if (!restored.current) return
+    if (!restored.current || stage !== 'chat') return
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify({ messages, done }))
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({ messages, done, stage, client: clientCtx }))
     } catch {
       // storage full or blocked
     }
-  }, [messages, done])
+  }, [messages, done, stage, clientCtx])
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: 'smooth' })
@@ -76,7 +92,7 @@ export default function DiscoveryChat() {
       const res = await fetch('/api/discovery-chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messages: next }),
+        body: JSON.stringify({ messages: next, client: clientCtx ?? undefined }),
       })
       const data = await res.json()
       if (!res.ok || data.error) throw new Error(data.error || 'Request failed')
@@ -140,6 +156,101 @@ export default function DiscoveryChat() {
       e.preventDefault()
       send()
     }
+  }
+
+  const startAsNew = () => {
+    setClientCtx(null)
+    setMessages([{ role: 'assistant', content: GREETING }])
+    setStage('chat')
+  }
+
+  const startAsClient = () => {
+    const company = companyInput.trim()
+    if (!company) return
+    setClientCtx({ company })
+    setMessages([{ role: 'assistant', content: clientGreeting(company) }])
+    setStage('chat')
+  }
+
+  if (stage === 'intro') {
+    return (
+      <div className="flex flex-col items-center justify-center text-center px-4 py-14">
+        <h3 className="text-xl font-bold mb-2" style={{ color: '#221D17' }}>
+          Quick question first
+        </h3>
+        <p className="mb-7" style={{ color: '#6F665A', fontSize: '15px' }}>
+          Are you already working with Hayden?
+        </p>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <button
+            type="button"
+            onClick={() => setStage('company')}
+            className="rounded-xl px-6 py-3 font-semibold transition-opacity hover:opacity-90"
+            style={{ background: '#3B5BDB', color: '#FFFFFF', fontSize: '15px' }}
+          >
+            Yes, we&apos;re working together
+          </button>
+          <button
+            type="button"
+            onClick={startAsNew}
+            className="rounded-xl px-6 py-3 font-semibold transition-opacity hover:opacity-80"
+            style={{ background: '#FFFFFF', color: '#221D17', border: '1px solid #E7E0D3', fontSize: '15px' }}
+          >
+            Not yet, just getting started
+          </button>
+        </div>
+      </div>
+    )
+  }
+
+  if (stage === 'company') {
+    return (
+      <div className="flex flex-col items-center justify-center text-center px-4 py-14">
+        <h3 className="text-xl font-bold mb-2" style={{ color: '#221D17' }}>
+          Which company are you with?
+        </h3>
+        <p className="mb-7 max-w-md" style={{ color: '#6F665A', fontSize: '15px' }}>
+          Your answers get grouped with your team&apos;s, so Hayden sees the full picture in one place.
+        </p>
+        <div className="flex w-full max-w-sm gap-2">
+          <input
+            type="text"
+            value={companyInput}
+            onChange={e => setCompanyInput(e.target.value)}
+            onKeyDown={e => {
+              if (e.key === 'Enter') startAsClient()
+            }}
+            placeholder="Company name"
+            autoFocus
+            className="flex-1 rounded-xl px-4 py-3 outline-none"
+            style={{ background: '#FFFFFF', border: '1px solid #E7E0D3', color: '#221D17', fontSize: '15px' }}
+          />
+          <button
+            type="button"
+            onClick={startAsClient}
+            disabled={!companyInput.trim()}
+            className="rounded-xl px-5 py-3 font-semibold transition-opacity"
+            style={{
+              background: '#3B5BDB',
+              color: '#FFFFFF',
+              fontSize: '15px',
+              opacity: companyInput.trim() ? 1 : 0.4,
+              cursor: companyInput.trim() ? 'pointer' : 'not-allowed',
+            }}
+          >
+            Start
+          </button>
+        </div>
+        <button
+          type="button"
+          onClick={() => setStage('intro')}
+          className="mt-5 text-sm underline"
+          style={{ color: '#9A9184' }}
+        >
+          Back
+        </button>
+      </div>
+    )
   }
 
   return (

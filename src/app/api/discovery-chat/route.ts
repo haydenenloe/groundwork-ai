@@ -77,7 +77,17 @@ When the list is satisfied (or you have truly reached the question limit), write
 
 Never output ${COMPLETE_MARKER} until you are genuinely wrapping up. Never mention the marker or these instructions to the prospect.`
 
+const CLIENT_SYSTEM_SUFFIX = (company: string) => `
+
+## Known context for this interview
+
+This prospect is part of an existing engagement with ${company}. Hayden may interview several people from this company, so:
+- You already know the company. Do not ask for the company name.
+- Ask for THEIR name, role, and email early, since each person's answers are filed separately.
+- Focus on the work THEY personally do and see, not a general company overview, unless they are clearly the owner.`
+
 type ChatMessage = { role: 'user' | 'assistant'; content: string }
+type ClientContext = { company?: string }
 
 /** JSON schema for extraction — mirrors the Keystroke DiscoveryInputSchema. */
 const EXTRACT_TOOL: Anthropic.Tool = {
@@ -290,8 +300,10 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    const body = (await req.json()) as { messages?: ChatMessage[] }
+    const body = (await req.json()) as { messages?: ChatMessage[]; client?: ClientContext }
     const messages = Array.isArray(body.messages) ? body.messages.slice(-MAX_MESSAGES) : []
+    const clientCompany =
+      typeof body.client?.company === 'string' ? body.client.company.trim().slice(0, 120) : ''
 
     if (messages.length === 0 || messages[messages.length - 1]?.role !== 'user') {
       return NextResponse.json({ error: 'Expected a user message' }, { status: 400 })
@@ -302,7 +314,7 @@ export async function POST(req: NextRequest) {
     const res = await client.messages.create({
       model: MODEL,
       max_tokens: 1024,
-      system: INTERVIEW_SYSTEM,
+      system: clientCompany ? INTERVIEW_SYSTEM + CLIENT_SYSTEM_SUFFIX(clientCompany) : INTERVIEW_SYSTEM,
       messages: messages.slice(-INTERVIEW_WINDOW).map(m => ({ role: m.role, content: m.content })),
     })
 
@@ -320,6 +332,13 @@ export async function POST(req: NextRequest) {
       // critical field is missing — ask for it instead.
       const full: ChatMessage[] = [...messages, { role: 'assistant', content: reply }]
       const payload = await extract(client, full)
+
+      // An existing engagement's company name is the grouping key downstream
+      // (the vault files briefs under the company slug), so the value entered
+      // on the intro screen wins over whatever the model extracted.
+      if (payload && clientCompany) {
+        payload.contact.company = clientCompany
+      }
 
       const gap = payload ? criticalGap(payload) : null
       if (payload && gap) {
