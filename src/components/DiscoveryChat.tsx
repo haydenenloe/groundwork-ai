@@ -11,7 +11,7 @@ type Stage = 'intro' | 'company' | 'chat'
 type ClientContext = { company: string } | null
 
 const GREETING =
-  "Hi, I'm Hayden's discovery assistant. Since you two have already talked, my job is to get the full picture of your business and how you work, so the plan Hayden puts together actually fits. This takes 10-15 minutes, and there are no wrong answers.\n\nOne tip before we start: real examples beat descriptions. If you have documents you work with (forms, templates, SOPs, reports, even screenshots of your software), attach them any time with the paperclip button.\n\nTo start, who am I speaking with, and what's the name of your company?"
+  "Hi, I'm Hayden's discovery assistant. My job is to understand your business and where the repetitive, frustrating work is, so that when you and Hayden talk, he shows up with specifics instead of generalities. This takes 10-15 minutes, and there are no wrong answers.\n\nOne tip before we start: real examples beat descriptions. If you have documents you work with (forms, templates, SOPs, reports, even screenshots of your software), attach them any time with the paperclip button.\n\nTo start, who am I speaking with, and what's the name of your company?"
 
 const clientGreeting = (company: string) =>
   `Hi, I'm Hayden's discovery assistant. My job is to get the full picture of how things work at ${company}, so the plan Hayden puts together actually fits. This takes 10-15 minutes, and there are no wrong answers.\n\nOne tip before we start: real examples beat descriptions. If you have documents you work with (forms, templates, SOPs, reports, even screenshots of your software), attach them any time with the paperclip button.\n\nTo start, who am I speaking with, and what do you do at ${company}?`

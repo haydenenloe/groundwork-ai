@@ -31,9 +31,9 @@ export default function DiscoveryPage() {
               Let&apos;s get the full picture
             </h1>
             <p className="text-lg leading-relaxed" style={{ color: '#6F665A' }}>
-              You&apos;ve already talked with Hayden. This conversation fills in the detail, so the plan he builds fits
-              how you actually work. Answer in your own words, and attach real documents where you can. The more you
-              share, the better the plan.
+              This conversation gives Hayden the full picture of your business and how you actually work, so he can be
+              specific instead of general. Answer in your own words, and attach real documents where you can. The more
+              you share, the better.
             </p>
           </div>
 
