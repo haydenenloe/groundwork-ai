@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef, type PointerEvent, type ReactNode } from 'react'
-import { Check, MessageSquare, Mail, FileText, Clock, TrendingUp, PhoneMissed, Star, Receipt, CalendarClock } from 'lucide-react'
+import { Check, MessageSquare, Mail, FileText, Clock, TrendingUp, ShieldCheck, Database, Receipt, CalendarClock } from 'lucide-react'
 
 const SURFACE = '#FFFFFF'
 const ALT = '#F3EFE7'
@@ -84,18 +84,33 @@ const slides: ReactNode[] = [
     <Chip>Sent to #leadership</Chip>
   </Frame>,
 
-  <Frame key="missed-call" label="Missed-call agent" icon={PhoneMissed}>
-    <Out>Hi, this is Apex Plumbing. Sorry we missed your call! What can we help with?</Out>
-    <In>Need someone to look at a leak under my sink.</In>
-    <Out>We can come by today between 2 and 4. Want me to lock it in?</Out>
-    <In>Yes please.</In>
-    <Chip>Job booked &middot; today 2&ndash;4 PM</Chip>
+  <Frame key="questionnaire" label="Security questionnaire agent" icon={ShieldCheck}>
+    <p className="text-xs" style={{ color: MUTED }}>Vendor questionnaire &middot; 112 questions</p>
+    <In>Q47: Describe your encryption standards for data at rest.</In>
+    <div className="self-stretch px-4 py-3 rounded-2xl" style={{ background: ALT, color: INK, borderLeft: `3px solid ${ACCENT}` }}>
+      <span className="block text-xs font-semibold mb-1" style={{ color: ACCENT }}>AI draft &middot; cites security policy &sect;4.2</span>
+      All customer data is encrypted at rest with AES-256; keys are managed in AWS KMS with annual rotation.
+    </div>
+    <Chip>109 drafted &middot; 3 flagged for human review</Chip>
   </Frame>,
 
-  <Frame key="review" label="Review agent" icon={Star}>
-    <Out>Thanks for choosing us, Maria! Would you mind leaving a quick review? It takes about 20 seconds.</Out>
-    <In>Done. You guys were great!</In>
-    <Chip>New 5-star review on Google</Chip>
+  <Frame key="briefing" label="Pre-call briefing agent" icon={CalendarClock}>
+    <span className="self-start inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium" style={{ background: ALT, color: MUTED }}>
+      <Clock size={12} /> 45 minutes before every call
+    </span>
+    <p className="font-semibold" style={{ color: INK }}>Acme Industrial &middot; renewal call</p>
+    <div className="flex flex-col">
+      {[
+        'Last touch: pricing question, unanswered 6 days',
+        'Open thread: SSO rollout still blocked',
+        'Talking point: usage up 31% this quarter',
+      ].map((row, idx) => (
+        <div key={row} className="py-2 text-sm" style={{ color: MUTED, borderTop: idx === 0 ? 'none' : `1px solid ${LINE}` }}>
+          {row}
+        </div>
+      ))}
+    </div>
+    <Chip>Briefing sent to Slack</Chip>
   </Frame>,
 
   <Frame key="payments" label="Payments agent" icon={Receipt}>
@@ -104,11 +119,23 @@ const slides: ReactNode[] = [
     <Chip>Paid &middot; $2,400 collected</Chip>
   </Frame>,
 
-  <Frame key="reminder" label="Reminder agent" icon={CalendarClock}>
-    <Out>Reminder: your appointment with Bright Smile Dental is tomorrow at 3:00 PM. Reply C to confirm or R to reschedule.</Out>
-    <In>C</In>
-    <Out>You are confirmed. See you then!</Out>
-    <Chip>Confirmed &middot; no-show avoided</Chip>
+  <Frame key="crm-hygiene" label="CRM hygiene agent" icon={Database}>
+    <span className="self-start inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium" style={{ background: ALT, color: MUTED }}>
+      <Clock size={12} /> Every evening, 6:00 PM
+    </span>
+    <p className="font-semibold" style={{ color: INK }}>End-of-day reconciliation</p>
+    <div className="flex flex-col">
+      {[
+        '3 call transcripts checked against the CRM',
+        '2 deals missing next steps, follow-ups drafted',
+        '1 stale stage corrected',
+      ].map((row, idx) => (
+        <div key={row} className="py-2 text-sm" style={{ color: MUTED, borderTop: idx === 0 ? 'none' : `1px solid ${LINE}` }}>
+          {row}
+        </div>
+      ))}
+    </div>
+    <Chip>CRM matches reality &middot; 6 edits applied</Chip>
   </Frame>,
 ]
 

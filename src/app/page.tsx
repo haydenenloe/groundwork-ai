@@ -44,9 +44,9 @@ function Swash() {
 }
 
 const MARQUEE_ITEMS = [
-  'Lead follow-up', 'Weekly reports', 'Missed calls', 'Invoice chasing',
-  'Appointment reminders', 'Review requests', 'Data entry', 'Customer support email',
-  'CRM updates', 'Onboarding handoffs',
+  'Security questionnaires', 'Lead enrichment', 'Pre-call briefings', 'CRM hygiene',
+  'Proposal drafts', 'Support triage', 'Weekly reporting', 'Invoice chasing',
+  'Onboarding handoffs', 'Knowledge search',
 ]
 
 export default function Home() {
@@ -66,21 +66,20 @@ export default function Home() {
               style={{ background: SURFACE, border: `1px solid ${LINE}`, color: MUTED, boxShadow: '0 2px 10px -4px rgba(34,29,23,0.12)' }}
             >
               <span className="pulse-dot" />
-              AI operations, built for small teams
+              Embedded AI engineering for mid-sized companies
             </span>
             <h1
               className="font-medium tracking-tight mb-7"
               style={{ fontFamily: SERIF, fontSize: 'clamp(2.6rem, 5.4vw, 4.1rem)', lineHeight: 1.05, color: INK }}
             >
-              AI teammates that{' '}
+              A working AI department,{' '}
               <span className="relative inline-block" style={{ fontStyle: 'italic', color: ACCENT, whiteSpace: 'nowrap' }}>
-                own the work
+                inside your company.
                 <Swash />
               </span>
-              , not just help with it.
             </h1>
             <p className="text-lg leading-relaxed mb-9 max-w-md" style={{ color: MUTED }}>
-              Most companies are stuck using AI as an assistant. We build AI sales systems that answer every lead in minutes, follow up until they book, and revive the ones you gave up on. You get booked calls, not software.
+              A forward-deployed engineer, embedded in your team, shipping production systems tied to a number you already track. Strategy, training, and engineering, without the quarter-million-dollar hire.
             </p>
             <div className="flex flex-wrap items-center gap-x-7 gap-y-4 mb-10">
               <Magnetic>
@@ -105,7 +104,7 @@ export default function Home() {
               </a>
             </div>
             <div className="flex flex-wrap gap-x-6 gap-y-2.5 text-sm" style={{ color: MUTED }}>
-              {['First build live in month one', 'You own your systems', 'Founder-led'].map((t) => (
+              {['One engineer, start to finish', 'You own your systems', 'First system live in month one'].map((t) => (
                 <span key={t} className="inline-flex items-center gap-2">
                   <Check size={14} style={{ color: ACCENT }} /> {t}
                 </span>
@@ -137,7 +136,7 @@ export default function Home() {
       {/* ========== BUSYWORK MARQUEE ========== */}
       <section className="py-6" style={{ borderTop: `1px solid ${LINE}`, borderBottom: `1px solid ${LINE}`, background: SURFACE }}>
         <p className="text-center text-xs font-semibold uppercase tracking-[0.14em] mb-4" style={{ color: MUTED }}>
-          The work our AI teammates take off your plate
+          Systems we install and run
         </p>
         <div className="marquee">
           <div className="marquee-track items-center">
@@ -168,9 +167,9 @@ export default function Home() {
           </Reveal>
           <div className="grid sm:grid-cols-3 gap-5">
             {[
-              { icon: Clock, t: 'Leads wait days', b: 'Inbound interest goes cold before anyone follows up.' },
-              { icon: RefreshCw, t: 'Reports rebuilt weekly', b: 'The same spreadsheet gets assembled by hand every Friday.' },
-              { icon: ClipboardList, t: 'Everything is manual', b: 'The CRM, the onboarding, the handoffs. All done by a person, if they remember.' },
+              { icon: Clock, t: 'Pilots stall out', b: 'Someone tried ChatGPT, a demo happened, nothing ever made it into production.' },
+              { icon: RefreshCw, t: 'The hire is scary', b: 'A full-time AI engineer runs $250k loaded, and you would not know how to interview one anyway.' },
+              { icon: ClipboardList, t: 'The work keeps piling', b: 'Questionnaires, follow-ups, reports, CRM updates. All manual, all repeated every week.' },
             ].map((c, i) => {
               const Icon = c.icon
               return (
@@ -191,8 +190,8 @@ export default function Home() {
               className="text-xl md:text-2xl leading-snug mt-12 max-w-3xl pl-6 [text-wrap:balance]"
               style={{ fontFamily: SERIF, color: INK, borderLeft: `3px solid ${ACCENT}` }}
             >
-              Everyone knows AI could handle this. No one has time to set it up.{' '}
-              <span style={{ fontStyle: 'italic', color: ACCENT }}>That is the whole job.</span>
+              Everyone knows AI should be doing more here. Nobody owns making it real.{' '}
+              <span style={{ fontStyle: 'italic', color: ACCENT }}>That is the job we take.</span>
             </p>
           </Reveal>
         </div>
@@ -205,15 +204,15 @@ export default function Home() {
             <div className="text-center max-w-2xl mx-auto mb-16">
               <p className="eyebrow eyebrow--center mb-5 justify-center">How it works</p>
               <h2 className="font-medium tracking-tight" style={{ fontFamily: SERIF, fontSize: 'clamp(1.9rem, 4vw, 2.9rem)', lineHeight: 1.1, color: INK }}>
-                Three steps to an AI operations layer.
+                The three pillars of an AI department.
               </h2>
             </div>
           </Reveal>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { n: '01', t: 'Find it', b: 'We figure out where AI can actually move the needle for your team, and which build is worth doing first.' },
-              { n: '02', t: 'Build it', b: 'We build the highest-value systems and wire them into the tools you already use. The first one ships in your first month.' },
-              { n: '03', t: 'Run it', b: 'A monthly cadence: new builds, team training, and improvements. Your operations layer compounds instead of going stale.' },
+              { n: '01', t: 'Roadmap', b: 'We map your operations, find where AI moves a number you already track, and rank every build by ROI. Strategy an executive can defend.' },
+              { n: '02', t: 'Engineering', b: 'We build production systems and wire them into the tools you already run, in accounts you own. The first one ships in your first month.' },
+              { n: '03', t: 'Training', b: 'Hands-on sessions raise your team on the tools and the systems we install, so the capability stays with your company for good.' },
             ].map((s, i, arr) => (
               <Reveal key={s.n} delay={i * 110}>
                 <div className="h-full flex flex-col">
@@ -374,7 +373,7 @@ export default function Home() {
               </h2>
               <div className="space-y-4 text-base leading-relaxed" style={{ color: MUTED }}>
                 <p>
-                  Groundwork AI is led by Hayden Enloe, who holds a master&rsquo;s in Information Systems and builds practical AI automations for small and mid-sized teams. Work with Groundwork and you get a founder who stays close to the work: in your operations, accountable for what ships, and invested in seeing it pay off.
+                  Groundwork AI is led by Hayden Enloe, an AI engineer with a master&rsquo;s in Information Systems who ships production systems for mid-sized companies: agents with real guardrails, retrieval that gets measured, and test suites that prove a system works before it touches your customers. Work with Groundwork and the person who scoped the work is the person who builds it.
                 </p>
                 <p>
                   The approach is simple. An honest diagnosis instead of a sales pitch, the path that is actually right for you, and systems you own. The goal is to give your team back the hours it loses to work that software should be doing.
@@ -395,29 +394,29 @@ export default function Home() {
                 Find what&rsquo;s worth building. Then build it.
               </h2>
               <p className="text-base leading-relaxed mt-5" style={{ color: MUTED }}>
-                Every engagement is scoped to your size and your goals, so we land on pricing together on a quick call. One rule governs every recommendation: the build has to be worth more than it costs, and cost less than the hire it replaces. If it will not, we will tell you. And if your system is not performing in 60 days, we work on it free until it is.
+                Straight prices, one rule: the build has to be worth more than it costs, and cost less than the hire it replaces. If it will not, we will tell you on the call. The audit is guaranteed (worth three times the fee, or refunded), and your first build carries a written delivery guarantee.
               </p>
             </div>
           </Reveal>
           <div className="grid md:grid-cols-3 gap-6 items-stretch">
             {[
               {
-                kind: 'Diagnose', name: 'AI Operations Audit',
-                desc: 'Not sure where AI fits? We map your workflows and find the highest-ROI place to start, before you build a thing.',
-                items: ['Interviews across your team', 'Prioritized roadmap with ROI', 'AI use policy draft', 'Live walkthrough and Q&A'],
+                kind: 'Roadmap', name: 'AI Operations Audit', price: '$6,500 · two weeks',
+                desc: 'Not sure where AI fits? Two weeks of interviews across your team, then an ROI-ranked roadmap an executive can defend.',
+                items: ['Interviews across your team', 'ROI-ranked roadmap', 'AI use policy and maturity scorecard', 'Worth 3x the fee, or refunded'],
                 featured: false,
               },
               {
-                kind: 'Build', name: 'Build & Maintain',
-                desc: 'Put one painful, repetitive workflow on autopilot. We build it, wire it into your tools, and keep it running and improving.',
-                items: ['One high-value build', 'Wired into the tools you use', 'Ongoing maintenance and tuning', 'Live in weeks, not months'],
+                kind: 'Engineering', name: 'Build Sprint', price: 'From $10,000 · 4-8 weeks',
+                desc: 'One high-value production system: built, tested against your own data, wired into your tools, and shipped.',
+                items: ['A production build, not a demo', 'Test suite proves it works', 'Delivery guarantee on your first build', 'Runs in accounts you own'],
+                featured: false,
+              },
+              {
+                kind: 'Partner', name: 'Embedded AI Partner', price: 'From $3,500/mo',
+                desc: 'Your AI department, one to three days a week: a forward-deployed engineer delivering continuous builds, team training, and strategy.',
+                items: ['Continuous build lane and maintenance', 'Hands-on team training', 'Monthly review of the number we moved', '90-day initial term, then month to month'],
                 featured: true,
-              },
-              {
-                kind: 'Partner', name: 'Ongoing Partnership',
-                desc: 'Your embedded AI operations partner: a growing team of AI teammates, plus training and strategy, that you can talk to directly.',
-                items: ['New builds every month', 'Team training and strategy', 'AI teammates you can chat with', 'You own your systems. Cancel anytime'],
-                featured: false,
               },
             ].map((p) => (
               <Reveal key={p.name} className="h-full">
@@ -438,7 +437,8 @@ export default function Home() {
                     </span>
                   )}
                   <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: ACCENT }}>{p.kind}</p>
-                  <h3 className="text-xl font-semibold mb-2" style={{ color: INK }}>{p.name}</h3>
+                  <h3 className="text-xl font-semibold mb-1" style={{ color: INK }}>{p.name}</h3>
+                  <p className="text-sm font-semibold mb-3" style={{ fontFamily: SERIF, color: ACCENT }}>{p.price}</p>
                   <p className="text-sm leading-relaxed mb-6" style={{ color: MUTED }}>{p.desc}</p>
                   <div className="flex flex-col gap-2.5 flex-1">
                     {p.items.map((it) => (
@@ -477,12 +477,12 @@ export default function Home() {
           </Reveal>
           <div className="flex flex-col gap-3">
             {[
-              { q: 'How fast will I see something working?', a: 'The audit takes two weeks. If you move to a retainer, the first working system ships inside your first month.' },
-              { q: 'How does pricing work?', a: 'Builds start at $2,500 one-time, plus a flat monthly care fee of $1,000 to $1,500 that covers hosting, monitoring, and improvements. Partner retainers run $3,000 to $5,000 a month. Exact numbers depend on the workflow, and we anchor them against what the same work would cost you in salary. If the math does not clearly favor you, we will say so on the call.' },
-              { q: 'What if it does not work?', a: 'Every system is guaranteed. If a build does not do what we agreed, we keep working on it until it does. You own your systems and your data, so you are never locked in.' },
-              { q: 'Do we need to be technical?', a: 'No. That is the point of working with us. We handle the building and integration, and we train your team on the parts they touch.' },
-              { q: 'Is our data safe?', a: 'Yes. Client-owned data never goes into AI tools without approval, anything client-facing is reviewed by a person, and the audit includes a written AI use policy.' },
-              { q: 'What does the retainer actually include?', a: 'One to two new builds a month, all maintenance, hands-on training, monthly reporting, and advisory. One flat fee, cancel anytime.' },
+              { q: 'How fast will I see something working?', a: 'The audit takes two weeks. Retainers start with a two-week embedded diagnostic, and the first working system ships inside your first month.' },
+              { q: 'How does pricing work?', a: 'The audit is $6,500. Build sprints run $10,000 to $30,000 depending on scope, billed by milestone. Embedded partner retainers run $3,500 to $12,000 a month depending on how many days a week you need, with a 90-day initial term. We anchor every number against the alternative: a full-time AI engineer costs $15,000 to $25,000 a month fully loaded. If the math does not clearly favor you, we will say so on the call.' },
+              { q: 'What if it does not work?', a: 'The audit is guaranteed: if the roadmap does not surface at least one opportunity worth three times the fee, we refund it. Your first build carries a written delivery guarantee. And every system runs in accounts you own, so you are never locked in.' },
+              { q: 'Do we need to be technical?', a: 'No. That is the point of working with us. We handle the engineering, and we train your team on the parts they touch.' },
+              { q: 'Is our data safe?', a: 'Yes. Systems run in your accounts under your permissions, client data never goes into AI tools without approval, and every build ships with a written security boundary. The audit includes an AI use policy your team will actually follow.' },
+              { q: 'What does the retainer actually include?', a: 'Depends on the tier. Every tier includes maintenance of everything we build, a weekly ship note, and a monthly review of the number we agreed to move. Partner and Department tiers add a continuous build lane, hands-on team training, and quarterly executive roadmaps.' },
             ].map((f) => (
               <Reveal key={f.q}>
                 <details className="card-hover rounded-2xl px-6 py-1 group" style={{ background: SURFACE, border: `1px solid ${LINE}` }}>
@@ -522,7 +522,7 @@ export default function Home() {
                 <span style={{ fontStyle: 'italic', color: '#8FA3EE' }}>you&rsquo;re losing.</span>
               </h2>
               <p className="text-lg leading-relaxed" style={{ color: 'rgba(251,249,245,0.68)' }}>
-                Book a free teardown call. Tell us what is eating your team&rsquo;s time, and we will map what we would build, what it would replace, and what it would save you. No pitch, just a diagnosis.
+                Book a free teardown call. Walk us through one process, and we will tell you what we would build, the number it would move, and what it would save you. No pitch, just a diagnosis.
               </p>
             </div>
           </Reveal>
