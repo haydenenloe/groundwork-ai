@@ -11,9 +11,9 @@ export default function Footer() {
           </span>
         </div>
         <div className="flex gap-6 text-sm" style={{ color: '#6F665A' }}>
-          <a href="/#how" className="transition-opacity hover:opacity-60">How it works</a>
-          <a href="/#work" className="transition-opacity hover:opacity-60">Work</a>
-          <a href="/#pricing" className="transition-opacity hover:opacity-60">Pricing</a>
+          <a href="/#process" className="transition-opacity hover:opacity-60">How it works</a>
+          <a href="/#proof" className="transition-opacity hover:opacity-60">Work</a>
+          <a href="/#offer" className="transition-opacity hover:opacity-60">Pricing</a>
           <a href="/blog" className="transition-opacity hover:opacity-60">Blog</a>
           <a href="/#book" className="transition-opacity hover:opacity-60">Book a call</a>
         </div>

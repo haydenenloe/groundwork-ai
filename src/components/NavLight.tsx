@@ -34,10 +34,10 @@ export default function NavLight() {
         </a>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-medium" style={{ color: MUTED }}>
-          <a href="/#how" className="nav-link">How it works</a>
-          <a href="/#work" className="nav-link">Work</a>
-          <a href="/#demos" className="nav-link">Demos</a>
-          <a href="/#pricing" className="nav-link">Pricing</a>
+          <a href="/#process" className="nav-link">How it works</a>
+          <a href="/#proof" className="nav-link">Work</a>
+          <a href="/#proof" className="nav-link">Demos</a>
+          <a href="/#offer" className="nav-link">Pricing</a>
           <a href="/blog" className="nav-link">Blog</a>
         </div>
 
@@ -63,10 +63,10 @@ export default function NavLight() {
 
       {open && (
         <div className="md:hidden px-6 py-5 space-y-4 text-sm font-medium" style={{ background: '#FBF9F5', borderTop: '1px solid #E7E0D3', color: MUTED }}>
-          <a href="/#how" className="block" onClick={() => setOpen(false)}>How it works</a>
-          <a href="/#work" className="block" onClick={() => setOpen(false)}>Work</a>
-          <a href="/#demos" className="block" onClick={() => setOpen(false)}>Demos</a>
-          <a href="/#pricing" className="block" onClick={() => setOpen(false)}>Pricing</a>
+          <a href="/#process" className="block" onClick={() => setOpen(false)}>How it works</a>
+          <a href="/#proof" className="block" onClick={() => setOpen(false)}>Work</a>
+          <a href="/#proof" className="block" onClick={() => setOpen(false)}>Demos</a>
+          <a href="/#offer" className="block" onClick={() => setOpen(false)}>Pricing</a>
           <a href="/blog" className="block" onClick={() => setOpen(false)}>Blog</a>
           <a href="/quiz" className="block" onClick={() => setOpen(false)}>Assessment</a>
           <a
